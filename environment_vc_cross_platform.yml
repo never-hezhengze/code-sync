@@ -1,0 +1,7 @@
+name: my_vscode_for_vc_env
+channels:
+  - defaults
+dependencies:
+  - python=3.11.9
+  - matplotlib
+prefix: C:\Users\hezhengze\.conda\envs\my_vscode_for_vc_env
