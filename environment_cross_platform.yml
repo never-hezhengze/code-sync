@@ -1,0 +1,9 @@
+name: machine_learning_env
+channels:
+  - defaults
+dependencies:
+  - python=3.13
+  - numpy
+  - matplotlib
+  - pandas
+prefix: C:\Users\hezhengze\.conda\envs\machine_learning_env
