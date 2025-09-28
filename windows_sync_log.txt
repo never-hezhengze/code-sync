@@ -11,3 +11,17 @@ Merge made by the 'ort' strategy.
  create mode 100755 auto_sync.sh
  create mode 100644 mac_created_file.txt
  create mode 100644 mac_sync_log.txt
+warning: in the working copy of 'sync_log.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'windows_sync_log.txt', LF will be replaced by CRLF the next time Git touches it
+[main 9d96586] Auto sync from Windows: 2025/09/29 鍛ㄤ竴  0:37:21.69
+ 3 files changed, 39 insertions(+), 10 deletions(-)
+ create mode 100644 windows_sync_log.txt
+[2025/09/29 周一  0:37:21.79] Changes committed 
+To github.com:never-hezhengze/code-sync.git
+   fbb808e..9d96586  main -> main
+[2025/09/29 周一  0:37:25.63] Sync completed successfully 
+======================================== 
+[2025/09/29 周一  0:40:55.32] Starting auto-sync... 
+From github.com:never-hezhengze/code-sync
+ * branch            main       -> FETCH_HEAD
+Already up to date.
