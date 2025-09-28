@@ -25,3 +25,16 @@ To github.com:never-hezhengze/code-sync.git
 From github.com:never-hezhengze/code-sync
  * branch            main       -> FETCH_HEAD
 Already up to date.
+warning: in the working copy of 'windows_sync_log.txt', LF will be replaced by CRLF the next time Git touches it
+[main a36ee87] Auto sync from Windows: 2025/09/29 鍛ㄤ竴  0:40:59.45
+ 2 files changed, 34 insertions(+)
+ create mode 100644 auto_sync_fixed.bat
+[2025/09/29 周一  0:40:59.55] Changes committed 
+To github.com:never-hezhengze/code-sync.git
+   9d96586..a36ee87  main -> main
+[2025/09/29 周一  0:41:03.24] Sync completed successfully 
+======================================== 
+[2025/09/29 周一  0:45:52.94] Starting auto-sync... 
+From github.com:never-hezhengze/code-sync
+ * branch            main       -> FETCH_HEAD
+Already up to date.
