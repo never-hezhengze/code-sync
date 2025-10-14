@@ -1237,3 +1237,15 @@ Fast-forward
  create mode 100644 "Project_for_cv/project3_1011/\347\273\223\346\236\234/text2.docx"
  create mode 100644 "Project_for_cv/project3_1011/\347\273\223\346\236\234/text3.docx"
  create mode 100644 "Project_for_cv/project3_1011/\347\273\223\346\236\234/text4.docx"
+warning: in the working copy of 'windows_sync_log.txt', LF will be replaced by CRLF the next time Git touches it
+[main 19027e7] Auto sync from Windows: 2025/10/14 鍛ㄤ簩 12:13:15.81
+ 1 file changed, 24 insertions(+)
+[2025/10/14 周二 12:13:16.51] Changes committed 
+To github.com:never-hezhengze/code-sync.git
+   d03b71e..19027e7  main -> main
+[2025/10/14 周二 12:13:36.60] Sync completed successfully 
+======================================== 
+[2025/10/14 周二 12:39:20.70] Starting auto-sync... 
+From github.com:never-hezhengze/code-sync
+ * branch            main       -> FETCH_HEAD
+Already up to date.
