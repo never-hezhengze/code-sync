@@ -1180,3 +1180,36 @@ error: failed to push some refs to 'github.com:never-hezhengze/code-sync.git'
 From github.com:never-hezhengze/code-sync
  * branch            main       -> FETCH_HEAD
 Already up to date.
+warning: in the working copy of 'windows_sync_log.txt', LF will be replaced by CRLF the next time Git touches it
+[main 3bfb161] Auto sync from Windows: 2025/10/14 鍛ㄤ簩 11:03:15.05
+ 21 files changed, 487 insertions(+)
+ create mode 100644 "Documents/\350\256\241\347\256\227\346\234\272\350\247\206\350\247\211\350\257\276\344\273\266/LN-1b \345\257\274\350\256\272.pptx"
+ create mode 100644 "Documents/\350\256\241\347\256\227\346\234\272\350\247\206\350\247\211\350\257\276\344\273\266/~$LN 4b  \346\212\225\345\275\261\345\217\230\346\215\242.pptx"
+ create mode 100644 "Documents/\350\257\276\346\234\254/Computer Vision Algorithms and Applications (Texts in Computer Science) (Richard Szeliski) (Z-Library).pdf"
+ create mode 100644 Project_for_cv/output_picture/Figure_rotated_holes.png
+ create mode 100644 Project_for_cv/output_picture/Figure_rotated_holes_vis.png
+ create mode 100644 Project_for_cv/output_picture/text5_order/R_then_S_then_T.png
+ create mode 100644 Project_for_cv/output_picture/text5_order/S_then_R_then_T.png
+ create mode 100644 Project_for_cv/output_picture/text5_order/S_then_T_then_R.png
+ create mode 100644 Project_for_cv/output_picture/text5_order/T_then_R_then_S.png
+ create mode 100644 Project_for_cv/output_picture/text5_order/order_comparison_text5.png
+ create mode 100644 Project_for_cv/project3_1011/output_picture/Figure_1.png
+ create mode 100644 Project_for_cv/project3_1011/output_picture/Figure_5.png
+ create mode 100644 Project_for_cv/project3_1011/text1.py
+ create mode 100644 Project_for_cv/project3_1011/text2.md
+ create mode 100644 Project_for_cv/project3_1011/text3.md
+ create mode 100644 Project_for_cv/project3_1011/text4.md
+ create mode 100644 Project_for_cv/project3_1011/text5.py
+ create mode 100644 Project_for_cv/project3_1011/verify_order.py
+ create mode 100644 "Python/Markdown/\347\254\224\350\256\260/\346\227\240\347\272\246\346\235\237\346\234\200\344\274\230\345\214\226,md"
+ create mode 100644 bfg-1.15.0.jar
+[2025/10/14 周二 11:03:15.86] Changes committed 
+Uploading LFS objects: 100% (3/3), 181 MB | 0 B/s, done.
+To github.com:never-hezhengze/code-sync.git
+   1a30dab..3bfb161  main -> main
+[2025/10/14 周二 11:04:21.67] Sync completed successfully 
+======================================== 
+[2025/10/14 周二 11:24:07.26] Starting auto-sync... 
+From github.com:never-hezhengze/code-sync
+ * branch            main       -> FETCH_HEAD
+Already up to date.
