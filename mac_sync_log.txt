@@ -144,3 +144,39 @@ hint: 'git pull' before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 [2025/09/29 ��һ  0:35:26.27] Sync failed 
 ======================================== 
+[main d03b71e] Auto sync from Mac: 2025年10月14日 星期二 12时08分38秒 CST
+ 6 files changed, 37 insertions(+)
+ create mode 100644 "Documents/\350\256\241\347\256\227\346\234\272\350\247\206\350\247\211\350\257\276\344\273\266/LN-1b \345\257\274\350\256\272.pptx"
+ create mode 100644 "Documents/\350\257\276\346\234\254/Computer Vision Algorithms and Applications (Texts in Computer Science) (Richard Szeliski) (Z-Library).pdf"
+ create mode 100644 "Project_for_cv/project3_1011/\347\273\223\346\236\234/text2.docx"
+ create mode 100644 "Project_for_cv/project3_1011/\347\273\223\346\236\234/text3.docx"
+ create mode 100644 "Project_for_cv/project3_1011/\347\273\223\346\236\234/text4.docx"
+To https://github.com/never-hezhengze/code-sync.git
+   328a041..d03b71e  main -> main
+[2025年10月14日 星期二 12时08分44秒 CST] Sync successful
+========================================
+[2025年10月14日 星期二 12时40分04秒 CST] Starting auto-sync...
+[2025/09/29 ��һ  0:24:29.31] Starting auto-sync... 
+[main 67fae55] Auto sync: 2025/09/29 周一  0:24:29.37
+ 2 files changed, 25 insertions(+)
+ create mode 100644 auto_sync.bat
+ create mode 100644 sync_log.txt
+[2025/09/29 ��һ  0:24:29.47] Changes committed 
+To github.com:never-hezhengze/code-sync.git
+   cfc0604..67fae55  main -> main
+[2025/09/29 ��һ  0:24:33.33] Sync completed successfully 
+======================================== 
+[2025/09/29 ��һ  0:35:22.58] Starting auto-sync... 
+[main d85e55e] Auto sync: 2025/09/29 周一  0:35:22.63
+ 1 file changed, 10 insertions(+)
+[2025/09/29 ��һ  0:35:22.71] Changes committed 
+To github.com:never-hezhengze/code-sync.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:never-hezhengze/code-sync.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2025/09/29 ��һ  0:35:26.27] Sync failed 
+======================================== 
