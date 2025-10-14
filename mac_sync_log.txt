@@ -79,3 +79,37 @@ hint: 'git pull' before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 [2025/09/29 ��һ  0:35:26.27] Sync failed 
 ======================================== 
+[main 565876e] Auto sync from Mac: 2025年10月14日 星期二 11时53分45秒 CST
+To https://github.com/never-hezhengze/code-sync.git
+ ! [rejected]        main -> main (non-fast-forward)
+错误：无法推送一些引用到 'https://github.com/never-hezhengze/code-sync.git'
+提示： 更新被拒绝，因为您当前分支的最新提交落后于其对应的远程分支。
+提示： 如果您希望先与远程变更合并，请在推送前执行 'git pull'。
+提示： 详见 'git push --help' 中的 'Note about fast-forwards' 小节。
+[2025年10月14日 星期二 11时53分47秒 CST] Push failed
+========================================
+[2025年10月14日 星期二 11时56分39秒 CST] Starting auto-sync...
+[2025/09/29 ��һ  0:24:29.31] Starting auto-sync... 
+[main 67fae55] Auto sync: 2025/09/29 周一  0:24:29.37
+ 2 files changed, 25 insertions(+)
+ create mode 100644 auto_sync.bat
+ create mode 100644 sync_log.txt
+[2025/09/29 ��һ  0:24:29.47] Changes committed 
+To github.com:never-hezhengze/code-sync.git
+   cfc0604..67fae55  main -> main
+[2025/09/29 ��һ  0:24:33.33] Sync completed successfully 
+======================================== 
+[2025/09/29 ��һ  0:35:22.58] Starting auto-sync... 
+[main d85e55e] Auto sync: 2025/09/29 周一  0:35:22.63
+ 1 file changed, 10 insertions(+)
+[2025/09/29 ��һ  0:35:22.71] Changes committed 
+To github.com:never-hezhengze/code-sync.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:never-hezhengze/code-sync.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2025/09/29 ��һ  0:35:26.27] Sync failed 
+======================================== 
