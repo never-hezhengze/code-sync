@@ -1677,3 +1677,76 @@ fatal: Could not read from remote repository.
 
 Please make sure you have the correct access rights
 and the repository exists.
+[main 2e20eb1] Auto sync from Windows: 2025/11/17 鍛ㄤ竴 10:07:46.26
+ 25 files changed, 653 insertions(+), 497 deletions(-)
+ create mode 100644 "Documents/\350\256\241\347\256\227\346\234\272\350\247\206\350\247\211\350\257\276\344\273\266/LN 9 \346\210\220\345\203\217\345\222\214\345\217\214\347\233\256\350\247\206\350\247\211.pptx"
+ create mode 100644 "Documents/\350\256\241\347\256\227\346\234\272\350\247\206\350\247\211\350\257\276\344\273\266/LN-8 \345\233\276\345\203\217\345\210\206\345\211\262.pptx"
+ delete mode 100644 Project_for_cv/project3_1011/verify_order.py
+ delete mode 100644 Project_for_cv/project4_1015/output_picture/laplacian_debug_lap_thin.jpg
+ delete mode 100644 Project_for_cv/project4_1015/output_picture/laplacian_debug_mask_final_thin.jpg
+ delete mode 100644 Project_for_cv/project4_1015/output_picture/laplacian_debug_mask_thin.jpg
+ delete mode 100644 Project_for_cv/project4_1015/output_picture/laplacian_edges_thin.jpg
+ rename Python/{ => Markdown}/results/40_0.01.png (100%)
+ rename "Python/results/40_0.01\350\257\257\345\267\256\345\210\206\346\236\220.png" => "Python/Markdown/results/40_0.01\350\257\257\345\267\256\345\210\206\346\236\220.png" (100%)
+ rename Python/{ => Markdown}/results/40_0.1.png (100%)
+ rename "Python/results/40_0.1\350\257\257\345\267\256\345\210\206\346\236\220.png" => "Python/Markdown/results/40_0.1\350\257\257\345\267\256\345\210\206\346\236\220.png" (100%)
+ rename Python/{ => Markdown}/results/80_0.01.png (100%)
+ rename "Python/results/80_0.01\350\257\257\345\267\256\345\210\206\346\236\220.png" => "Python/Markdown/results/80_0.01\350\257\257\345\267\256\345\210\206\346\236\220.png" (100%)
+ rename Python/{ => Markdown}/results/80_0.1.png (100%)
+ rename "Python/results/80_0.1\350\257\257\345\267\256\345\210\206\346\236\220.png" => "Python/Markdown/results/80_0.1\350\257\257\345\267\256\345\210\206\346\236\220.png" (100%)
+[2025/11/17 周一 10:07:48.06] Changes committed 
+ssh: Could not resolve hostname github.com: Name or service not known
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[2025/11/17 周一 10:07:48.76] Sync failed 
+======================================== 
+[2025/11/17 周一 22:50:34.89] Starting auto-sync... 
+From github.com:never-hezhengze/code-sync
+ * branch            main       -> FETCH_HEAD
+   504250b..c1e743f  main       -> origin/main
+Auto-merging Project_for_cv/project4_1015/text1.py
+Merge made by the 'ort' strategy.
+ C/text.cpp                                         |  99 ++++-
+ Project_for_cv/mini_project/Image/image1.1.jpg     | Bin 0 -> 184077 bytes
+ Project_for_cv/mini_project/Image/image1.2.jpg     | Bin 0 -> 199145 bytes
+ Project_for_cv/mini_project/Image/image2.1.jpg     | Bin 0 -> 214493 bytes
+ Project_for_cv/mini_project/Image/image2.2.jpg     | Bin 0 -> 204775 bytes
+ Project_for_cv/mini_project/miniproject.pdf        | Bin 0 -> 2902490 bytes
+ Project_for_cv/mini_project/miniproject.synctex.gz | Bin 0 -> 152018 bytes
+ Project_for_cv/mini_project/miniproject.tex        | 434 +++++++++++++++++++++
+ Project_for_cv/mini_project/result/Figure_1.1.png  | Bin 0 -> 1226653 bytes
+ Project_for_cv/mini_project/result/Figure_2.1.png  | Bin 0 -> 1050414 bytes
+ .../mini_project/result/matches_visualization1.jpg | Bin 0 -> 585995 bytes
+ .../mini_project/result/matches_visualization2.jpg | Bin 0 -> 558250 bytes
+ .../mini_project/result/panorama_result1.jpg       | Bin 0 -> 366085 bytes
+ .../mini_project/result/panorama_result2.jpg       | Bin 0 -> 350377 bytes
+ .../\344\273\243\347\240\201/miniproject.py"       | 193 +++++++++
+ .../mini_project/\346\212\245\345\221\212.pdf"     | Bin 0 -> 2902490 bytes
+ Project_for_cv/project2_924/text1.py               |   4 -
+ .../project4_1015/output_picture/debug_grad.jpg    | Bin 281862 -> 281702 bytes
+ .../project4_1015/output_picture/debug_mask.jpg    | Bin 672364 -> 687480 bytes
+ .../output_picture/debug_mask_final.jpg            | Bin 400625 -> 314496 bytes
+ .../project4_1015/output_picture/edges_overlay.jpg | Bin 569289 -> 529693 bytes
+ Project_for_cv/project4_1015/text1.py              |  11 +-
+ mac_sync_log.txt                                   | 122 ++++++
+ 23 files changed, 842 insertions(+), 21 deletions(-)
+ create mode 100644 Project_for_cv/mini_project/Image/image1.1.jpg
+ create mode 100644 Project_for_cv/mini_project/Image/image1.2.jpg
+ create mode 100644 Project_for_cv/mini_project/Image/image2.1.jpg
+ create mode 100644 Project_for_cv/mini_project/Image/image2.2.jpg
+ create mode 100644 Project_for_cv/mini_project/miniproject.pdf
+ create mode 100644 Project_for_cv/mini_project/miniproject.synctex.gz
+ create mode 100644 Project_for_cv/mini_project/miniproject.tex
+ create mode 100644 Project_for_cv/mini_project/result/Figure_1.1.png
+ create mode 100644 Project_for_cv/mini_project/result/Figure_2.1.png
+ create mode 100644 Project_for_cv/mini_project/result/matches_visualization1.jpg
+ create mode 100644 Project_for_cv/mini_project/result/matches_visualization2.jpg
+ create mode 100644 Project_for_cv/mini_project/result/panorama_result1.jpg
+ create mode 100644 Project_for_cv/mini_project/result/panorama_result2.jpg
+ create mode 100644 "Project_for_cv/mini_project/\344\273\243\347\240\201/miniproject.py"
+ create mode 100644 "Project_for_cv/mini_project/\346\212\245\345\221\212.pdf"
+Encountered 2 files that should have been pointers, but weren't:
+	Project_for_cv/mini_project/miniproject.pdf
+	Project_for_cv/mini_project/鎶ュ憡.pdf
