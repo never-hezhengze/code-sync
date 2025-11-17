@@ -1395,3 +1395,285 @@ Fast-forward
  3 files changed, 36 insertions(+), 6 deletions(-)
  delete mode 100644 "Documents/LaTeX\345\205\245\351\227\250 (\345\210\230\346\265\267\346\264\213) (Z-Library).pdf"
  delete mode 100644 Documents/Pro Git (Scott Chacon, Ben Straub) (Z-Library).pdf
+[main 504250b] Auto sync from Windows: 2025/10/27 鍛ㄤ竴  0:42:36.41
+ 269 files changed, 125874 insertions(+), 3 deletions(-)
+ create mode 100644 C/C++/text1.cpp
+ create mode 100644 C/C++/text1.exe
+ create mode 100644 "Documents/\350\256\241\347\256\227\346\234\272\350\247\206\350\247\211\350\257\276\344\273\266/LN-6 \350\276\271\347\274\230\346\243\200\346\265\213.pptx"
+ create mode 100644 "Documents/\350\256\241\347\256\227\346\234\272\350\247\206\350\247\211\350\257\276\344\273\266/LN-7 \347\211\271\345\276\201\347\202\271\346\243\200\346\265\213\345\222\214\345\233\276\345\203\217\351\205\215\345\207\206.pptx"
+ delete mode 100644 "Documents/\350\256\241\347\256\227\346\234\272\350\247\206\350\247\211\350\257\276\344\273\266/~$LN 4b  \346\212\225\345\275\261\345\217\230\346\215\242.pptx"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/README.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day 1.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day 2.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day 3.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day 4.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day 5.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day 6.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day 7.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day 8.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day 9.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day_10.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day_11.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day_12.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day_13.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day_14.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day_15.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day_16.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day_17.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day_18.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day_19.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day_20.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day_21.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day_22.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day_23.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/Status/Day_24.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_01.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_02.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_03.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_04.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_05.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_06.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_07.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_08.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_09.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_10.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_11.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_12.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_13.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_14.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_15.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_16.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_17.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_18.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_19.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_20.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_21.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_22.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_23.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python-100/notebooks/Day_24.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/Python_Basic.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/a.txt"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/images/09b1dbf9ccdb4b69b614a0875b4e5f4c_006tKfTcgy1fkr9s9113dj30g80i7weq.jpg"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/ly.txt"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/1.python-basic/ly2.txt"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/1.numpy-beginner.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/2.numpy.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/README.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/images/1.png"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/images/2.png"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/images/3.png"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/images/4.png"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy-100/100_Numpy_exercises.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy-100/100_Numpy_exercises_no_solution.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy-100/100_Numpy_exercises_with_hint.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy-100/README.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/10_Random_sampling.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/10_Random_sampling_Solutions.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/11_Set_routines.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/11_Set_routines_Solutions.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/12_Sorting_searching_and_counting.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/12_Sorting_searching_and_counting_Solutions.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/13_Statistics.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/13_Statistics_solutions.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/1_Array_creation_routines.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/1_Array_creation_routines_Solution.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/2_Array_manipulation_routines.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/2_Array_manipulation_routines_Solutions.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/3_String_operations.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/3_String_operations_solutions.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/4_Numpy-specific_help_functions.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/4_Numpy-specific_help_functions_Solutions.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/5_Input_and_Output.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/5_Input_and_Output_Solutions.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/6_Linear_algebra.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/6_Linear_algebra_Solutions.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/7_Discrete_Fourier_Transform.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/7_Discrete_Fourier_Transform_solutions.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/8_Logic_functions.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/8_Logic_functions_Solutions.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/9_Mathematical_functions.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/9_Mathematical_functions_solutions.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/2.numpy/numpy_exercises/README.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/3.pandas/1.10-Minutes-to-pandas/10 Minutes to pandas.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/3.pandas/1.10-Minutes-to-pandas/README.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/3.pandas/1.10-Minutes-to-pandas/data/foo.csv"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/3.pandas/1.10-Minutes-to-pandas/data/foo.h5"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/3.pandas/1.10-Minutes-to-pandas/data/foo.xlsx"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/3.pandas/2.Pandas_Exercises/README.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/3.pandas/3.pandas_beginner/README.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/3.pandas/3.pandas_beginner/pandas_beginner.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/3.pandas/3.pandas_beginner/student.csv"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/3.pandas/4.Pandas50/Pandas50.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/3.pandas/4.Pandas50/README.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/3.pandas/README.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/4.scipy/1.scipy-intro.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/4.scipy/10.scipy-spatial.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/4.scipy/2.scipy-optimize.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/4.scipy/3.scipy-linalg.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/4.scipy/4.scipy-stats.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/4.scipy/5.scipy-integrate.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/4.scipy/6.scipy-signal.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/4.scipy/7.scipy-interpolate.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/4.scipy/8.scipy-sparse.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/4.scipy/9.scipy-ndimage.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/4.scipy/README.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/4.scipy/maze.jpg"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/4.scipy/scipy_morphology_demo.png"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/4.scipy/scipy_morphology_demo2.png"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/4.scipy/suqares.jpg"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/4.scipy/tmp.png"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/4.scipy/vinci_target.png"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/5.data-visualization/1.matplotlib/examples/spx.csv"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/5.data-visualization/1.matplotlib/matplotlib-beginner.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/5.data-visualization/1.matplotlib/matplotlib50/Pokemon.csv"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/5.data-visualization/1.matplotlib/matplotlib50/matplotlib50.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/5.data-visualization/1.matplotlib/plot_distribution/README.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/5.data-visualization/1.matplotlib/plot_distribution/img/beta.png"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/5.data-visualization/1.matplotlib/plot_distribution/img/binom.png"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/5.data-visualization/1.matplotlib/plot_distribution/img/guass.png"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/5.data-visualization/1.matplotlib/plot_distribution/img/uniform.png"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/5.data-visualization/1.matplotlib/plot_distribution/plot_distribution.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/5.data-visualization/2.seaborn/README.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/5.data-visualization/2.seaborn/Searborn.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/5.data-visualization/README.md"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/5.data-visualization/matplotlib-beginner.ipynb"
+ create mode 100644 "Machine_learning/01-\345\274\225\350\250\200/README.md"
+ create mode 100644 Machine_learning/ML-lesson3-Scikit-learn.ipynb
+ create mode 100644 Machine_learning/ML-lesson4-regression.html
+ create mode 100644 Machine_learning/ML-lesson4-regression.ipynb
+ rename Machine_learning/{ => Project1}/wisc_bc_data.csv (100%)
+ rename "Machine_learning/\344\271\263\350\205\272\347\231\214\350\257\212\346\226\255.html" => "Machine_learning/Project1/\344\271\263\350\205\272\347\231\214\350\257\212\346\226\255.html" (100%)
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/3.3_logistic_regression_watermelon/data/watermelon_3a.csv"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/3.3_logistic_regression_watermelon/src/logistic_regression_watermelon.py"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/3.3_logistic_regression_watermelon/src/self_def.py"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/3.4_cross_validation/data/transfusion.data"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/3.4_cross_validation/data/transfusion.names"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/3.4_cross_validation/src/cross_validation.py"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/3.5_LDA/data/watermelon_3a.csv"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/3.5_LDA/src/LDA.py"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/3.5_LDA/src/self_def.py"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.1.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.2.1.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.2.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.3.1.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.3.2.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.3.3.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.3.4.1.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.3.4.2.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.3.4.3.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.3.4.4.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.3.4.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.3.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.4.1.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.4.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.5.0.1.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.5.0.2.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.5.1.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.5.2.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.5.3.1.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.5.3.2.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.5.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.6.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.7.1.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.7.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/3.9.png"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/Error-Correcting Output Codes.pdf"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/Ch3/IMG_20170316_201041.jpg"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/logistic_regression_watermelon_my.ipynb"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/\345\221\250\345\277\227\345\215\216\343\200\212\346\234\272\345\231\250\345\255\246\344\271\240\343\200\213\350\257\276\345\220\216\344\271\240\351\242\230\350\247\243\347\255\224\347\263\273\345\210\227\357\274\210\345\233\233\357\274\211\357\274\232Ch3 - \347\272\277\346\200\247\346\250\241\345\236\213.html"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/\345\221\250\345\277\227\345\215\216\343\200\212\346\234\272\345\231\250\345\255\246\344\271\240\343\200\213\350\257\276\345\220\216\344\271\240\351\242\230\350\247\243\347\255\224\347\263\273\345\210\227\357\274\210\345\233\233\357\274\211\357\274\232Ch3 - \347\272\277\346\200\247\346\250\241\345\236\213.md"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/\345\221\250\345\277\227\345\215\216\343\200\212\346\234\272\345\231\250\345\255\246\344\271\240\343\200\213\350\257\276\345\220\216\344\271\240\351\242\230\350\247\243\347\255\224\347\263\273\345\210\227\357\274\210\345\233\233\357\274\211\357\274\232Ch3.3 - \347\274\226\347\250\213\345\256\236\347\216\260\345\257\271\347\216\207\345\233\236\345\275\222.html"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/\345\221\250\345\277\227\345\215\216\343\200\212\346\234\272\345\231\250\345\255\246\344\271\240\343\200\213\350\257\276\345\220\216\344\271\240\351\242\230\350\247\243\347\255\224\347\263\273\345\210\227\357\274\210\345\233\233\357\274\211\357\274\232Ch3.3 - \347\274\226\347\250\213\345\256\236\347\216\260\345\257\271\347\216\207\345\233\236\345\275\222.md"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/\345\221\250\345\277\227\345\215\216\343\200\212\346\234\272\345\231\250\345\255\246\344\271\240\343\200\213\350\257\276\345\220\216\344\271\240\351\242\230\350\247\243\347\255\224\347\263\273\345\210\227\357\274\210\345\233\233\357\274\211\357\274\232Ch3.4 - \344\272\244\345\217\211\351\252\214\350\257\201\346\263\225\347\273\203\344\271\240.html"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/\345\221\250\345\277\227\345\215\216\343\200\212\346\234\272\345\231\250\345\255\246\344\271\240\343\200\213\350\257\276\345\220\216\344\271\240\351\242\230\350\247\243\347\255\224\347\263\273\345\210\227\357\274\210\345\233\233\357\274\211\357\274\232Ch3.4 - \344\272\244\345\217\211\351\252\214\350\257\201\346\263\225\347\273\203\344\271\240.md"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/\345\221\250\345\277\227\345\215\216\343\200\212\346\234\272\345\231\250\345\255\246\344\271\240\343\200\213\350\257\276\345\220\216\344\271\240\351\242\230\350\247\243\347\255\224\347\263\273\345\210\227\357\274\210\345\233\233\357\274\211\357\274\232Ch3.5 - \347\274\226\347\250\213\345\256\236\347\216\260\347\272\277\346\200\247\345\210\244\345\210\253\345\210\206\346\236\220.html"
+ create mode 100644 "Machine_learning/Project3_\347\272\277\346\200\247\346\250\241\345\236\213/\345\221\250\345\277\227\345\215\216\343\200\212\346\234\272\345\231\250\345\255\246\344\271\240\343\200\213\350\257\276\345\220\216\344\271\240\351\242\230\350\247\243\347\255\224\347\263\273\345\210\227\357\274\210\345\233\233\357\274\211\357\274\232Ch3.5 - \347\274\226\347\250\213\345\256\236\347\216\260\347\272\277\346\200\247\345\210\244\345\210\253\345\210\206\346\236\220.md"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/4.3_ID3/data/watermelon_3.csv"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/4.3_ID3/src/ID3_watermelon.py"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/4.3_ID3/src/decision_tree.py"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/4.4_CART/data/watermelon_2.csv"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/4.4_CART/src/CART_watermelon.py"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/4.4_CART/src/decision_tree.py"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/4.4_CART/src/decision_tree_full.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/4.4_CART/src/decision_tree_post.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/4.4_CART/src/decision_tree_pre.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/Ch4/4.1.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/Ch4/4.2.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/Ch4/4.3.1.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/Ch4/4.3.2.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/Ch4/4.3.3.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/Ch4/4.3.4.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/Ch4/4.3.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/Ch4/4.3_decision_tree_ID3.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/Ch4/4.4.1.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/Ch4/4.4.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/Ch4/4.4_decision_tree_CART.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/Ch4/4.4_decision_tree_full.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/Ch4/4.4_decision_tree_post.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/Ch4/4.4_decision_tree_pre.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/Ch4/4.5.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/Ch4/4.6.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/Ch4/4.7.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/Ch4/4.8.png"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/ML-lesson4-DecisonTree.ipynb"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/\345\221\250\345\277\227\345\215\216\343\200\212\346\234\272\345\231\250\345\255\246\344\271\240\343\200\213\350\257\276\345\220\216\344\271\240\351\242\230\350\247\243\347\255\224\347\263\273\345\210\227\357\274\210\344\272\224\357\274\211\357\274\232Ch4 - \345\206\263\347\255\226\346\240\221.html"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/\345\221\250\345\277\227\345\215\216\343\200\212\346\234\272\345\231\250\345\255\246\344\271\240\343\200\213\350\257\276\345\220\216\344\271\240\351\242\230\350\247\243\347\255\224\347\263\273\345\210\227\357\274\210\344\272\224\357\274\211\357\274\232Ch4 - \345\206\263\347\255\226\346\240\221.md"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/\345\221\250\345\277\227\345\215\216\343\200\212\346\234\272\345\231\250\345\255\246\344\271\240\343\200\213\350\257\276\345\220\216\344\271\240\351\242\230\350\247\243\347\255\224\347\263\273\345\210\227\357\274\210\344\272\224\357\274\211\357\274\232Ch4.3 - \347\274\226\347\250\213\345\256\236\347\216\260ID3\347\256\227\346\263\225.html"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/\345\221\250\345\277\227\345\215\216\343\200\212\346\234\272\345\231\250\345\255\246\344\271\240\343\200\213\350\257\276\345\220\216\344\271\240\351\242\230\350\247\243\347\255\224\347\263\273\345\210\227\357\274\210\344\272\224\357\274\211\357\274\232Ch4.3 - \347\274\226\347\250\213\345\256\236\347\216\260ID3\347\256\227\346\263\225.md"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/\345\221\250\345\277\227\345\215\216\343\200\212\346\234\272\345\231\250\345\255\246\344\271\240\343\200\213\350\257\276\345\220\216\344\271\240\351\242\230\350\247\243\347\255\224\347\263\273\345\210\227\357\274\210\344\272\224\357\274\211\357\274\232Ch4.4 - \347\274\226\347\250\213\345\256\236\347\216\260CART\347\256\227\346\263\225\344\270\216\345\211\252\346\236\235\346\223\215\344\275\234.html"
+ create mode 100644 "Machine_learning/Project4_\345\206\263\347\255\226\346\240\221/\345\221\250\345\277\227\345\215\216\343\200\212\346\234\272\345\231\250\345\255\246\344\271\240\343\200\213\350\257\276\345\220\216\344\271\240\351\242\230\350\247\243\347\255\224\347\263\273\345\210\227\357\274\210\344\272\224\357\274\211\357\274\232Ch4.4 - \347\274\226\347\250\213\345\256\236\347\216\260CART\347\256\227\346\263\225\344\270\216\345\211\252\346\236\235\346\223\215\344\275\234.md"
+ create mode 100644 Machine_learning/yiliaofeiyongyuce.html
+ create mode 100644 Project_for_cv/project4_1015/output_picture/debug_grad.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/debug_mask.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/debug_mask_final.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/edges_overlay.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/laplacian_debug_lap.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/laplacian_debug_lap_thin.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/laplacian_debug_mask.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/laplacian_debug_mask_final.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/laplacian_debug_mask_final_thin.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/laplacian_debug_mask_thin.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/laplacian_edges_overlay.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/laplacian_edges_thin.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/prewitt_debug_grad.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/prewitt_debug_mask.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/prewitt_debug_mask_final.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/prewitt_edges_overlay.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/text4_combined.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/text4_gray.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/text4_roberts_edge.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/text4_roberts_magnitude.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/text5_combined.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/text5_gray.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/text5_prewitt_edge.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/text5_prewitt_magnitude.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/text6_combined.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/text6_gray.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/text6_laplacian_edge.jpg
+ create mode 100644 Project_for_cv/project4_1015/output_picture/text6_laplacian_viz.jpg
+ create mode 100644 Project_for_cv/project4_1015/result.docx
+ create mode 100644 Project_for_cv/project4_1015/text1.py
+ create mode 100644 Project_for_cv/project4_1015/text2.py
+ create mode 100644 Project_for_cv/project4_1015/text3.py
+ create mode 100644 Project_for_cv/project4_1015/text4.py
+ create mode 100644 Project_for_cv/project4_1015/text5.py
+ create mode 100644 Project_for_cv/project4_1015/text6.py
+ create mode 100644 Project_for_cv/project5_1022/output_picture/Figure_1.png
+ create mode 100644 Project_for_cv/project5_1022/output_picture/Figure_2.png
+ create mode 100644 Project_for_cv/project5_1022/output_picture/Figure_3.png
+ create mode 100644 Project_for_cv/project5_1022/result.docx
+ create mode 100644 Project_for_cv/project5_1022/text1.py
+ create mode 100644 Project_for_cv/project5_1022/text2.py
+ create mode 100644 Project_for_cv/project5_1022/text3.py
+[2025/10/27 周一  0:42:37.36] Changes committed 
+Uploading LFS objects: 100% (3/3), 21 MB | 1.7 MB/s, done.
+To github.com:never-hezhengze/code-sync.git
+   bbdeac1..504250b  main -> main
+[2025/10/27 周一  0:43:34.45] Sync completed successfully 
+======================================== 
+[2025/11/17 周一 10:07:40.33] Starting auto-sync... 
+ssh: Could not resolve hostname github.com: Name or service not known
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.

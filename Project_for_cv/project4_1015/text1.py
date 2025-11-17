@@ -61,7 +61,7 @@ def main():
 	upper = int(min(255, (1.0 + sigma) * median_val))
 	mask_canny = cv2.Canny(denoised, lower, upper)
 
-	# 合并 Roberts 和 Canny 结果
+	# 合并结果
 	mask_combined = cv2.bitwise_or(mask_rob, mask_canny)
 
 	# 5) 去噪和细化：先做开运算移除小噪点
@@ -84,7 +84,7 @@ def main():
 				break
 		return skel
 
-	# 优先使用 opencv_contrib 的 ximgproc.thinning (如果可用)，否则使用本地 skeletonize 函数
+	# 优先使用 opencv_contrib 
 	try:
 		from cv2 import ximgproc as xip
 		mask_skel = xip.thinning(mask_clean)
@@ -95,22 +95,21 @@ def main():
 	mask_final = cv2.dilate(mask_skel, cv2.getStructuringElement(cv2.MORPH_RECT, (1, 1)), iterations=1)
 
 	# 将边缘以红色叠合回原图，但做 alpha 混合以保留原始细节
-	alpha = 0.75  # 红色强度（0-1，越大红色越明显）
+	alpha = 0.75  # 红色强度
 	red_img = np.zeros_like(image)
 	red_img[:, :] = (0, 0, 255)
 	blended = cv2.addWeighted(image, 1.0 - alpha, red_img, alpha, 0)
 	overlay = image.copy()
 	overlay[mask_final == 255] = blended[mask_final == 255]
 
-
-	# 保存结果到同目录下的 output_picture，并保存中间调试图像以便进一步调参
+	# 保存结果到output_picture
 	script_dir = os.path.dirname(__file__)
 	out_dir = os.path.join(script_dir, 'output_picture')
 	os.makedirs(out_dir, exist_ok=True)
 	out_path = os.path.join(out_dir, 'edges_overlay.jpg')
 	cv2.imwrite(out_path, overlay)
 
-	# 保存调试图像：梯度图、合并掩码与最终掩码
+	# 保存梯度图、合并掩码与最终掩码
 	debug_grad_path = os.path.join(out_dir, 'debug_grad.jpg')
 	debug_mask_path = os.path.join(out_dir, 'debug_mask.jpg')
 	debug_mask_final = os.path.join(out_dir, 'debug_mask_final.jpg')

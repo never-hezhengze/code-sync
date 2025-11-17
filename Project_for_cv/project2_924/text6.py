@@ -35,7 +35,9 @@ def arnold_inverse_transform(img, num_iterations):
     return transformed
 
 # 读取原始图像
-image = cv2.imread('Photo/537.png')
+image = cv2.imread('Photo/53.png')
+print("i am here")
+print(image)
 if image is None:
     raise ValueError("无法读取图像")
 

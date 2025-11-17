@@ -78,7 +78,7 @@ def rotate_forward_and_mark_holes(img, angle_deg=30.0, save_path='output_picture
 	total_pixels = rows * cols
 	holes_count = int(np.count_nonzero(~mapped))
 
-	# 将空洞位置设为白点（RGB 白）以便可视化
+	# 将空洞位置设为白点以便可视化
 	dest_marked = dest.copy()
 	# 对于单通道或三通道都适用的赋值方式
 	if dest_marked.ndim == 2:

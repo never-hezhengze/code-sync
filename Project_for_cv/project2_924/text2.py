@@ -67,7 +67,7 @@ inverse_transformed_cropped = inverse_rotated[y_start:y_end, x_start:x_end]
 # 计算原图与逆变换图像的差值
 diff = cv2.absdiff(image, inverse_transformed_cropped)
 
-# 转换BGR到RGB（因为OpenCV使用BGR，而Matplotlib使用RGB）
+# 转换BGR到RGB（OpenCV使用BGR，而Matplotlib使用RGB）
 image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 transformed_rgb = cv2.cvtColor(transformed, cv2.COLOR_BGR2RGB)
 inverse_transformed_rgb = cv2.cvtColor(inverse_transformed_cropped, cv2.COLOR_BGR2RGB)
