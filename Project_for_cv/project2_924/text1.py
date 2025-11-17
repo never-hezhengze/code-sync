@@ -43,10 +43,6 @@ restored = restored_full[center_y:center_y+rows, center_x:center_x+cols]
 # 计算A与A'的差值图像
 difference = cv2.absdiff(image, restored)
 
-# 保存结果
-cv2.imwrite('output/A_prime.png', restored)
-cv2.imwrite('output/diff_rgb.png', difference)
-
 # 显示结果
 plt.figure(figsize=(15, 5))
 
