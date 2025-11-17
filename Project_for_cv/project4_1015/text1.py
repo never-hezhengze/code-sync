@@ -4,17 +4,12 @@ import os
 
 
 def main():
-	# 尝试读取原始图像（优先使用相对路径 Photo/picture1.jpg）
+	# 尝试读取原始图像
 	img_path = 'Photo/picture1.jpg'
 	image = cv2.imread(img_path)
-	# 如果直接读取失败，尝试基于脚本目录的备选路径
 	if image is None:
-		script_dir = os.path.dirname(__file__)
-		alt_path = os.path.normpath(os.path.join(script_dir, '..', 'Photo', 'picture1.jpg'))
-		image = cv2.imread(alt_path)
-		if image is None:
-			print(f"无法读取图像，尝试的路径: {img_path} 和 {alt_path}")
-			return
+		print(f"无法读取图像，尝试的路径: {img_path} ")
+		return
 
 	# 获取图像尺寸
 	rows, cols = image.shape[:2]
