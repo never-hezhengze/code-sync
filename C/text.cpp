@@ -1,93 +1,61 @@
 #include <iostream>
-#include <string>
-#include <unordered_map>
-#include <queue>
+#include <vector>
 using namespace std;
 
-// 二叉树节点结构
-struct TreeNode {
-    char val;
-    TreeNode* left;
-    TreeNode* right;
-    TreeNode(char x) : val(x), left(nullptr), right(nullptr) {}
-};
+vector<vector<int>> graph;
+vector<int> path;
+vector<bool> visited;
+int n, m, u, v, w;
+bool found = false;
 
-// 构建二叉树
-TreeNode* buildTree(unordered_map<char, pair<char, char>>& nodes, char rootVal) {
-    if (rootVal == '#') return nullptr;
-    
-    TreeNode* root = new TreeNode(rootVal);
-    
-    // 构建左子树
-    char leftVal = nodes[rootVal].first;
-    root->left = buildTree(nodes, leftVal);
-    
-    // 构建右子树
-    char rightVal = nodes[rootVal].second;
-    root->right = buildTree(nodes, rightVal);
-    
-    return root;
-}
-
-// 使用BFS查找值为x的结点所在的最小层次
-int findMinLevel(TreeNode* root, char x) {
-    if (root == nullptr) return -1;
-    
-    queue<pair<TreeNode*, int>> q;  // 存储节点和对应的层次
-    q.push({root, 1});
-    
-    while (!q.empty()) {
-        TreeNode* node = q.front().first;
-        int level = q.front().second;
-        q.pop();
-        
-        // 如果找到目标节点，返回当前层次
-        if (node->val == x) {
-            return level;
+void dfs(int cur) {
+    if (cur == w) return; // 不能经过 w
+    if (cur == v) {
+        // 输出路径
+        for (size_t i = 0; i < path.size(); i++) {
+            cout << path[i];
+            if (i != path.size() - 1) cout << " ";
         }
-        
-        // 将左右子节点加入队列
-        if (node->left != nullptr) {
-            q.push({node->left, level + 1});
-        }
-        if (node->right != nullptr) {
-            q.push({node->right, level + 1});
-        }
+        cout << endl;
+        found = true;
+        return;
     }
     
-    return -1;  // 没有找到
+    for (int next : graph[cur]) {
+        if (!visited[next] && next != w) {
+            visited[next] = true;
+            path.push_back(next);
+            dfs(next);
+            path.pop_back();
+            visited[next] = false;
+        }
+    }
 }
 
 int main() {
-    int n;
-    cin >> n;
+    cin >> n >> m >> u >> v >> w;
+    graph.resize(n);
+    visited.resize(n, false);
     
-    unordered_map<char, pair<char, char>> nodes;
-    char rootVal = ' ';
-    
-    // 读取节点信息
-    for (int i = 0; i < n; i++) {
-        char parent, left, right;
-        cin >> parent >> left >> right;
-        
-        nodes[parent] = make_pair(left, right);
-        
-        // 第一个节点作为根节点
-        if (i == 0) {
-            rootVal = parent;
-        }
+    for (int i = 0; i < m; i++) {
+        int a, b;
+        cin >> a >> b;
+        graph[a].push_back(b);
     }
     
-    // 读取要查找的目标值
-    char x;
-    cin >> x;
+    // 如果起点或终点就是 w，直接无解
+    if (u == w || v == w) {
+        cout << -1 << endl;
+        return 0;
+    }
     
-    // 构建二叉树
-    TreeNode* root = buildTree(nodes, rootVal);
+    visited[u] = true;
+    path.push_back(u);
+    dfs(u);
     
-    // 查找并输出最小层次
-    int minLevel = findMinLevel(root, x);
-    cout << minLevel << endl;
+    if (!found) {
+        cout << -1 << endl;
+    }
     
     return 0;
 }

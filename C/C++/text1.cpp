@@ -1,73 +1,81 @@
 #include <iostream>
+#include <fstream>
+#include <sstream>
+#include <vector>
+#include <string>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
-// Ñ­»·¶ÓÁÐÀà
-class CircularQueue {
-private:
-    int* data;
-    int front, rear;
-    int capacity;
-public:
-    CircularQueue(int size) {
-        capacity = size + 1;
-        data = new int[capacity];
-        front = rear = 0;
-    }
-    ~CircularQueue() {
-        delete[] data;
-    }
-    bool enqueue(int x) {
-        if ((rear + 1) % capacity == front) return false;
-        data[rear] = x;
-        rear = (rear + 1) % capacity;
-        return true;
-    }
-    bool dequeue(int& x) {
-        if (front == rear) return false;
-        x = data[front];
-        front = (front + 1) % capacity;
-        return true;
-    }
-    bool isEmpty() {
-        return front == rear;
-    }
-};
-
-int main() {
-    int n;
-    cin >> n;
-
-    CircularQueue q(n + 2); // ¶ÓÁÐÈÝÁ¿×ã¹»
-
-    // µÚÒ»ÐÐ
-    cout << "1" << endl;
-    q.enqueue(1);
-    q.enqueue(0); // ÐÐ½áÊø±êÖ¾
-
-    // Éú³ÉµÚ2µ½nÐÐ
-    for (int i = 2; i <= n; i++) {
-        int a, b;
-        // ÐÐÊ×¹Ì¶¨1
-        cout << "1 ";
-        q.enqueue(1);
-
-        q.dequeue(a);
-        while (true) {
-            q.dequeue(b);
-            if (b == 0) {
-                // ÉÏÒ»ÐÐ½áÊø
-                cout << "1" << endl;
-                q.enqueue(1);
-                q.enqueue(0);
-                break;
-            } else {
-                int sum = a + b;
-                cout << sum << " ";
-                q.enqueue(sum);
-                a = b;
-            }
+// åˆ†åŒºå‡½æ•°
+int partition(vector<int>& arr, int low, int high) {
+    int random = low + rand() % (high - low + 1);
+    swap(arr[random], arr[high]);
+    
+    int pivot = arr[high];
+    int i = low - 1;
+    
+    for (int j = low; j < high; j++) {
+        if (arr[j] < pivot) {
+            i++;
+            swap(arr[i], arr[j]);
         }
     }
+    swap(arr[i + 1], arr[high]);
+    return i + 1;
+}
 
+// å¿«é€ŸæŽ’åº
+void quickSort(vector<int>& arr, int low, int high) {
+    if (low < high) {
+        int pi = partition(arr, low, high);
+        quickSort(arr, low, pi - 1);
+        quickSort(arr, pi + 1, high);
+    }
+}
+
+int main() {
+    srand(time(0));
+    
+    // ä»Žæ–‡ä»¶è¯»å–è¾“å…¥
+    ifstream infile("in.txt");
+    if (!infile) {
+        cerr << "æ— æ³•æ‰“å¼€è¾“å…¥æ–‡ä»¶ in.txt" << endl;
+        return 1;
+    }
+    
+    string line;
+    getline(infile, line);
+    infile.close();
+    
+    stringstream ss(line);
+    vector<int> arr;
+    int num;
+    
+    while (ss >> num) {
+        arr.push_back(num);
+    }
+    
+    int n = arr.size();
+    
+    if (n > 0) {
+        quickSort(arr, 0, n - 1);
+    }
+    
+    // è¾“å‡ºåˆ°æ–‡ä»¶
+    ofstream outfile("out.txt");
+    if (!outfile) {
+        cerr << "æ— æ³•æ‰“å¼€è¾“å‡ºæ–‡ä»¶ out.txt" << endl;
+        return 1;
+    }
+    
+    for (int i = 0; i < n; i++) {
+        outfile << arr[i];
+        if (i < n - 1) {
+            outfile << " ";
+        }
+    }
+    outfile.close();
+    
     return 0;
 }
