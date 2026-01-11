@@ -48,7 +48,7 @@ def main():
     # 二值化（Otsu）
     _, mask_prew = cv2.threshold(grad_n, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
 
-    # 可选：用 Canny 加强连续性
+    # 用 Canny 加强连续性
     median_val = np.median(denoised)
     sigma = 0.33
     lower = int(max(0, (1.0 - sigma) * median_val))

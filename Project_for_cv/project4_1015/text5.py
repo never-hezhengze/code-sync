@@ -58,7 +58,7 @@ def main():
 
 	combined = np.hstack([gray_bgr, spacer, mag_bgr, spacer, edge_bgr])
 
-	# 添加简短标签
+	# 添加标签
 	font = cv2.FONT_HERSHEY_SIMPLEX
 	font_scale = max(0.5, w / 800)
 	thickness = 1
