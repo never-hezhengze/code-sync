@@ -34,4 +34,4 @@ Thumbs.db
 # Large files or personal files you don't want to sync
 *.zip
 *.rar
-*.7z
+*.7zmac_sync_log.txt
