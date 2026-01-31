@@ -545,3 +545,35 @@ hint: 'git pull' before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 [2025/09/29 ��һ  0:35:26.27] Sync failed 
 ======================================== 
+[main a2b29b6] Auto sync from Mac: 2026年 1月30日 星期五 09时51分53秒 CST
+ 2 files changed, 108 insertions(+)
+ create mode 100644 "26\347\276\216\350\265\233/\346\234\210\347\220\203\346\256\226\346\260\221\345\234\260\345\273\272\350\256\276\345\273\272\346\250\241\350\256\272\346\226\207.docx"
+To github.com:never-hezhengze/code-sync.git
+   0f7bb26..a2b29b6  main -> main
+[2026年 1月30日 星期五 09时52分00秒 CST] Sync successful
+========================================
+[2026年 1月31日 星期六 22时25分52秒 CST] Starting auto-sync...
+[2025/09/29 ��һ  0:24:29.31] Starting auto-sync... 
+[main 67fae55] Auto sync: 2025/09/29 周一  0:24:29.37
+ 2 files changed, 25 insertions(+)
+ create mode 100644 auto_sync.bat
+ create mode 100644 sync_log.txt
+[2025/09/29 ��һ  0:24:29.47] Changes committed 
+To github.com:never-hezhengze/code-sync.git
+   cfc0604..67fae55  main -> main
+[2025/09/29 ��һ  0:24:33.33] Sync completed successfully 
+======================================== 
+[2025/09/29 ��һ  0:35:22.58] Starting auto-sync... 
+[main d85e55e] Auto sync: 2025/09/29 周一  0:35:22.63
+ 1 file changed, 10 insertions(+)
+[2025/09/29 ��һ  0:35:22.71] Changes committed 
+To github.com:never-hezhengze/code-sync.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:never-hezhengze/code-sync.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2025/09/29 ��һ  0:35:26.27] Sync failed 
+======================================== 
