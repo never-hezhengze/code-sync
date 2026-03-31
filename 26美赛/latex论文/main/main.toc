@@ -1,5 +1,6 @@
 \contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Background}{3}{subsection.1.1}%
+<<<<<<< HEAD
 \contentsline {subsection}{\numberline {1.2}Literature Review}{3}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}The Description of the Problem}{3}{subsection.1.3}%
 \contentsline {subsection}{\numberline {1.4}Our work}{3}{subsection.1.4}%
@@ -25,3 +26,53 @@
 \contentsline {subsubsection}{\numberline {6.2.1}Model extension}{6}{subsubsection.6.2.1}%
 \contentsline {subsubsection}{\numberline {6.2.2}Model application}{6}{subsubsection.6.2.2}%
 \contentsline {section}{\numberline {7}Conclusions}{6}{section.7}%
+=======
+\contentsline {subsection}{\numberline {1.2}Restatement of the Problem}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}The Description of the Problem}{4}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Our Work}{5}{subsection.1.4}%
+\contentsline {section}{\numberline {2}Assumptions}{5}{section.2}%
+\contentsline {section}{\numberline {3}Notations}{6}{section.3}%
+\contentsline {section}{\numberline {4}Modeling and Solving of Problem 1}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Calculation of each scheme}{7}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Scheme a: Only Space Elevator System}{7}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Scheme b: Only Rocket Launches}{7}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Scheme c: Combined Space Elevator and Rocket Launches}{7}{subsubsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.2}Improvement of scheme c}{8}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Rocket Iteration: Transportation cost iteration}{8}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}A new strategy based on the iterative models}{10}{subsubsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.3}Conclusions of Problem 1}{11}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Modeling and Solving of Problem 2}{11}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Introduction of Non-ideal Factors}{11}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Non-ideal Factors in Space Elevator System}{11}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Non-ideal Factors in Rocket Transportation Systems}{11}{subsubsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.2}Transportation Plan Adjustment}{12}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Scheme a}{12}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Scheme b}{12}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Scheme c}{12}{subsubsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.3}Scheme Comparison and Sensitivity Analysis}{14}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Comparison}{14}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Engineering Measures Based on Model Results}{15}{subsubsection.5.3.2}%
+\contentsline {section}{\numberline {6}Modeling and Solving of Problem 3}{15}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Preparation of models}{15}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Water Demand Model}{15}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Physiological and Domestic Water Demand}{15}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Agricultural Water Demand}{16}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}Industrial Water Demand}{17}{subsubsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.4}Technical Leaks and Environmental Damage}{17}{subsubsection.6.2.4}%
+\contentsline {subsubsection}{\numberline {6.2.5}Comprehensive Calculation}{18}{subsubsection.6.2.5}%
+\contentsline {subsection}{\numberline {6.3}Water Resource Replenishment Model}{18}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Sensitivity Analysis and Resource Utilization}{19}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Conclusions of Problem 3}{19}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Modeling and Solving of Problem 4}{19}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Preparation of models}{19}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Construction of LCA Model}{19}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Calculation of Total Environmental Impact}{20}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Physical Derivation of Atmospheric Carrying Capacity Threshold}{20}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}Steady-state Equilibrium Calculation Formula}{21}{subsubsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.4}Modification of the Transportation Model}{21}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Conclusion}{22}{subsection.7.5}%
+\contentsline {section}{\numberline {8}Model Evaluation}{22}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Advantages}{22}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Limitations}{22}{subsection.8.2}%
+\contentsline {section}{\numberline {9}Letter of Advice}{23}{section.9}%
+>>>>>>> 604b2d943fd4b8cd6daeab3470bbe5e77daca95e

@@ -1,6 +1,38 @@
 \section{Assumptions} %假设
 
+\begin{enumerate}
+\item
+\textbf{Assumption:}  
+The lunar base construction and material transportation process are planned with "year" as the basic time unit. 
+Within a single year, transportation capacity, transportation costs and resource allocation strategies remain unchanged, and transportation decisions between different years are independent of each other.
 
-\textbf{Assumption 1:} The light attenuation and scattering in the underwater environment adhere to the Jaffe-McGlamery imaging model, where the propagation of light follows an exponential decay law.
+\textbf{Justification:}  
+This assumption is consistent with the industry practice of conducting overall planning on an annual cycle for large-scale aerospace projects.
+By reasonably discretizing the time dimension, the model can focus on the core contradiction between transportation efficiency and cost while ensuring computational feasibility.
+Furthermore, parameter variations between years can be characterized using a technology iteration model, thereby simplifying modeling complexity while maintaining scientific rigor and engineering feasibility.
+\item
+\textbf{Assumption:}  
+The total amount of materials required for lunar base construction is determined at the beginning of modeling and does not change over time throughout the construction cycle. 
+Additional material requirements due to design adjustments or unexpected needs are not considered in the model.
 
+\textbf{Justification:}  
+This assumption is consistent with the engineering practice of completing overall demand论证 and material planning for large-scale aerospace projects at the beginning of a mission.
+By fixing the total material requirements, the model can effectively avoid uncertainty interference introduced by non-transportation factors, thereby focusing on analyzing the performance differences of different transportation schemes in terms of time and cost dimensions.
 
+\item
+\textbf{Assumption:}  
+In normal operating conditions, the space elevator system has a clearly defined and stable annual maximum transportation capacity,
+and its annual transportation volume does not exceed the system design upper limit, without considering short-term overloading operations.
+
+\textbf{Justification:}  
+This assumption is based on the fundamental principle of "safety first" in aerospace engineering and is consistent with the engineering characteristics of large-scale precision engineering systems operating under rated conditions.
+The model directly adopts the technical parameters given in the problem statement as system capability constraints,thereby ensuring the reliability of model inputs and the engineering interpretability of results.
+
+\item
+\textbf{Assumption:}  
+The annual availability rate of the space elevator system and the launch success rate of rockets are independent of each other across different years, and are not directly affected by historical operating conditions.
+
+\textbf{Justification:}  
+This assumption is based on the engineering characteristics that aerospace systems usually "reset" their operating status after annual maintenance and overhaul, effectively avoiding the modeling complexity caused by time dependence. 
+At the same time, this processing method is consistent with the parameter settings given in the question, which helps to establish a unified and fair comparison benchmark between different transportation solutions.
+\end{enumerate}

@@ -3,28 +3,74 @@
 \begin{ReportAiUse}{9}
 \bibitem{AI1}
 Bing AI\\
-Query1: write a sort algorithm\\
-Output: Sure, I can help you with that. Here is a simple implementation of the selection sort algorithm in Python:
-\begin{lstlisting}[language=python]
-def selection_sort(arr):
-    for i in range(len(arr)):
-        min_idx = i
-        for j in range(i + 1, len(arr)):
-            if arr[min_idx] > arr[j]:
-                min_idx = j
-        arr[i], arr[min_idx] = arr[min_idx], arr[i]
-    return arr
-\end{lstlisting}
-This algorithm sorts an array by repeatedly finding the minimum element from the unsorted part of the array and putting it at the beginning. \href{https://www.geeksforgeeks.org/sorting-algorithms/}{The time complexity of this algorithm is O($n^2$)}.
-
-There are many other sorting algorithms available such as bubble sort, insertion sort, merge sort, quick sort, heap sort, and more. Each of these algorithms has its own advantages and disadvantages. You can learn more about them on GeeksforGeeks and Programiz.
-
-I hope this helps!
+Query1: Please help explain in detail what the Pareto Model is\\
+Output: The Pareto Model, rooted in the Pareto Principle (commonly known as the 80/20 Rule), is a theoretical and 
+analytical framework used to describe the skewed distribution of resources, effects, or outcomes in various natural, 
+social, and economic systems. Named after Vilfredo Pareto, an Italian economist and sociologist who first documented 
+this phenomenon in the late 19th century, the model has become a foundational tool for understanding imbalance and 
+optimizing decision-making.
+ ### Core Concept The central tenet of the Pareto Model is the **disproportionate relationship** 
+between inputs and outputs: a small fraction of factors (typically around 20\%, called the "vital few") 
+is responsible for a large majority of results (typically around 80\%, called the "trivial many"). 
+Importantly, the 80/20 ratio is not a rigid mathematical constant but a heuristic—actual proportions may vary 
+(e.g., 70/30, 90/10) depending on the context, but the underlying "skewness" remains consistent. For instance: 
+- In wealth distribution, 20\% of a population might hold 80\% of a country’s total wealth; 
+- In business operations, 20\% of a company’s products could generate 80\% of its revenue; 
+- In quality management, 20\% of defect types may cause 80\% of production issues. 
+### Mathematical Foundation: The Pareto Distribution The Pareto Model is mathematically formalized through 
+the **Pareto Distribution**, a continuous probability distribution designed to characterize variables with a "heavy tail" 
+i.e., a small number of extreme values and a large number of small values). 
+Its key components include: 
+1. **Probability Density Function (PDF)**: \[ f(x) = \begin{cases} \frac{\alpha x_0^\alpha}{x^{\alpha + 1}} & \text{for } x \geq x_0, \\ 0 & \text{for } x < x_0, \end{cases} \] - \( x \): 
+The random variable (e.g., income, product sales, task impact);
+ - \( x_0 \): The minimum value of \( x \) (scale parameter, representing the threshold below which no observations exist);
+ - \( \alpha > 0 \): The shape parameter (Pareto index), which determines the degree of skewness—smaller \( \alpha \) means a more uneven distribution. 
+2. **Cumulative Distribution Function (CDF)**: \[ F(x) = 1 - \left( \frac{x_0}{x} \right)^\alpha \quad \text{for } x \geq x_0, \] This function calculates the probability that \( x \) is 
+less than or equal to a given value, illustrating how quickly the "vital few" dominate the distribution.
+ ### Key Characteristics 
+ 1. **Unevenness**: Rejects the assumption of linear proportionality, emphasizing that outcomes are rarely distributed equally across factors. 
+ 2. **Scalability**: Applies across scales (from individual tasks to global systems) and domains (economics, business, engineering, etc.). 
+ 3. **Prioritization Focus**: Highlights the value of identifying and focusing on the "vital few" factors to maximize efficiency—allocating resources to these factors yields disproportionate returns.
+ ### Practical Applications The Pareto Model’s simplicity and versatility make it widely used in diverse fields:
+ - **Economics & Finance**: Analyzing income inequality, market concentration, and wealth distribution (e.g., measuring the Gini coefficient alongside Pareto metrics).
+ - **Business Management**: Optimizing product portfolios (prioritizing high-revenue items), improving customer retention (focusing on high-value clients), and reducing operational waste (targeting key inefficiencies).
+ - **Quality Control**: In lean manufacturing and Six Sigma, the "Pareto Chart" (a hybrid of bar chart and line graph) identifies the most frequent causes of defects, guiding process improvements. 
+ - **Productivity & Project Management**: Prioritizing tasks to focus on high-impact activities, reducing time spent on low-value work, and allocating team resources effectively.
+  ### Limitations
+ - **Descriptive, Not Prescriptive**: The model describes *what is* (a skewed distribution) but not *why* it occurs or how to change it—it must be paired with causal analysis for actionable insights.
+ - **Not Universal**: Not all phenomena follow a Pareto distribution; some systems (e.g., normal distributions in natural sciences) exhibit more balanced outcomes. 
+ - **Risk of Oversimplification**: Overreliance on the 80/20 ratio may lead to neglecting the "trivial many," which could become critical over time (e.g., niche products that grow into major revenue streams). In essence, the Pareto Model is a powerful tool for recognizing imbalance, enabling individuals and organizations to prioritize effectively, optimize resource allocation, and achieve more with less by focusing on the factors that drive the most significant results.
 
 \bibitem{AI2}
 OpenAl Enie (Nov 5, 2023 version, Ernie 4.0)\\
-Query1: <insert the exact wording of any subsequent input into the Al tool>\\
-Output: <insert the complete output from the second query>
+Query1: What authoritative literatures are available on the technical principles, feasibility of space elevators, and their application in space colonization?\\
+Output: The following literatures cover core aspects of space elevators (e.g., technical design, economic paradigm, deployment methods) and their integration with space colonization (e.g., Mars, Moon colonization), with sources including the International Space Elevator Consortium (ISEC), NASA, arXiv, and authoritative publishing platforms, ensuring academic rigor and practical reference value:
+1. Literatures Focused on Space Elevator Fundamentals & Technical Feasibility
+
+Title: Space Elevator: A Revolutionary Earth-to-Space Transportation SystemAuthors: Bradley Edwards, Eric WestlingPublisher/Year: BC Edwards Publishing, 2002Core Content: This book is a foundational work on space elevator technology. It systematically elaborates on the design framework of space elevators (including tether materials, counterweight configuration, and climber systems), and quantifies the efficiency advantages of space elevators over traditional rockets (e.g., energy consumption is only 1\% of that of rockets). It also proposes a phased construction plan suitable for early technical conditions.Value: Provides a comprehensive theoretical basis for understanding the basic structure and technical logic of space elevators, and is widely cited in subsequent space elevator research.
+
+
+Title: "Changing the Economic Paradigm for Building a Space Elevator"Authors: Kevin Barry, Eduardo Pineda AlfaroConference/Year: 72nd International Astronautical Congress (IAC-21), Dubai, UAE, October 2021Core Content: The paper breaks through the traditional "high-cost construction" cognition of space elevators, analyzes the economic feasibility of space elevators from the perspective of industrial chain collaboration (e.g., shared use of ground bases, batch production of tether materials), and predicts that the cost of space elevator transportation can be reduced to \$100-200 per kilogram in the mature stage.Value: Supplements the economic dimension of space elevator research, which is crucial for evaluating the cost-effectiveness of space colonization transportation.
+
+
+Title: "Non-Equatorial Uniform-Stress Space Elevators"Author: Blaise GassendPlatform/Year: arXiv (2509.16231), October 2025Core Content: This paper expands the design scope of space elevators beyond the traditional equatorial anchor. It demonstrates the feasibility of non-equatorial space elevators through mechanical analysis (equilibrium of gravity, centrifugal force, and tether tension), and points out their advantages: avoiding crowded geosynchronous orbits (GEO) and high-radiation Van Allen belts, which is more suitable for human-carrying transportation in space colonization.Value: Provides a new design direction for space elevator anchor site selection, especially for space colonies that need to avoid specific orbital resources.
+
+2. Literatures on Space Elevators & Space Colonization Application
+
+Title: Space Colonization Using Space-Elevators from Phobos (PDF)Institution/Year: NASA (NTRS Citation: 20030065879), 2003Core Content: This is a classic NASA study on Mars colonization. It proposes a "Mars-Phobos space elevator system": using Phobos (a moon of Mars) as a raw material source and tether anchor, deploying two space elevators—one connecting Phobos to the upper atmosphere of Mars (for receiving surface payloads) and the other extending outward from Phobos (for transporting materials to the Earth-Moon system or asteroid belt). It also analyzes the role of this system in supporting Mars colony infrastructure construction and space industry development.Value: Provides a typical case of integrating space elevators with planetary colonization, which can be referenced for designing Moon colony transportation systems (e.g., using lunar satellites as elevator anchors).
+
+
+Title: "Exponential Tethers for Accelerated Space Elevator Deployment"Author: Blaise GassendPlatform/Year: arXiv (2412.17198), December 2024Core Content: The paper proposes an "exponential tether" design for space elevators—by making the tether cross-section vary exponentially with altitude, the tether can be reeled in and out at both ends without changing its stress profile. This design significantly shortens the deployment cycle of space elevators (reducing the time from initial launch to full operation by 40\% compared to traditional methods) and is suitable for rapid transportation support in the early stage of space colony construction.Value: Solves the problem of "slow deployment of space elevators" in space colonization, and provides a technical path for timely material supply to colonies.
+
+3. Literatures on Space Elevator History & Industry Practice
+
+Title: Space Elevators: A HistoryAuthor: David RaittReport/Year: ISEC Report, 2017Core Content: Compiled by the International Space Elevator Consortium (ISEC), this report sorts out the development history of space elevators from the 19th century (Tsiolkovsky’s "sky ladder" concept) to the 21st century (carbon nanotube material breakthroughs). It also summarizes global research projects (e.g., Japan’s Obayashi Corporation’s space elevator plan, NASA’s advanced technology research) and industry cooperation models.Value: Helps understand the evolution of space elevator technology and the current status of industrial research, and provides a reference for the "maturity of space elevator technology" in space colonization planning.
+
+
+Title: Road to the Space Elevator EraAuthors: Peter Swan, David Raitt, John Knapman, et al.Publisher/Year: Virginia Edition Publishing Company (Science Deck), 2019 (ISBN: 978-0-9913370-3-3)Core Content: This book integrates technical research and practical planning, covering topics such as space elevator material upgrades (from carbon nanotubes to graphene composites), space debris avoidance strategies, and the integration of space elevators with space habitats (e.g., connecting to rotating artificial gravity habitats). It also predicts that space elevators will become the core infrastructure for lunar and Martian colonization by the 2050s.Value: Bridges the gap between space elevator technology and space colonization practice, and is highly relevant to the 2050 Moon colony construction scenario in the 2026 MCM Problem B.
+
+4. Supplementary Literature on Space Elevator Materials & Feasibility
+Title: "太空升降舱_百科" (Space Elevator Encyclopedia)Platform/Year: 抖音百科 (Douyin Encyclopedia), February 2025Core Content: This Chinese-language reference systematically introduces the composition of space elevators (counterweight, tether, ground base, climber), material requirements (carbon nanotube’s strength-to-weight ratio advantage), and global research progress (e.g., Japan’s estimated \$93 billion construction cost, NASA’s tether durability tests). It also analyzes technical challenges (batch production of carbon nanotubes, space debris impact prevention).Value: Provides a concise and easy-to-understand overview of space elevator basics, suitable for quickly grasping key technical indicators and feasibility constraints.
 
 \bibitem{AI3}
 Github CoPilot (Feb 3, 2024 version)\\

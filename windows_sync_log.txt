@@ -2122,3 +2122,124 @@ error: The following untracked working tree files would be overwritten by merge:
 Please move or remove them before you merge.
 Updating 8db8cf0..604b2d9
 Aborting
+[main 2b16db4] Auto sync from Windows: 2026/03/31 周二 18:01:27.87
+ 89 files changed, 3207 insertions(+), 8 deletions(-)
+ create mode 100644 "26\347\276\216\350\265\233/latex\350\256\272\346\226\207/main/main.aux"
+ create mode 100644 "26\347\276\216\350\265\233/latex\350\256\272\346\226\207/main/main.fdb_latexmk"
+ create mode 100644 "26\347\276\216\350\265\233/latex\350\256\272\346\226\207/main/main.fls"
+ create mode 100644 "26\347\276\216\350\265\233/latex\350\256\272\346\226\207/main/main.out"
+ create mode 100644 "26\347\276\216\350\265\233/latex\350\256\272\346\226\207/main/main.toc"
+ create mode 100644 Documents/data/2015city.csv
+ create mode 100644 Documents/data/clothes.csv
+ create mode 100644 Documents/data/daily.csv
+ create mode 100644 Documents/data/education.csv
+ create mode 100644 Documents/data/food.csv
+ create mode 100644 Documents/data/housing.csv
+ create mode 100644 Documents/data/medical.csv
+ create mode 100644 Documents/data/other.csv
+ create mode 100644 Documents/data/transport.csv
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/2015city.csv"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/2015outcome.csv"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch11_Basics/Ch11_Basics.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch11_Basics/Ex_package/Rpackage_survival.pdf"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch11_Basics/Ex_read/EDUC_SCORES.txt"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch11_Basics/Ex_read/main.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch11_Basics/Ex_read/weight.csv"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch11_Basics/Ex_sink/data_outline.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch11_Basics/Ex_sink/main.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch11_Basics/Ex_sink/weight.csv"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch11_Basics/Ex_sink/weight_outline.txt"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch11_Basics/Ex_source/data_outline.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch11_Basics/Ex_source/main.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch11_Basics/Ex_source/weight.csv"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch11_Basics/Ex_write/EDUC_SCORES.txt"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch11_Basics/Ex_write/data1.txt"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch11_Basics/Ex_write/data2.csv"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch11_Basics/Ex_write/main.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch11_Basics/Ex_write/weight.csv"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch11_Basics/fig1.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_barplot/barplot.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_barplot/treat1.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_barplot/treat2.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_barplot/treat3.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_boxplot/boxplot.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_boxplot/mbox1.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_boxplot/mbox2.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_dotchart/dotchart.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_dotchart/mdot1.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_dotchart/mdot2.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_hist/hist.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_hist/hist.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_pie/favor.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_pie/favoriate.csv"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_pie/pie.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_plot/dose.csv"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_plot/dose1.pdf"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_plot/dose2.eps"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_plot/dose3.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_plot/layout.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_plot/par.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_plot/plot.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_plot/splitscreen.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_qqplot/qq1.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_qqplot/qq2.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_qqplot/qqplot.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_qqplot/weight.csv"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_star/2015city.csv"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_star/star.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_star/star1.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_star/star2.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch12_Plots/Ex_star/star3.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch13_Stats/Ex_cluster/2015city.csv"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch13_Stats/Ex_cluster/R2.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch13_Stats/Ex_cluster/city1.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch13_Stats/Ex_cluster/city2.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch13_Stats/Ex_cluster/city3.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch13_Stats/Ex_cluster/hclust.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch13_Stats/Ex_cluster/hclust2.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch13_Stats/Ex_lm/lm.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch13_Stats/Ex_lm/women1.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch13_Stats/Ex_lm/women2.jpeg"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch1 R\350\257\255\350\250\200\345\237\272\347\241\200/Ch1ex.pdf"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch2 \351\232\217\346\234\272\345\217\230\351\207\217\344\272\247\347\224\237\346\226\271\346\263\225/Ch21_RNG.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch2 \351\232\217\346\234\272\345\217\230\351\207\217\344\272\247\347\224\237\346\226\271\346\263\225/Ch22_IT.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch2 \351\232\217\346\234\272\345\217\230\351\207\217\344\272\247\347\224\237\346\226\271\346\263\225/Ch23_AR.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch2 \351\232\217\346\234\272\345\217\230\351\207\217\344\272\247\347\224\237\346\226\271\346\263\225/Ch24_Trans.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch2 \351\232\217\346\234\272\345\217\230\351\207\217\344\272\247\347\224\237\346\226\271\346\263\225/Ch25_MNorm.r"
+ create mode 100644 "Documents/\347\273\237\350\256\241\350\256\241\347\256\227/Ch2 \351\232\217\346\234\272\345\217\230\351\207\217\344\272\247\347\224\237\346\226\271\346\263\225/Ch2ex.pdf"
+ create mode 100644 R/text.R
+[2026/03/31 �ܶ� 18:01:28.57] Changes committed 
+To github.com:never-hezhengze/code-sync.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:never-hezhengze/code-sync.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2026/03/31 �ܶ� 18:01:41.33] Sync failed 
+======================================== 
+[2026/03/31 �ܶ� 18:03:41.96] Starting auto-sync... 
+From github.com:never-hezhengze/code-sync
+ * branch            main       -> FETCH_HEAD
+Auto-merging 26美赛/latex论文/main/main.aux
+CONFLICT (add/add): Merge conflict in 26美赛/latex论文/main/main.aux
+Auto-merging 26美赛/latex论文/main/main.out
+CONFLICT (add/add): Merge conflict in 26美赛/latex论文/main/main.out
+warning: Cannot merge binary files: 26美赛/latex论文/main/main.pdf (HEAD vs. 604b2d943fd4b8cd6daeab3470bbe5e77daca95e)
+Auto-merging 26美赛/latex论文/main/main.pdf
+CONFLICT (content): Merge conflict in 26美赛/latex论文/main/main.pdf
+warning: Cannot merge binary files: 26美赛/latex论文/main/main.synctex.gz (HEAD vs. 604b2d943fd4b8cd6daeab3470bbe5e77daca95e)
+Auto-merging 26美赛/latex论文/main/main.synctex.gz
+CONFLICT (content): Merge conflict in 26美赛/latex论文/main/main.synctex.gz
+Auto-merging 26美赛/latex论文/main/main.toc
+CONFLICT (add/add): Merge conflict in 26美赛/latex论文/main/main.toc
+Auto-merging 26美赛/latex论文/sections/1_Introduction.tex
+CONFLICT (content): Merge conflict in 26美赛/latex论文/sections/1_Introduction.tex
+Auto-merging 26美赛/latex论文/sections/2_Assumptions.tex
+Automatic merge failed; fix conflicts and then commit the result.
+Encountered 5 files that should have been pointers, but weren't:
+	2026_MCM-ICM_Problems/MCM-ICM_Summary.pdf
+	26美赛/测试/common.pdf
+	数据可视化/project1/参考文件/养老保险基金运行的经济学与社会实证研究_李曜.pdf
+	数据可视化/project1/参考文件/基于LED的CCD校准用光源的设计_王学仁.pdf
+	数据可视化/project2/贺正泽2023302021155.pdf
