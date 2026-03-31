@@ -1,0 +1,282 @@
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+\endhead
+& & \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{introduction}{%
+\section{Introduction}\label{introduction}}
+
+\hypertarget{problem-background}{%
+\subsection{Problem Background}\label{problem-background}}
+
+随着地球资源日益紧张与人口持续增长，人类文明正面临前所未有的可持续发展挑战。月球作为距离地球最近的天体，拥有丰富的氦-3、钛、铁等矿产资源，以及作为深空探索跳板的战略价值，是国际航天机构竞相布局的关键目标。
+
+然而，传统的采用火箭运输方式的太空运输系统存在显著瓶颈。目前根据SpaceX数据，将1公斤有效载荷送入近地轨道的成本约为2,720美元，而抵达月球表面的成本则更为高昂。这种高成本、低频率的运输模式严重制约了大规模太空基础设施建设。同时此方案因燃料产生的有害气体排放也严重的影响地球生态环境。
+
+相比之下，太空电梯系统作为革命性太空运输基础设施，展现出突破性潜力。该系统利用地球自转离心力与重力的平衡，在赤道上空35,786公里处的地球同步轨道设置顶点锚点，通过100,000公里长的超强材料系绳连接地面港口，形成"太空高速公路"。与传统火箭相比，太空电梯以电力为动力源，理论上可实现近乎零碳排放的大规模物资运输，将单位运输成本降低至传统方式的千分之一以下。
+
+本题目聚焦设想的2050年10万人殖民月球计划，分析月球基地建设初期工程材料运输的时间周期与经济成本、居民入住后基地用水需求量可以采用的不同运输方案，进而再综合考虑不同运输方案的环境影响给出不同的运输方案。
+
+\hypertarget{restatement-of-the-problem}{%
+\subsection{Restatement of the
+Problem}\label{restatement-of-the-problem}}
+
+Considering the background information and restricted conditions
+identified in the problem statement, we need to solve the following
+problems:
+
+\textbf{Problem
+1}：预计建设10万人月球殖民地需要1亿吨材料，若在理想情况（无火箭发射失败、无系绳晃动）下，采用三种不同方案：\\
+A:仅使用太空电梯的三个银河港
+
+B:仅使用十个地球火箭发射系统的传统方案
+
+C:两种运输系统相结合的方案
+
+本文将建立数学模型计算这三种不同方案所需运输成本以及耗费时间。
+
+\textbf{Problem
+2}：将问题1的模型拓展，考虑非理想因素对运输方案的影响，即考虑太空电梯系统的缆绳晃动、电梯损坏和火箭运输系统的发射失败因素。由于这些非理想因素，两种运输系统的年运载量以及单位运输成本均会受到影响。在问题1的模型中综合这些影响，得到调整后的运输方案。
+
+\textbf{Problem
+3}：在月球殖民地建成及运营后，十万人口的用水需求总量为多少、分布情况如何，建立数学模型分析这一问题，并结合问题1、2的运输系统模型，得到如何在确保殖民地用水供应的前提下的最优额外成本以及时间安排的送水方案。
+
+\textbf{Problem 4:}
+运输材料过程中，发射火箭不可避免对地球环境产生影响但地球环境所能承载的污染有限，将这一影响纳入模型考虑范围重新制定实现10万人月球殖民基地的材料与水资源运输方案
+
+\hypertarget{problem2}{%
+\section{Problem2}\label{problem2}}
+
+在前一问题中本文只讨论了电梯运输系统与传统火箭运输系统在理想情况下，单独和共同承担运输任务的情况下得到的运输方案。考虑现实中更为实际的运输情况，存在如缆绳晃动、电梯损坏、火箭失效和发射失败等非理想状况导致运输系统运力下降和成本上升的情况，为使模型更贴合实际，本节将讨论非理想状况下运送建设10万人月球殖民基地所需的1亿吨材料的运输方案及其可靠性。
+
+\hypertarget{ux975eux7406ux60f3ux56e0ux7d20ux7684ux5f15ux5165}{%
+\subsection{非理想因素的引入}\label{ux975eux7406ux60f3ux56e0ux7d20ux7684ux5f15ux5165}}
+
+非理想因素的核心是
+``系统故障导致运力损失、时间延长、成本增加''，需结合航天工程实践与设备可靠性规律，将抽象故障转化为可量化的参数，确保模型的可操作性与科学性。
+
+\hypertarget{ux592aux7a7aux7535ux68afux7cfbux7edfux975eux7406ux60f3ux56e0ux7d20}{%
+\subsubsection{太空电梯系统非理想因素}\label{ux592aux7a7aux7535ux68afux7cfbux7edfux975eux7406ux60f3ux56e0ux7d20}}
+
+太空电梯系统的非理想因素主要源于超长线缆（10
+万公里石墨烯缆绳）的动力学特性与机械系统损耗，具体量化如下：
+
+\textbf{缆绳晃动：}受地球轨道扰动、高层大气阻力影响，缆绳会产生低频晃动（振幅约
+5-10
+公里），为避免缆绳断裂，需降低运输载荷设定为15\%，从而定义运力损失系数
+\(k_{\text{SE}} = 0.85\)；{[}1{]}
+
+\textbf{电梯故障：}机械传动系统磨损、电力供应中断等故障导致系统停运维修，参考大型工程设备可靠性数据，定义年可用率\(r_{\text{SE}} = 0.\)9；
+
+\textbf{维修成本：}故障维修涉及缆绳检测、机械部件更换等，年维修成本占完美工况年运输成本的5\%
+
+\hypertarget{ux706bux7badux8fd0ux8f93ux7cfbux7edfux975eux7406ux60f3ux56e0ux7d20}{%
+\subsubsection{火箭运输系统非理想因素}\label{ux706bux7badux8fd0ux8f93ux7cfbux7edfux975eux7406ux60f3ux56e0ux7d20}}
+
+传统火箭运输的非理想因素主要源于发射过程的复杂性与环境依赖性，具体量化如下：
+
+\textbf{发射失败：}重型火箭（如先进 Falcon
+Heavy）的结构复杂度高，参考航天发射历史数据，定义发射成功率
+\(p_{R} = 0.\)95{[}3{]}；
+
+\textbf{发射场效率下降：}发射场受设备维护、天气条件（如台风、雷暴）影响，定义发射场可用率\(r_{R} = 0.\)85导致发射场年总发射次数上限下降{[}2{]}。
+
+\textbf{额外成本：}火箭发射发生失败后，损失的材料需重新发射火箭以满足运载量需求。火箭总运载量上升以及火箭补充带来新的成本，忽略火箭损毁带来的火箭修建成本
+
+\hypertarget{ux8fd0ux8f93ux65b9ux6848ux8c03ux6574}{%
+\subsection{运输方案调整}\label{ux8fd0ux8f93ux65b9ux6848ux8c03ux6574}}
+
+\hypertarget{aux65b9ux6848}{%
+\subsubsection{a方案}\label{aux65b9ux6848}}
+
+\[年运输量：P_{\text{SE}，\text{imperfect}} = P_{\text{SE}} \times k_{\text{SE}} \times r_{\text{SE}}\]
+
+\[年运输成本：C_{SE,imperfect} = C_{\text{SE}} \times Q_{\text{SE}，\text{imperfect}} \times (1 + 0.05)\]
+
+因此得到仅使用太空电梯系统时间为\(T = \frac{M}{P_{\text{SE}，\text{imperfect}}}\)
+
+任务总成本：\(C_{\text{total}} = C_{SE,imperfect} \times T\)
+
+计算得到：仅使用太空电梯系统需要约243.4年，总成本10.5万亿美元。对比理想情况时间增加30.7\%，成本上升5\%
+
+\hypertarget{bux65b9ux6848}{%
+\subsubsection{b方案}\label{bux65b9ux6848}}
+
+\[年发射次数上限：N_{\text{imperfect}} = N \times r_{R}\]
+
+\[年总运输量：P_{R，\text{total}} = P_{R} \times N_{\text{imperfect}}\]
+
+\[年有效运输量：P_{R，\text{imperfect}} = P_{R，\text{total}} \times p_{R}\]
+
+\[年运输成本：C_{R,imperfect} = C_{R} \times P_{R，\text{total}}\]
+
+因此得到仅使用火箭运输系统时间为\(T = \frac{M}{P_{R，\text{imperfect}}}\)
+
+任务总成本：\(C_{\text{total}} = C_{R,imperfect} \times T\)
+
+计算结果表明：仅使用火箭运输系统，在满足发射场物理极限的合理范围内需要约
+82.6 年，总成本 52.63
+万亿美元。相较于理想情况，时间延长的核心原因是发射场可用率下降导致的运力缩减，而成本上升则主要源于发射失败带来的材料补运需求。
+
+\includegraphics[width=6.25972in,height=3.75625in]{media/image1.png}
+
+\hypertarget{cux65b9ux6848}{%
+\subsubsection{c方案}\label{cux65b9ux6848}}
+
+综合考虑太空电梯系统和火箭发射两种方法，延续综合考虑太空电梯系统和火箭发射两种方法，延续问题
+1
+中的多目标优化思路，引入非理想因素对两种系统的运力、成本修正，构建改进后的模型，实现时间与成本的最优权衡。
+
+\textbf{模型构建：}
+
+\textbf{决策变量：}火箭年发射次数\(x(t)\)（随时间动态调整，非理想状态下最大年发射次数上限为
+8500 次，由 10 个发射场 ×850 次 / 年 / 发射场得出）。
+
+\textbf{约束条件：}总运力约束：\(P_{\text{SE}，\text{imperfect}} \times T + P_{\text{launch}} \times p_{R} \times \sum_{t = 0}^{T}{x(t)} = M\)\hspace{0pt}其中，\(P_{\text{SE}，\text{imperfect}} = 410805\)吨/年（非理想状态下太空电梯年运力），\(p_{R} = 0.95\)（火箭发射成功率），确保总运输量满足1亿吨需求。
+
+\textbf{目标函数：}
+
+\(\left\{ \begin{matrix}
+T(x) = \frac{M - P_{\text{launch}} \times p_{R} \times \sum_{t = 0}^{T}{x(t)}}{P_{\text{SE}，\text{imperfect}}} \\
+C(x) = C_{\text{SE}，\text{imperfect}} \times P_{\text{SE}，\text{imperfect}} \times T + \sum_{t = 0}^{T}{P_{\text{launch}} \times x(t) \times C_{\text{launch}}(t)} \\
+\end{matrix} \right.\ \)\hspace{0pt}
+
+其中，\(C_{\text{launch}}(t)\)为考虑技术迭代的火箭单位运输成本（随时间衰减，参考莱特定律设定年衰减系数
+α=5\%），\(C_{\text{SE}，\text{imperfect}}\)=105~美元/吨（含维修成本加成的太空电梯单位成本）。
+
+\textbf{优化结果}
+
+通过参数扫描法对可行域进行高分辨率采样，结合非支配关系筛选得到 Pareto
+前沿，从中选取三类代表性解（激进解、均衡解、经济解），具体结果如下表所示：
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.25}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.25}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.25}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.25}}@{}}
+\toprule
+\endhead
+\textbf{Option} & \textbf{完成时间T}
+
+\textbf{(年)} & \textbf{总成本C}
+
+\textbf{(万亿美元)} & \textbf{火箭最大年发射次数}
+
+\textbf{(次/年)} \\
+Faster（激进解） & 71 & 15.62 & 8500 \\
+Balanced（均衡解） & 93 & 11.61 & 8500 \\
+Cheaper（经济解） & 115 & 10.75 & 8500 \\
+\bottomrule
+\end{longtable}
+
+\includegraphics[width=6.26667in,height=3.49653in]{media/image2.png}激进解（Faster）：以最大化火箭发射频率（8500
+次 / 年）压缩运输时间，71 年即可完成任务，但需承担 15.62
+万亿美元的较高成本，适合对工期有严格要求的战略场景；
+
+均衡解（Balanced）：在时间与成本间达到最优平衡，93 年完成任务，总成本
+11.61 万亿美元，兼顾工程可行性与经济性，为最佳推荐方案；
+
+经济解（Cheaper）：通过延长工期至 115 年，最小化总成本至 10.75
+万亿美元，接近纯太空电梯方案成本，适合对预算敏感、无明确工期限制的场景。
+
+基于火箭运输成本下降模型，后期多发射火箭具有明显的经济优势，由此所有方案依然是在后期满载和、高频次发射火箭，前中期少发射或不发射火箭。对比理想情况方案c的具体安排仍为：\textbf{银河港口长期保持满载和运输、火箭运输系统前期少发射或不发射；当火箭成本下降后开始保持满载和与高频次发射。}
+
+\hypertarget{ux65b9ux6848ux5bf9ux6bd4ux4e0eux7075ux654fux5ea6ux5206ux6790}{%
+\subsection{方案对比与灵敏度分析}\label{ux65b9ux6848ux5bf9ux6bd4ux4e0eux7075ux654fux5ea6ux5206ux6790}}
+
+\hypertarget{ux6bd4ux8f83}{%
+\subsubsection{比较}\label{ux6bd4ux8f83}}
+
+为研究三种方案在非理想条件下抵抗干扰能力和方案可行性，本文对三种方案模型进行了灵敏度分析并得到模型综合稳定性评分。采用\textbf{单参数局部扰动法}，针对
+A（纯太空电梯）、B（纯火箭）、C（混合均衡解）三方案，选取 6
+个非理想参数进行 ±20\%
+波动，逐个参数独立扰动后计算时间与成本的变化率，通过平均最大变化率转化为
+100
+分制稳定度评分，量化各方案对参数波动的抗干扰能力，为方案风险决策提供直观参考。
+
+综合三类运输方案的核心指标，构建对比分析表如下：
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.17}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.17}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.17}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.17}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.17}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.17}}@{}}
+\toprule
+\endhead
+\textbf{方案} & \textbf{完成时间}
+
+\textbf{（年）} & \textbf{总成本}
+
+\textbf{（万亿美元）} & \textbf{时间敏感度} & \textbf{成本敏感度} &
+\textbf{综合稳定性评分} \\
+纯太空电梯 & 243.4 & 10.50 & 7.7\% & 0.2\% & 96.1 \\
+纯火箭 & 82.6 & 52.63 & 6.8\% & 5.4\% & 93.9 \\
+混合运输（c - 均衡解） & 93 & 11.61 & 7.3\% & 3.2\% & 94.8 \\
+\bottomrule
+\end{longtable}
+
+非理想因素对单一方案的负面影响更为显著：纯太空电梯工期延长
+30.7\%，纯火箭方案由于发射失败与发射场效率下降导致其执行时间明显增加，同时成本进一步增加，过于高昂的运输成本以及较长的计划周期使得本方案难以实现；
+
+混合方案中，混合方案的均衡解任是最具实际应用价值的选项，其工期仅为纯太空电梯的
+38.2\%，成本仅为纯火箭的 22.1\%，兼具了两种方案优势。
+
+\hypertarget{ux57faux4e8eux6a21ux578bux7ed3ux679cux7684ux5de5ux7a0bux63aaux65bdux5efaux8bae}{%
+\subsubsection{基于模型结果的工程措施建议}\label{ux57faux4e8eux6a21ux578bux7ed3ux679cux7684ux5de5ux7a0bux63aaux65bdux5efaux8bae}}
+
+结合非理想因素影响与优化结果，提出以下工程实践建议：
+
+\textbf{太空电梯系统优化：}
+
+针对缆绳晃动问题，研发主动稳定控制系统（如小型推进器、张力调节装置），降低运力损失使系数\(k_{\text{SE}}\)至
+0.95 以上，可使纯太空电梯工期缩短至 210 年以内；
+
+建立预防性维护体系，基于设备运行数据预测故障，将年可用率\(r_{\text{SE}}\)提升至
+0.95，进一步降低工期与维修成本。
+
+\textbf{火箭运输系统优化：}
+
+改进火箭回收复用技术，提高发射成功率\(p_{R}\)，从而减少补运成本；同时优化发射场调度系统，提升发射场可用率\(r_{R}\)，降低火箭发射成本；
+
+控制火箭年发射频率在 8500
+次以内，避免过度透支发射场寿命，平衡短期运力与长期可持续性。
+
+\textbf{混合运输策略实施：}
+
+优先采用均衡解方案，前期（前 20 年）以火箭高频发射（8500 次 /
+年）快速运输核心设备，中期（21-70 年）维持中等发射频率，后期（71-93
+年）逐步降低火箭发射次数，充分利用太空电梯持续运力；
+
+建立动态调度机制，根据太空电梯维修周期、火箭发射成功率波动调整运输比例，应对非理想因素的突发影响。
+
+\hypertarget{lreferences}{%
+\section{lReferences}\label{lreferences}}
+
+【1】How long would it take to ride to the top of a space elevator?,
+访问时间为 一月 30, 2026，
+\underline{https://space.stackexchange.com/questions/5603/how-long-would-it-take-to-ride-to-the-top-of-a-space-elevator}
+
+\underline{【2】}Space Shuttle Weather Launch Commit Criteria and KSC
+End of Mission Weather Landing Criteria - NASA.gov, 访问时间为 一月 30,
+2026，
+\underline{https://www3.nasa.gov/centers/kennedy/pdf/167476main\_Weather-07R.pdf}
+
+\underline{【3】}Odds of rocket explosion during launch - NASA
+Spaceflight Forum, 访问时间为 一月 30, 2026，
+\underline{https://forum.nasaspaceflight.com/index.php?topic=27683.0}
+
+\hypertarget{appendices}{%
+\section{Appendices}\label{appendices}}
+
+\begin{longtable}[]{@{}l@{}}
+\toprule
+\endhead
+Appendix 1 \\
+Introduce: 这里我们给出模型的主要代码并对一些关键数据进行展示 \\
+ \\
+\bottomrule
+\end{longtable}

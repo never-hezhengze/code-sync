@@ -25,23 +25,62 @@
 %% 
 %% !Mode:: "TeX:UTF-8"
 %\documentclass{mcmthesis}
-\documentclass[CTeX = true]{mcmthesis}  % 当使用 CTeX 套装时请注释上一行使用该行的设置
+\PassOptionsToPackage{table}{xcolor}
+\documentclass[
+  CTeX = true,
+  tcn = 2623614
+]{mcmthesis}  % 当使用 CTeX 套装时请注释上一行使用该行的设置
 \mcmsetup{tstyle=\color{black}\bfseries,%修改题号，队号的颜色和加粗显示，黑色可以修改为 black
         tcn = 2623614, problem = B, %修改队号，参赛题号
         sheet = true, titleinsheet = true, keywordsinsheet = true,
         titlepage = false, abstract = true}
 
+\renewcommand{\team}{Team 2623614}
+
+\geometry{
+  left=1.8cm,
+  right=1.8cm,
+  top=2.0cm,
+  bottom=1.8cm
+}
+    
+% !TeX program = xelatex
+\usepackage{fontspec}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4em}
+
+\newfontfamily\letterfont{Apple Chancery}
+
   %四款字体可以选择
   %\usepackage{times}
-\usepackage{newtxtext}
+  %\usepackage{newtxtext}
   %\usepackage{palatino}
+\usepackage{lastpage}
+% ===== 中文支持（macOS + XeLaTeX）=====
+\usepackage{fontspec}
+\usepackage{xeCJK}
 
+% 西文字体
+\setmainfont{Times New Roman}
+
+% 中文字体（macOS 自带）
+\setCJKmainfont{Songti SC}      % 宋体
+\setCJKsansfont{Heiti SC}       % 黑体
+\setCJKmonofont{PingFang SC}   % 等宽
+
+\xeCJKsetup{
+  CJKmath = true
+}
+\usepackage{placeins}
 \usepackage{graphicx}
+%\usepackage[table]{xcolor}
+
 \usepackage{indentfirst}  %首行缩进，注释掉，首行就不再缩进。
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 
-
-
-\title{xxxxxxx}
+\title{Decision-making Model for Combined Transportation System of Lunar Colonies Based on Pareto Optimization}
 
 
 \author{}
@@ -49,12 +88,13 @@
 
 
 
-
+\linespread{1.0}
+\setlength{\parskip}{1.2pt}
 \begin{document}
-
-\fancyhead[L]{\small\bfseries\itshape\leftmark}
-\fancyhead[R]{\small\bfseries\itshape Page~\thepage~of~\pageref{LastPage}}
-
+\pagestyle{main}
+\fancyhead[L]{\small\bfseries Team \# 2623614}
+%\fancyhead[L]{\small\bfseries\itshape\leftmark}
+%\fancyhead[R]{\small\bfseries\itshape Page~\thepage~of~\pageref{LastPage}}
 
 
 \input{../sections/0_abstract}
@@ -63,15 +103,15 @@
 \tableofcontents
 \newpage
 \input{../sections/1_Introduction}
-\newpage
+
 \input{../sections/2_Assumptions}
 \input{../sections/3_Notations}
 \input{../sections/4_Models}
-\input{../sections/5_Sensitivity_Analysis}
-\input{../sections/6_Model_Evaluation_and_Promotion}
-\input{../sections/7_Conclusions}
+% \input{../sections/5_Sensitivity_Analysis}
+\input{../sections/6_Model_Evaluation}
+\input{../sections/7_Letter_of_Advice}
 \input{../sections/8_References}
-\input{../sections/9_Appendices}
-\input{../sections/10_AI}
+%\input{../sections/9_Appendices}
+%\input{../sections/10_AI}
 \end{document}
 

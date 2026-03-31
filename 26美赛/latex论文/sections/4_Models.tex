@@ -1,144 +1,711 @@
 \newpage % Start models on a new page
-\section{Models}
-\subsection{Modeling and Solving of Problem 1}
 
-\subsubsection{Calculation of each scheme}
-\paragraph{Scheme a: Only Space Elevator System}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------------------------------------问题一----------------------------------------%
+\section{Modeling and Solving of Problem 1}
+
+\subsection{Calculation of each scheme}
+\subsubsection{Scheme a: Only Space Elevator System}
 \vspace{0.3em}
-太空电梯系统由三个银河港组成，每个银河港每年可运输17.9万吨货物，$P_{SES} = 3 \times 179000 = 537000\ \mathrm{kg/year}$。
-根据国际太空电梯协会（ISEC）的预测，太空电梯的运营成本可降至$C_{SES} = \$100/\mathrm{kg}$，这包含了电力消耗、维修及折旧等费用。
-因此，仅使用太空电梯系统的时间为
+The space elevator system consists of three galactic ports, each of which can transport 179,000 tons of cargo per year.$P_{SES} = 3 \times 179000 = 537000\ \mathrm{kg/year}$。
+According to predictions from the International Space Elevator Association (ISEC), the operating cost of a space elevator can be reduced to $C_{SES} = \$100/\mathrm{kg}$, which includes power consumption, maintenance and depreciation.), the operating cost of a space elevator can be reduced to $C_{SES} = \$100/\mathrm{kg}$, which includes power consumption, maintenance and depreciation.
+Therefore, the time to use the space elevator system alone is
 \[T=\frac{M}{P_{SES}}\]
 Total cost of the mission为
 \[C_{total} = C_{SES} \times M \]
-计算得出：仅使用太空电梯系统需要约186.22年，总成本约10万亿美元。
+\indent It is calculated that using the space elevator system alone will take about 186.22 years and the total cost will be about $10 trillion$.
 
-\paragraph{Scheme b: Only Rocket Launches}
+\subsubsection{Scheme b: Only Rocket Launches}
 \vspace{0.3em}
-利用现有的十个发射场进行高频发射，每个火箭发射可携带$P_{launch} = 100000kg$的有效载荷，
-单发火箭的成本为$C_{launch} = \$500/\mathrm{kg}$。
-若设定目标工期为40年，则每年需要发射的火箭次数为
+Using the existing ten launch sites for high-frequency launches, each rocket launch can carry a payload of $P_{launch} = 150000kg$.launches, each rocket launch can carry a payload of $P_{launch} = 150000kg$.
+The cost of a single rocket is $C_{launch} = \$500/\mathrm{kg}$.
+If the target construction period is set to 40 years, the number of rocket launches required each year is
 \[x = \frac{M}{P_{launch} \times T} \]
-Total cost of the mission为
+Total cost of the mission is
 \[C_{total} = C_{launch} \times M \]
-计算得出：若仅使用火箭发射且在40年完成，总成本约50万亿美元，但每年需要发射25000次火箭，日均发射约68次，
-单个发射场在一天内需要发射约7次，远超当前全球发射能力，在工程上极其困难。
+\indent It is calculated that if only rocket launches are used and completed in 40 years, the total cost will be about 50 trillion US dollars, but 16,667 rocket launches will be needed every year, with an average of about 46 launches per day. 
+A single launch site needs to launch about five times a day, which far exceeds the current global launch capacity and is extremely difficult in engineering.
 
-\paragraph{Scheme c: Combined Space Elevator and Rocket Launches}
+\subsubsection{Scheme c: Combined Space Elevator and Rocket Launches}
 \vspace{0.3em}
-综合考虑太空电梯系统和火箭发射两种方法时，这是一个多目标优化问题，目标是最小化任务完成时间$T$和总成本$C_{total}$。
-通过调整火箭发射次数$x$来达到两种方法的不同组合，从中找到时间和成本之间的平衡点。
+When considering the two methods of space elevator system and rocket launch, this is a multi-objective optimization problem. The goal is to minimize the mission completion time $T$ and the total cost $C_{total}$. 
+Different combinations of the two methods are achieved by adjusting the number of rocket launches $x$ to find a balance between time and cost.
 %为刻画混合航天运输系统中任务时间与总成本之间的权衡关系，本文构建了一种混合运载能力权衡优化模型（HCTO-PM），并通过显式 Pareto 前沿进行决策分析。
 To analyze the trade-off between mission completion time and total cost in a hybrid space transportation system,
 a Hybrid Capacity Trade-off Optimization model with explicit Pareto Mapping (HCTO-PM) is developed.
-该模型采用单参数控制的并行运输系统结构，决策变量$x$表示火箭的年发射次数，目标函数包括任务完成时间$T$和总成本$C_{total}$。
-任务完成时间$T$由以下公式给出：
+The model adopts a parallel transportation system structure controlled by a single parameter. The decision variable $x$ represents the annual number of launches of the rocket. The objective function includes the mission completion time $T$ and the total cost $C_{total}$.
+The task completion time $T$ is given by the following formula:
 \[T = \frac{M}{P_{SES} + P_{launch} \times x} \]
-总成本$C_{total}$由以下公式给出：
+The total cost $C_{total}$ is given by the following formula:
 \[C_{\mathrm{total}}(x)=C_{SES}\cdot P_{SES}\cdot\frac{M}{P_{SES}+xP_{launch}}+C_{launch}\cdot P_{launch}\cdot x\]
-Multi-Objective Formulation:
-The model simultaneously considers the following two conflicting optimization objectives.
+The model simultaneously considers the following two conflicting optimization objectives:
 \[\begin{cases}
 \min T(x)=\frac{M}{P_{\mathrm{SES}}+xP_{\mathrm{launch}}} \\
 \min C(x)=C_{\mathrm{total}}(x) & 
 \end{cases}\]
-Without the assumption of explicit preference weights, this problem does not pursue a single optimal solution, 
+
+
+\indent Without the assumption of explicit preference weights, this problem does not pursue a single optimal solution, 
 but instead constructs a Pareto optimal solution set to characterize the efficiency boundary in the feasible decision space.
 Since the model contains only one continuous decision variable, this paper uses the parameter sweep method to
 perform high-resolution sampling of the feasible interval of $x$.
-计算对应的时间–成本目标值，并通过非支配关系筛选得到 Pareto 前沿。
-%\begin{figure}[htbp]
-%    \centering
-%    \includegraphics[width=0.65\textwidth]{figures/pareto_scan.png}
-%    \caption{时间–成本多目标优化问题的 Pareto 前沿}
-%    \label{fig:pareto_scan}
-%\end{figure}
-%图~\ref{fig:pareto_scan}展示了时间–成本多目标优化问题的 Pareto 前沿。
-从中选出部分关键解得到如下表格：
+
+Calculate the corresponding time-cost target value and obtain the Pareto front through non-dominance relationship screening.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.65\textwidth]{../figures/pareto_scan.png}
+  \caption{Pareto frontier for time-cost multi-objective optimization problems}
+  \label{fig:pareto_scan}
+\end{figure}
+\FloatBarrier
+\indent Select some key solutions to get the following table:
 \begin{table}[htbp]
 \centering
 \caption{Trade-off Results under Different Rocket Launch Frequencies}
 \label{tab:tradeoff_results}
+
+\resizebox{0.9\textwidth}{!}{ % ← 统一缩放比例
 \renewcommand{\arraystretch}{1.3}
-\begin{tabular}{c c c}
+\rowcolors{1}{gray!15}{white}
+
+\begin{tabularx}{\textwidth}{
+>{\centering\arraybackslash}X
+>{\centering\arraybackslash}X
+>{\centering\arraybackslash}X}
 \toprule
-\textbf{Rocket Launches} $x$ (\textbf{times/year}) 
-& \textbf{Completion Time} $T$ (\textbf{years}) 
-& \textbf{Total Cost} $C$ (\textbf{million USD}) \\
+\textbf{Rocket Launches $x$ (times/year)}
+& \textbf{Completion Time $T$ (years)}
+& \textbf{Total Cost $C$ (million USD)} \\
 \midrule
-2{,}496  & 109.72 & 193{,}110.40 \\
-4{,}997 & 77.72 & 378{,}986.12 \\
-7{,}499 &49.09 & 752{,}636.23 \\
+2{,}496 & 109.72 & 193{,}110.40 \\
+4{,}997 & 77.72  & 378{,}986.12 \\
+7{,}499 & 49.09  & 752{,}636.23 \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
+}
 \end{table}
-根据不同的决策偏好可以从中选择适当的解决方案。
-贴图
 
-\subsubsection{Improvement of scheme c}
-\paragraph{Rocket Iteration: Transportation cost iteration}
-\vspace{0.3em}
-理论基础:
-在分析每 100kg 有效载荷的运输成本演变时，必须引入工业经济学中的核心概念——学习曲线模型（Learning Curve Model），
-即莱特定律（Wright's Law）。该定律由 T.P. Wright 最早于 1936 年在航空制造领域提出，其核心论点表明：单位产品的生产成本
-并不是随机波动的，而是随着累计产量的增加呈现出可预测的幂律下降趋势。在商业航天领域，这一效应被进一步修正为受“规模经济”与“复用频率”双重驱动的成本迭代机制。
-在构建长周期的航天运输成本演变模型时，若仅采用单一的指数衰减模型，容易忽略物理化学层面的硬性约束。因此，本研究引入双因子成本结构（Dual-Factor Cost Structure），
-将单次发射的单位质量成本  解构为两个性质迥异的组成部分：受工业学习曲线影响的箭体制造与运营成本$C_{body}$，以及受化学工业定价影响的相对刚性的燃料（推进剂）成本 $C_{fuel}$ 。
-根据工业经济学中的莱特定律（Wright's Law），箭体制造与发射运营成本具有显著的“干中学”（Learning by Doing）特征，即随着累计发射量和复用次数的增加，该部分成本呈现幂律下降。
-然而，燃料成本主要取决于液氧、甲烷或煤油的工业大宗商品价格，其波动受宏观能源市场影响，难以通过航天产业自身的规模效应实现数量级下降。因此，成本动力学方程应表达为：
+Appropriate solutions can be selected based on different decision-making preferences.
+
+\subsection{Improvement of scheme c}
+\subsubsection{Rocket Iteration: Transportation cost iteration}
+\medskip
+\noindent\textbf{Theoretical Basis}\par
+When analyzing the evolution of transportation costs per 100kg payload, the core concept in industrial economics—the Learning Curve Model—must be introduced.
+That is Wright's Law.The production cost of a unit product It does not fluctuate randomly, but shows a predictable power law downward trend as cumulative production increases.In the field of commercial aerospace, this effect is further modified into a cost iteration mechanism driven by both "economies of scale" and "reuse frequency".
+Therefore, this study introduces the dual-factor cost structure, the unit mass cost of a single launch is deconstructed into two components with very different properties: the rocket body manufacturing and operating cost $C_{body}$, which is affected by the industrial learning curve, and the relatively rigid fuel (propellant) cost $C_{fuel}$, which is affected by chemical industry pricing.
+According to Wright's Law in industrial economics, rocket body manufacturing and launch operation costs have significant "learning by doing" characteristics, that is, as the cumulative launch volume and the number of reuses increase, this cost decreases with a power law. 
+Therefore, the cost dynamics equation should be expressed as:
 \[C_{launch}=C_{man}(n)+C_{fuel}=C_1\cdot n^{-b}+C_{fixed}\]
-其中，$n$ 为累计产出量，$b$ 为学习指数，而 $C_{fixed}$ 代表了由化学能密度决定的热力学成本底限。这一模型的引入，揭示了航天运输成本下降虽然在初期极其迅速，但在远期将逼近一个由物理极限决定的渐进值。
-通过历史数据回溯可以发现，航天运输成本的结构正经历着从“硬件主导”向“能源主导”的范式转移。在传统航天飞机时代，每公斤约 54,500 美元的发射成本中，推进剂成本占比微乎其微（不足 0.1\%），绝大部分开支源于
-一次性的硬件损耗与高昂的地面维护。此时，莱特定律对整体成本的削减作用极为显著。随着 SpaceX 猎鹰 9 号（Falcon 9）及星舰（Starship）架构的出现，高频复用技术彻底改变了这一比例。根据 ARK Invest 与
-SpaceX 公开财务数据的交叉验证，猎鹰 9 号的燃料成本约为 20-30 万美元，仅占单次发射边际成本的极小比例，但在完全复用的星舰架构预期中，随着硬件均摊成本的急剧下降，燃料成本的占比将大幅提升。根据埃隆·马斯克
-的工程预期，未来星舰的单次发射成本中，推进剂费用将成为主要的边际支出项。这表明，虽然制造成本可以通过 30\%-35\% 的高学习率（Learning Rate）快速摊薄，但燃料成本将构成一条不可逾越的水平渐近线（Horizontal Asymptote）。
+\indent Among them, $n$ is the cumulative output, $b$ is the learning index, and $C_{fixed}$ represents the thermodynamic cost floor determined by chemical energy density.
+Model calculations show that while manufacturing costs can be rapidly amortized through a high learning rate, fuel costs constitute an insurmountable horizontal asymptote.
 
-参数设定:
-为了构建适用于年度预测的数学模型，我们将基于“产量”的莱特定律映射为基于“时间”的年度衰减函数，并设定燃料成本为常量约束。假设全球航天发射频率维持当前的指数增长趋势，制造成本部分的年均优化效率将维持高位。
-基于现有技术路径的分析，本模型设定如下核心参数：
-- 制造成本衰减率：考虑到规模效应与复用技术的成熟，设定箭体制造与运营部分的年均衰减系数$\alpha$为 5\%。
-- 燃料成本刚性：设定每 100kg 有效载荷分摊的燃料成本为常数$C_{fuel}$，作为成本演化的收敛极限。
-综合考量，未来的单位运输成本将不再是无限趋近于零，而是沿着一条指数曲线逼近燃料成本底线。这种处理方式平抑了纯数学模型在远期预测中的失真风险，符合大规模物流网络的物理现实。
+\medskip
+\noindent\textbf{Parameter Settings}\par
+Based on the analysis of existing technical paths, this model sets the following core parameters: 
+\begin{itemize}
+  \item Manufacturing cost decay rate: Taking into account the scale effect and the maturity of reuse technology, the average annual decay coefficient $\alpha$ of the rocket body manufacturing and operation part is set to 5\%.
+  \item Fuel cost rigidity: The fuel cost shared per 100kg payload is set to a constant $C_{fuel}$ as the convergence limit of cost evolution.load is set to a constant $C_{fuel}$ as the convergence limit of cost evolution.load is set to a constant $C_{fuel}$ as the convergence limit of cost evolution.
+\end{itemize}
 
-模型构建:
-基于上述双因子分析，本研究建立每 100kg 货物运输成本$C_{launch}(t)$随时间$t$演变的最终迭代公式：
-设$t$为年份(以模型起始年为$t = 0$)，$C_{launch}(t)$由可变动的制造部分$C_{man}(t)$和固定的燃料部分$C_{fuel}$，则有：
+\indent Taken together, future unit transportation costs will no longer approach zero infinitely, but will approach the bottom line of fuel costs along an exponential curve. This processing method suppresses the distortion risk of pure mathematical models in long-term predictions and is consistent with the physical reality of large-scale logistics networks.\medskip
+
+\noindent\textbf{Model Construction}\par
+Based on the above two-factor analysis, this study establishes the final iterative formula for the evolution of cargo transportation cost $C_{launch}(t)$ per 100kg over time $t$:
+Let $t$ be the year (taking the model starting year as $t = 0$), $C_{launch}(t)$ consists of the variable manufacturing part $C_{man}(t)$ and the fixed fuel part $C_{fuel}$, then there is:
 \[C_{launch}(t)=C_{man_0}\times(1-\alpha)^t+C_{fuel}\]
-带入参数得：
+Bringing in the parameters:ng in the parameters:ng in the parameters:
 \[C_{launch}(t)=(C_{total_0}-C_{fuel})\times(0.95)^t+C_{fuel}\]
-该公式清晰地描述了成本下降的两个阶段：在近期（$t$较小时），由$(1 - \alpha)^t$主导，体现为成本的快速下降，符合摩尔定律般的指数特征；在远期（$t$趋于无穷大时）， $C_{launch}(t)$渐近收敛于 $C_{fuel}$，体现了能源价格对太空物流经济性的最终约束。
+\indent This formula clearly describes the two stages of cost decline: in the near term (when $t$ is small), it is dominated by $(1 - \alpha)^t$, which is reflected in the rapid decline of costs, consistent with the exponential characteristics of Moore's Law; in the long term (when $t$ tends to infinity), $C_{launch}(t)$ asymptotically converges to $C_{fuel}$, reflecting the ultimate constraint of energy prices on the economics of space logistics.
 
-\paragraph{A new strategy based on the iterative models}
+\subsubsection{A new strategy based on the iterative models}
 \vspace{0.3em}
-基于上述迭代模型，我们提出了一种新的混合运输策略，以进一步优化运输成本与时间的权衡。在HCTO-PM模型的基础上，结合时间变量$t$引入动态成本调整机制来反映火箭发射成本随时间的演变，得到
-Multi-Year Hybrid Capacity Trade-off Optimization with Pareto Mapping (MY-HCTO-PM)模型。该模型下的决策变量$x$不在是单一维度，而是会随着时间$t$动态调整的函数$x(t)$，以反映不同年份的发射频率选择。
-优化目标函数同样包括任务完成时间$T$和总成本$C_{total}$，计算公式为
+Based on the above iterative model, we propose a new hybrid transportation strategy to further optimize the trade-off between transportation costs and time. Building upon the HCTO-PM model, we introduce a dynamic cost adjustment mechanism by incorporating the time variable $t$ to reflect the evolution of rocket launch costs over time, resulting in
+Multi-Year Hybrid Capacity Trade-off Optimization with Pareto Mapping (MY-HCTO-PM) model. \\
+Calculation formulas as follow:
 \[P_{SES}T+P_{launch}\cdot\sum_{t=0}^{T}x_{(t)} = M\]
 \[C_{total}=C_{SES}\cdot P_{SES}\cdot T+\sum_{t=0}^{T}C_{launch}(t)\cdot x_{(t)}\cdot P_{launch}\]
-对每个可行$T$, 求出用火箭发射的总运输质量后按年份倒序分配（从最后一年开始发射），以利用制造成本衰减优势。得到一组$(T,C)$ 数据点，即帕累托前沿。
-为便于决策，定义三类代表性解：
-- 均衡解（Balanced）：使用归一化后的时间和成本计算每个可行点到理想点 $(T_{min}, C_{min})$ 的欧氏距离，距离最小者即为均衡解
-- 激进解（Faster）：均衡解向左偏移一定比例（减少总工期，允许成本增加）
-- 经济解（Cheaper）：均衡解向右偏移一定比例（延长总工期以降低成本）
-该方法保证了三类方案均落在最优折中区间内，可直观展示工期与成本之间的权衡关系。
+\indent For each feasible $T$, we first calculate the total mass transported by rockets and then allocate it in reverse chronological order (starting from the last year) to take advantage of manufacturing cost decay benefits. This generates a set of $(T,C)$ data points, i.e., the Pareto frontier.
+To facilitate decision-making, we define three representative solutions:
+\begin{itemize}
+  \item Balanced solution: Use the normalized time and cost to calculate the Euclidean distance from each feasible point to the ideal point $(T_{min}, C_{min})$. The one with the smallest distance is the balanced solution.
+  \item Radical solution (Faster): The equilibrium solution shifts to the left by a certain proportion (reduces the total construction period and allows the cost to increase)
+  \item Economic solution (Cheaper): The equilibrium solution shifts to the right by a certain proportion (extends the total construction period to reduce costs)
+\end{itemize}
+\indent This method ensures that all three types of solutions fall within the optimal compromise range, and can intuitively demonstrate the trade-off relationship between construction period and cost.
 % 贴图
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.5\textwidth]{../figures/picture2.png}
+  \caption{Multi-Year Pareto Optimization Results with Rocket Cost Iteration}
+  \label{fig:multi_year_pareto}
+\end{figure}
+\FloatBarrier
+
+\subsection{Conclusions of Problem 1}
+The combination of space elevators and traditional rockets is more conducive to efficient and economical space transportation. By adjusting the frequency of rocket launches, the best balance between mission completion time and total cost can be found.
+Based on the MY-HCTO-PM model, decision makers can choose balanced, radical or economical transportation solutions based on different preferences to better meet actual needs.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------------------------------------问题二----------------------------------------%
+
+\section{Modeling and Solving of Problem 2}
+
+In the previous question, this article only discussed the transportation solution obtained by the elevator transportation system and the traditional rocket transportation system under ideal circumstances, individually and jointly undertaking transportation tasks.
+Considering the more realistic transportation conditions in reality, there are non-ideal conditions such as cable shaking, elevator damage, rocket failure and launch failure, which lead to a decrease in transportation system capacity and an increase in costs. 
+In order to make the model more realistic, this section will discuss the transportation plan and reliability of the 100 million tons of materials required to build a 100,000-person lunar colony base under non-ideal conditions.
+
+\subsection{Introduction of Non-ideal Factors}
+
+The core of non-ideal factors is "system failure leading to capacity loss, time extension, and cost increase." It is necessary to combine aerospace engineering practice and equipment reliability rules to transform abstract faults into quantifiable parameters to ensure the operability and scientificity of the model.
+
+\subsubsection{Non-ideal Factors in Space Elevator System}
+
+The non-ideal factors of the space elevator system mainly stem from the dynamic characteristics and mechanical system losses of the ultra-long cable (100,000 kilometers of graphene cable). 
+The specific quantification is as follows:inly stem from the dynamic characteristics and mechanical system losses of the ultra-long cable (100,000 kilometers of graphene cable). The specific quantification is as follows:
+
+\textbf{Cable shaking:}Affected by the disturbance of the earth's orbit and the resistance of the upper atmosphere, the cable will produce low-frequency shaking (amplitude is about 5-10 kilometers). In order to avoid the cable breakage, the transportation load needs to be reduced to 15\%, thus defining the transportation capacity loss coefficient as \(k_{\text{SES}} = 0.85\);
+
+\textbf{Elevator failure:}Mechanical transmission system wear and tear, power supply interruption and other faults lead to system shutdown and maintenance. Referring to the reliability data of large engineering equipment, the annual availability rate is defined as \(r_{\text{SES}} = 0.9\);
+
+\textbf{Repair cost:r cost:}Fault repair involves cable inspection, mechanical component replacement, etc. The annual maintenance cost accounts for 5\% of the annual transportation cost under perfect working conditions.
 
 
-\subsubsection{Conclusions of Problem}
-太空电梯和传统火箭的组合更有利于实现高效且经济的太空运输。通过调整火箭发射频率，可以在任务完成时间和总成本之间找到最佳平衡点。
-引入火箭运输成本的时间迭代模型后，提出了一种新的混合运输策略，进一步优化了运输方案。该策略通过动态调整火箭发射频率，利用制造成本的衰减优势，实现了更低的总成本和更短的任务时间。
-基于MY-HCTO-PM模型，决策者可以根据不同的偏好选择均衡、激进或经济的运输方案，从而更好地满足实际需求。
+\subsubsection{Non-ideal Factors in Rocket Transportation Systems}
+
+Traditional rocket transportation non-ideal factors mainly stem from the complexity of the launch process and environmental dependencies, with specific quantification as follows:
+
+\textbf{Launch failure:}The structural complexity of heavy rockets (such as advanced Falcon Heavy) is high. Referring to historical data on space launches, the launch success rate is defined as \(p_{launch} = 0.95\);
+
+\textbf{Launch site efficiency decline:}Launch sites are affected by equipment maintenance and weather conditions (such as typhoons, thunderstorms). The launch site availability rate is defined as \(r_{launch} = 0.85\), which leads to a reduction in the annual maximum number of launches at the launch site~\cite{nasa_weather_07R}.
+
+\textbf{Additional costs:ional costs:}After a rocket launch fails, the lost material requires the rocket to be relaunched to meet the load capacity requirement. The increase in total rocket carrying capacity and rocket replenishment bring new costs, ignoring the rocket construction cost caused by rocket damage.
 
 
-\subsection{Modeling and Solving of Problem 2}
-\subsubsection{Problem Analysis}
+\subsection{Transportation Plan Adjustment}
+
+\subsubsection{Scheme a}
+\begin{itemize}
+  \item Annual transportation volume: $P_{\text{SES},\text{imperfect}} = P_{\text{SES}} \times k_{\text{SES}} \times r_{\text{SES}}$
+
+  \item Annual transportation costs: transportation costs: $C_{SES,imperfect} = C_{\text{SES}} \times P_{\text{SES},\text{imperfect}} \times (1 + 0.05)$
+\end{itemize}
+Therefore, the system time using only the space elevator is \(T = \frac{M}{P_{\text{SES},\text{imperfect}}}\)
+
+Total task cost: \(C_{\text{total}} = C_{SES,imperfect} \times T\)
+
+Calculated: It would take about 243.4 years to use the space elevator system alone, with a total cost of \$10.5 trillion. Compared with the ideal situation, the time increases by 30.7\% and the cost increases by 5\%.
 
 
-\subsubsection{Model Preparation}
+\subsubsection{Scheme b}
+\begin{itemize}
+  \item Annual launch limit: $N_{\text{imperfect}} = N \times r_{launch}$
+
+  \item Total annual transportation volume: $P_{launch,\text{total}} = P_{launch} \times N_{\text{imperfect}}$
+
+  \item Annual effective transportation volume: $P_{launch,\text{imperfect}} = P_{launch,\text{total}} \times p_{launch}$
+
+  \item Annual transportation cost: $C_{launch,imperfect} = C_{launch} \times P_{launch,\text{total}}$
+\end{itemize}
+
+Therefore, the system time using only the rocket transportation system is \(T = \frac{M}{P_{launch,\text{imperfect}}}\), and the total task cost is \(C_{\text{total}} = C_{launch,imperfect} \times T\).
+
+The calculated results show that using only the rocket transportation system requires about 82.6 years to complete the task under reasonable physical limits of launch sites, with a total cost of 52.63 trillion USD. Compared with the ideal situation, the time increase is mainly due to reduced transport capacity caused by launch site availability decline, while cost increase is mainly due to material replenishment costs caused by launch failures.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.50\textwidth]{../figures/comparison_problem2.png}
+  \caption{Comparision of Two Scenarios under Non-ideal Conditions}
+  \label{fig:comparison_problem2}
+\end{figure}
+\FloatBarrier
+
+\subsubsection{Scheme c}
+
+Comprehensively consider the two methods of space elevator system and rocket launch, continue to comprehensively consider the two methods of space elevator system and rocket launch, continue the multi-objective optimization idea in question 1, introduce non-ideal factors to correct the capacity and cost of the two systems, build an improved model, and achieve the optimal trade-off between time and cost.
+
+\textbf{Build the following model:}
+
+\noindent\textbf{Decision variables:ion variables:}
+
+Number of rocket launches per year\(x(t)\)(Dynamically adjusted over time, the maximum annual number of launches under non-ideal conditions is 8500, derived from 10 launch sites $\times$ 850 times/year/launch site).
+
+\noindent\textbf{Constraints:raints:}
+
+Total capacity constraints:capacity constraints:\(P_{\text{SES},\text{imperfect}} \times T + P_{\text{launch}} \times p_{launch} \times \sum_{t = 0}^{T}{x(t)} = M\)\hspace{0pt}in,\(P_{\text{SES},\text{imperfect}} = 410805\)tons/year (annual capacity of space elevator under non-ideal conditions),\(p_{launch} = 0.95\)(rocket launch success rate) to ensure that the total transportation volume meets the demand of 100 million tons.
+
+\noindent\textbf{Objective function:tive function:}
+\[
+\left\{
+\begin{aligned}
+T(x) &= \frac{M - P_{\text{launch}} \times p_{\text{launch}} \times \sum_{t = 0}^{T} x(t)}
+             {P_{\text{SES},\text{imperfect}}} \\
+C(x) &= C_{\text{SES},\text{imperfect}} \times P_{\text{SES},\text{imperfect}} \times T
+       + \sum_{t = 0}^{T} P_{\text{launch}} \times x(t) \times C_{\text{launch}}(t)
+\end{aligned}
+\right.
+\]
+
+Among them, \(C_{\text{launch}}(t)\) is the unit transportation cost of the rocket considering technology iteration (decays over time, refer to Wright's law to set the annual attenuation coefficient $\alpha =5\%$), \(C_{\text{SES},\text{imperfect}}\)=105~USD/ton (the unit cost of the space elevator including maintenance cost bonus).
+
+\noindent\textbf{Optimize results:}
+
+High-resolution sampling of the feasible region is carried out through the parameter scanning method, and the Pareto front is obtained by filtering the non-dominated relationship, from which three types of representative solutions (radical solutions, equilibrium solutions, and economic solutions) are selected. The specific results are shown in the following table:
+
+\begin{table}[htbp]
+\centering
+\caption{Trade-off Results of Different Transportation Strategies}
+\label{tab:tradeoff_summary}
+
+\resizebox{0.9\textwidth}{!}{ % ← 统一整体缩放
+\renewcommand{\arraystretch}{1.3}
+\rowcolors{1}{gray!15}{white}
+\setlength{\tabcolsep}{4pt}
+
+\begin{tabular}{
+>{\centering\arraybackslash}M{0.28\textwidth}
+>{\centering\arraybackslash}M{0.22\textwidth}
+>{\centering\arraybackslash}M{0.22\textwidth}
+>{\centering\arraybackslash}M{0.26\textwidth}
+}
+\toprule
+\textbf{Option}
+& \textbf{Completion Time $T$ (years)}
+& \textbf{Total Cost $C$ (trillion USD)}
+& \textbf{Maximum Rocket Launches (per year)} \\
+\midrule
+Faster (Aggressive Strategy)
+& 71
+& 15.62
+& 8500 \\
+
+Balanced (Compromise Strategy)
+& 93
+& 11.61
+& 8500 \\
+
+Cheaper (Cost-Oriented Strategy)
+& 115
+& 10.75
+& 8500 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+\FloatBarrier
+
+\indent Based on the rocket transportation cost reduction model, launching multiple rockets in the later period has obvious economic advantages. Therefore, all plans are still to launch rockets with full load and high frequency in the later period, and launch less or no rockets in the early and mid-term.
+Compared with the ideal situation, the specific arrangements of plan c are still:\textbf{Galaxy Port has maintained full load and transportation for a long time, and the rocket transportation system has few or no launches in the early stage; when the cost of rockets drops, it will begin to maintain full load and high-frequency launches.}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.65\textwidth]{../figures/three_results_problem2.png}
+  \caption{Pareto Optimization Results under Non-ideal Conditions}
+  \label{fig:three_results_problem2}
+\end{figure}
+\FloatBarrier
 
 
-\subsubsection{Model Construction}
+
+\subsection{Scheme Comparison and Sensitivity Analysis}
 
 
+\subsubsection{Comparison}
 
-\subsubsection{Model Solution}
+In order to study the interference resistance and feasibility of the three schemes under non-ideal conditions, this article conducted a sensitivity analysis on the three scheme models and obtained the comprehensive stability score of the model.
+Using \textbf{single parameter local perturbation method}, for the three options a (pure space elevator), b (pure rocket), and c (mixed equilibrium solution), 6 non-ideal parameters were selected to fluctuate by ±20\%. 
+After independent perturbation of each parameter, the change rate of time and cost was calculated. The average maximum change rate was converted into a 100-point stability score to quantify the anti-interference ability of each scheme against parameter fluctuations, providing an intuitive reference for program risk decisions.
+
+Based on the core indicators of the three types of transportation solutions, a comparative analysis table is constructed as follows:
+%----------------表格----------------%
+\begin{table}[htbp]
+\centering
+\caption{Performance and Sensitivity Comparison of Transportation Schemes}
+\label{tab:scheme_performance_sensitivity}
+
+\resizebox{0.9\textwidth}{!}{ % ← 控制整体缩放比例
+\renewcommand{\arraystretch}{1.3}
+\rowcolors{1}{gray!15}{white}
+\setlength{\tabcolsep}{3pt}
+
+\begin{tabular}{ 
+>{\centering\arraybackslash}M{0.22\textwidth}
+>{\centering\arraybackslash}M{0.14\textwidth}
+>{\centering\arraybackslash}M{0.15\textwidth}
+>{\centering\arraybackslash}M{0.13\textwidth}
+>{\centering\arraybackslash}M{0.13\textwidth}
+>{\centering\arraybackslash}M{0.20\textwidth} }
+\toprule
+\textbf{Scheme}
+& \textbf{Completion Time $T$ (years)}
+& \textbf{Total Cost $C$ (trillion USD)}
+& \textbf{Time Sensitivity (\%)}
+& \textbf{Cost Sensitivity (\%)}
+& \textbf{Overall Stability Score} \\
+\midrule
+Pure Space Elevator
+& 243.4
+& 10.50
+& 7.7
+& 0.2
+& 96.1 \\
+
+Pure Rocket
+& 82.6
+& 52.63
+& 6.8
+& 5.4
+& 93.9 \\
+
+Hybrid Transportation (Scheme C, Balanced)
+& 93
+& 11.61
+& 7.3
+& 3.2
+& 94.8 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+\FloatBarrier
+
+Non-ideal factors have a more significant negative impact on a single plan: the pure space elevator construction period is extended by 30.7\%, the pure rocket plan has a significant increase in execution time due to launch failure and reduced launch site efficiency, and at the same time, the cost further increases. Excessively high transportation costs and long planning cycles make this plan difficult to implement.
+
+Among the hybrid solutions, the balanced deployment of the hybrid solution is the option with the most practical application value. Its construction period is only 38.2\% of that of a pure space elevator, and its cost is only 22.1\% of that of a pure rocket. It combines the advantages of both solutions.
+
+
+\subsubsection{Engineering Measures Based on Model Results}
+
+Combining the effects of non-ideal factors and optimization results, the following engineering practice suggestions are put forward:
+
+\noindent\textbf{Space elevator system optimization:}
+\begin{enumerate}
+  \item In response to the problem of cable swaying, an active stability control system (such as a small thruster and a tension adjustment device) is developed to reduce the capacity loss and bring the coefficient \(k_{\text{SES}}\) to more than 0.95, which can shorten the construction period of a pure space elevator;
+  \item Establish a preventive maintenance system, predict failures based on equipment operation data, and increase the annual availability rate \(r_{\text{SES}}\) to 0.95, further reducing the construction period and maintenance costs.
+\end{enumerate}
+
+\noindent\textbf{Rocket transportation system optimization:}
+\begin{enumerate}
+  \item Improve rocket recovery and reuse technology to increase launch success rate\(p_{launch}\), thereby reducing reshipment costs; at the same time, optimize the launch site scheduling system to increase launch site availability\(r_{launch}\) and reduce rocket launch costs;
+  \item Control the annual launch frequency of rockets within 8,500 times to avoid overdrafting the life of the launch site and balance short-term capacity and long-term sustainability.
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------------------------------------问题三----------------------------------------%
+\section{Modeling and Solving of Problem 3}
+\subsection{Preparation of models}
+This chapter aims to construct a multi-dimensional dynamic mass balance model (DMS model) to systematically evaluate the total water demand of a lunar colony with a population of 100,000 in full operation for one year.
+Due to the extreme vacuum, microgravity (1/6g) and huge temperature difference between day and night in the lunar environment, water resource management will present system dynamics that are completely different from those on the Earth~\cite{water_electrolysis_2013}.
+
+The model will take into account human metabolism, intensive controlled ecological agriculture, industrial utilities and inevitable technological leaks.
+By extrapolating the existing Environmental Control and Life Support System (ECLSS) specifications of the International Space Station (ISS) and combining them with data from closed ecosystem experiments such as Biosphere 2 and Lunar Palace 1, the report will quantify the annual water deficit produced by a lunar colony within the constraints of closed-loop recycling efficiency, thereby determining the minimum mass of supplies that must be transported from Earth to the Moon each year.
+According to the previous simulation calculation based on Pareto optimal equilibrium solution, 
+The infrastructure task is expected to reach the predetermined target node in the 77th year. Starting from the 78th year, the system will enter an operation stage with water replenishment as its core task, and a certain amount of rigid replenishment needs will be maintained every year. 
+Based on the constructed comprehensive transportation cost model, a quantitative comparative study was conducted on three transportation efficiency paths in the replenishment stage.
+
+\subsection{Water Demand Model}
+\subsubsection{Physiological and Domestic Water Demand}
+
+\medskip
+\noindent\textbf{Water Flux Analysis for Maintaining Survival and Quality of Life}\par
+Based on the experience of the International Space Station, the daily basic physiological water consumption of each astronaut (including drinking, food rehydration and basic hygiene) is about 3.8 liters (1 gallon)~\cite{nasa_iss_water_recovery}.
+However, for a long-term operating colony, in order to maintain the mental health and social functions of residents, domestic water standards must be closer to the normal state of the earth.
+The average daily indoor water consumption per person in the average American household is about 227 to 375 liters, covering showering, laundry and toilet flushing.
+In the lunar environment, the circulating flux of domestic water $W_{dom}$ can be expressed by the following formula:
+\[W_{dom}=P\times(q_{drink}+q_{hygiene}+q_{laundry}+q_{food})\]
+\indent Among them, $P = 100000$, $q_i$ represents the per capita daily demand coefficient of each sub-item.
+This study sets the "lunar colonization standard" per capita daily demand at 35 liters, which is much higher than the maintenance level of the ISS, but only one-tenth of the wasteful consumption on earth.
+
+\medskip
+\noindent\textbf{Efficiency Limitations of Water Recycling Systems (WRS)}\par
+Although the circulation flux is huge, the actual recharge requirements depend on the net efficiency $\eta_{WRS}$ of the water recovery system (WRS).
+Currently, ISS has achieved the milestone of 98\% water recovery rate through urine processor (UPA) and brine processor (BPA)~\cite{adu2025water}.
+Therefore, based on the current state-of-the-art recovery rate, we can estimate that by 2050, the recovery rate of the water recovery system usable in lunar colonies will reach 99\%.
+The daily deficit of domestic water $L_{dom}$ satisfies:
+\[L_{dom}=W_{dom}\times(1-\eta_{WRS})\]
+\indent Based on the recovery rate of 99\% expected to be achieved after the lunar base is fully completed, a population of 100,000 will lose approximately 35,000 liters of water per day in the life cycle. These losses are mainly due to the saturated replacement of the filter bed, irreversible binding during the catalytic oxidation process, and unextractable bound water in the solid residue of excreta~\cite{nelson2009water}.
+\begin{table}[htbp]
+\centering
+\caption{Comparison of Domestic Water Usage and Recycling Efficiency under Different Environments}
+\label{tab:water_usage_comparison}
+
+\resizebox{0.9\textwidth}{!}{ % ← 统一缩放比例
+\renewcommand{\arraystretch}{1.3}
+\rowcolors{2}{gray!15}{white}
+
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X c c c}
+\toprule
+\textbf{Parameter} 
+& \textbf{ISS} 
+& \textbf{Lunar Colony} 
+& \textbf{Earth Baseline} \\
+\midrule
+Drinking water per capita (L/day)      & 2.0 & 3.5  & 3.0   \\
+Personal hygiene (L/day)               & 0.5 & 15.0 & 95.0  \\
+Laundry and cleaning (L/day)           & 0.0 & 10.0 & 70.0  \\
+Food preparation (L/day)               & 0.8 & 1.5  & 10.0  \\
+Toilet flushing (L/day)                & 0.5 & 5.0  & 100.0 \\
+\midrule
+\textbf{Total circulation demand (L/day)} 
+                                      & \textbf{3.8} 
+                                      & \textbf{35.0} 
+                                      & \textbf{278.0} \\
+\midrule
+Recycling efficiency ($\eta$)           & 98\% & 99\% & $<5\%$ \\
+\bottomrule
+\end{tabularx}
+}
+\end{table}
+\FloatBarrier
+
+
+\subsubsection{Agricultural Water Demand}
+\medskip
+\noindent\textbf{Water Footprint of Controlled Environmental Agriculture (CEA)}\par
+A colony with a population of 100,000 cannot rely on dehydrated food transported from the earth for a long time, and a large-scale lunar greenhouse must be established.
+The Bioregenerative Life Support System (BLSS) provides food and oxygen through photosynthesis of plants and participates in the water cycle as a natural condensed water collector.
+According to Biosphere 2 and NASA research, the agricultural area required to provide 100\% food self-sufficiency is approximately 370 square meters per person~\cite{vpk_moon_water_2024}. For a population of 100,000, the total area amounts to 37 million square meters.
+In a hydroponic or aeroponic system, although it saves 90\% of water than soil agriculture, due to the high transpiration rate of the plants, the amount of water circulated within the system is staggering.
+The agricultural irrigation intensity $q_{irr}$ is usually about 3.8 liters per square meter per day. Then the total agricultural cycle flux $W_{agri_flux}$ is:
+\[W_{agri_flux}=A_{total}\times q_{irr}\approx1.4\times10^8\mathrm{L/day}\]
+
+\medskip
+\noindent\textbf{Balance Between Transpiration and Humidity Recovery}\par
+In controlled environment agriculture, most of the water absorbed by plants is released into the air through leaf transpiration.
+In order to close the water cycle, this humidity condensate must be recovered through a condensation heat exchanger.
+The net loss rate $(1 - \eta_{agri})$ of the agricultural cycle is usually much lower than that of the domestic water cycle because most of the water flows in the pure physical transpiration state.
+However, losses arise from three main areas:
+\begin{enumerate}
+\item Biomass fixed water, that is, the water contained in the plant tissue itself, is transferred to human metabolic circuits during harvest and consumption;
+\item Regular emptying and cleaning of root solutions (due to mineral accumulation);
+\item Leaks during greenhouse maintenance.
+\end{enumerate}
+The recovery rate of the high-efficiency agricultural system is set to 99.7\%, and the average daily agricultural loss is:
+\[L_{agri}=W_{agri_flux}\times0.003\approx420,000\mathrm{L/day}\]
+
+\subsubsection{Industrial Water Demand}
+The detailed information on industrial water use obtained through data research is shown in the table below.
+\begin{table}[htbp]
+\centering
+\caption{Industrial and Public Utility Water Consumption Indicators}
+\label{tab:industrial_water}
+
+\resizebox{0.9\textwidth}{!}{ % ← 这里控制整体大小
+\renewcommand{\arraystretch}{1.3}
+\rowcolors{1}{gray!15}{white}
+\setlength{\tabcolsep}{4pt}
+
+\begin{tabular}{
+>{\centering\arraybackslash}M{0.23\textwidth} 
+>{\centering\arraybackslash}M{0.25\textwidth} 
+>{\centering\arraybackslash}M{0.20\textwidth} 
+>{\centering\arraybackslash}M{0.30\textwidth}
+}
+\toprule
+\textbf{Water Use Category}
+& \textbf{Unit Water Consumption}
+& \textbf{Estimated Daily Demand (L/day)}
+& \textbf{Key Technical Drivers} \\
+\midrule
+Oxygen production
+& 1.125 kg H$_2$O per kg O$_2$
+& 94{,}500
+& Sabatier reactor water recovery efficiency \\
+
+Industrial thermal control
+& 20 L per kg H$_2$
+& 250{,}000
+& Evaporative cooling loss coefficient \\
+
+Power system cooling
+& Fixed circulation loss ratio
+& 100{,}000
+& Heat exchanger sealing performance \\
+
+Propellant synthesis
+& 9 L per kg H$_2$ (chemical processing requirement)
+& 150{,}000
+& Mission frequency dependency \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+\FloatBarrier
+
+\subsubsection{Technical Leaks and Environmental Damage}
+\medskip
+\noindent\textbf{Airlock Recirculation and Extravehicular Activity (EVA)}\par
+In a city of 100,000 inhabitants, frequent opening and closing of airlocks is the norm. About 4\% of the air remains in each cycle and escapes to vacuum.
+Since the air is maintained at a relative humidity of about 50\%, these escaping gases carry a non-negligible amount of water vapor.
+The airlock daily deficit $L_{leak_air}$ can be modeled as:
+\[L_{leak_air}=N_{EVA}\times V_{lock}\times\rho_{air}\times\omega\times(1-\eta_{reclaim})\]
+\indent Where $N_{EVA}$ is the number of daily cycles, $V_{lock}$ is the airlock volume, and $\omega$ is the absolute humidity.\\
+
+\noindent\textbf{Structural Background Leakage}\par
+The vast surface area of ​​lunar habitats results in tiny structural penetrations.
+Even if it is built to the highest aerospace standards, the annual gas loss rate per cubic meter of volume may still reach 0.01\%~\cite{abney_sabatier_h2}.
+For a colony with a volume of 3 million cubic meters, the annual water content loss due to this background leakage is constant.
+
+\subsubsection{Comprehensive Calculation}
+Based on the above sub-analysis, the calculation formula of the total annual supply demand $M_{supply}$ of the lunar colony is as follows:
+\[M_{supply}=365\times[L_{dom}+L_{agri}+L_{ind}+L_{leak_air}+L_{leak_struc}]\]
+Substitute the parameter values ​​determined in this study:
+\begin{enumerate}
+\item Loss of Life ($L_{dom}$): $100000×35×0.01=35000$ l/day.
+\item Agricultural Lossescultural Losses ($L_{agri}$): $140000000 \times 0.03 = 420,000$ l/day.
+\item Industrial Lossesstrial Losses ($L_{ind}$): Estimated to be 500,000 l/day.
+\item Technical Leakical Leak ($L_{leak_air}+L_{leak_struc}$): Including EVA and structural leakage, estimated at 15,000 l/day.
+\end{enumerate}
+\begin{table}[htbp]
+\centering
+\caption{Annual Water Mass Balance Summary (100,000-Person Scale)}
+\label{tab:annual_water_balance}
+
+\resizebox{0.9\textwidth}{!}{ % ← 调这个 0.9 即可
+\renewcommand{\arraystretch}{1.3}
+\rowcolors{1}{gray!15}{white}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{
+>{\centering\arraybackslash}M{0.36\textwidth}
+>{\centering\arraybackslash}M{0.18\textwidth}
+>{\centering\arraybackslash}M{0.25\textwidth}
+>{\centering\arraybackslash}M{0.18\textwidth}
+}
+\toprule
+\textbf{Loss Category}
+& \textbf{Daily Loss (L/day)}
+& \textbf{Annual Loss (Metric Tons)}
+& \textbf{Share of Total (\%)} \\
+\midrule
+Domestic water circulation
+& 35{,}000
+& 12{,}775
+& 3.6 \\
+Agricultural BLSS system
+& 420{,}000
+& 153{,}300
+& 43.3 \\
+Industrial use, oxygen production and cooling
+& 500{,}000
+& 182{,}500
+& 51.5 \\
+Airlock operations, leakage and EVA
+& 15{,}000
+& 5{,}475
+& 1.5 \\
+\midrule
+\textbf{Total}
+& \textbf{987{,}500}
+& \textbf{354{,}050}
+& \textbf{100.0} \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+\FloatBarrier
+
+\indent According to model calculations, within one year of full operation of a lunar colony with a population of 100,000, the total water consumption will be approximately 354 million liters.
+Under ideal recovery rates in all parts, a net water resource deficit of approximately 354,000 metric tons per year would have to be faced.
+Without the intervention of in-situ resource utilization (ISRU), nearly 1,000 tons of water would need to be moved from the earth to the lunar surface every day on average.
+
+\subsection{Water Resource Replenishment Model}
+According to previous simulation calculations based on Pareto optimal equilibrium solutions, the infrastructure task is expected to reach the predetermined target node in the 77th year. Starting from the 78th year, the system will enter an operation phase with water replenishment as its core mission, and will need to maintain a rigid replenishment demand of 354,200 metric tons per year.
+
+\textbf{Pure space elevator system transportation solution} shows extremely high economic stability. The model shows that the annual design capacity limit of the space elevator is $5.37 \times 10^5$ tons, and the capacity utilization rate remains stable at 65.96\%, which can fully cover people's livelihood supply needs. Its unit transportation cost is anchored at 100 USD/kg, and the total annual cost is approximately 35.42 billion USD. With its nonlinear cost advantage and electric energy drive characteristics, this system is the most sustainable economic form to maintain the operation of the "artery" of earth-lunar logistics.
+
+\textbf{Pure Rocket Cluster System Transportation Solution} Limited by chemical energy and physical properties, the total unit transportation cost of the rocket cluster is 116.6 USD/kg (including a fixed fuel cost bottom line of 100 USD/kg), and the total annual cost is approximately US$41.30 billion, which is US$5.88 billion higher than the elevator solution. Although it has the flexibility of discrete deployment, its economic efficiency, environmental load and launch site turnover pressure are significantly inferior to orbital transportation in ultra-large-scale, long-term standardized material supply.
+
+\textbf{Dual system comprehensive scheme} Based on the MY-HCTO-PM model logic, this scheme adopts the principle of "marginal cost minimization". During regular replenishment periods, the system automatically allocates 100\% load to the elevator system to achieve minimum expenditure (\$35.42 billion). Its core strategic value lies in the construction of a robust redundancy mechanism of "fixed orbit main transportation + discrete mobile backup": retaining the potential of 10,000 rocket launches per year, ensuring that when the elevator system is out of service due to force majeure, the logistics chain has the supply resilience to immediately intervene.
+\subsection{Sensitivity Analysis and Resource Utilization}
+Model results show that agricultural and industrial losses account for more than 94\% of total recharge needs. This reveals a key insight: increasing the recycling rate of domestic water (for example from 98\% to 99\%) will have a minimal marginal contribution to reducing logistics pressure. Conversely, a 0.1\% improvement in agricultural condensation efficiency could save tens of thousands of tons of supply mass per year.
+
+\subsection{Conclusions of Problem 3}
+This report demonstrates the huge logistical challenges in the early stages of operating a lunar colony with a population of 100,000 by building a cross-domain mathematical model. Even with state-of-the-art closed-loop recycling technology, the annual water replenishment demand of 354,000 metric tons still exceeds current and near-future (such as Starship cluster) transportation capabilities. Therefore, full operation of the lunar colony must be synchronized with in-situ water resource extraction on the lunar surface.
+
+To sum up, the best strategy for water replenishment of the lunar base should be a comprehensive transportation paradigm of “elevators as the main body and rockets as elastic backup”. In the long-term operation launched in the 78th year, this model not only achieved annual cost savings of approximately 14.2\% by maximizing asset utilization, but also utilized the elevator’s annual capacity surplus of approximately 182,800 tons to reserve logistics redundancy for the base’s future scale expansion.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-----------------------------------------问题四----------------------------------------%
+\section{Modeling and Solving of Problem 4}
+\subsection{Preparation of models}
+Traditional cost-time optimization models often ignore the cumulative effect of high-frequency heavy rocket launches on the stratosphere and global climate.
+In order to evaluate the impact of the monthly material transportation demand of up to $10^8$ tons anywhere on the earth's atmospheric environment, this chapter introduces environmental impact factors based on life cycle assessment (LCA) on the basis of the original logistics optimization model, and establishes a threshold constraint mechanism based on the atmospheric carrying capacity, aiming to quantitatively analyze the ecological costs of different transportation strategies.
+
+\subsection{Construction of LCA Model}
+In traditional surface transportation LCA analysis, environmental impact is usually mainly characterized by carbon dioxide $CO_2$ emissions.
+However, space transportation has its own uniqueness: rocket engines directly inject combustion products into the stratosphere and mesosphere.
+Due to the lack of convective weather phenomena (such as rainfall) at these altitudes, the residence time of particulate matter can last for years.
+Therefore, the single launch environmental impact equivalent ($\$mu $) defined in this model is a composite indicator, and its calculation formula is as follows:
+\[\mu=\alpha\cdot M_{CO_2}+\beta\cdot M_{BC}+\gamma\cdot M_{\mathrm{Al_2O_3}}+\delta\cdot M_{H_2O}\]
+\indent Where:
+\begin{itemize}
+\item $M_{CO_2}$ is the greenhouse gas emission mass.
+\item $M_{BC}$ is the mass of black carbon, soot particles.
+\item $M_{\mathrm{Al_2O_3}}$ is the mass of aluminum oxide particles (mainly from solid boosters).
+\item $M_{H_2O}$ is the water vapor in the upper atmosphere.
+\item $\alpha,\beta,\gamma,\delta$ are the environmental destruction weight coefficients for each pollutant.
+\end{itemize}
+
+In the numerical simulation, we simplified the above complex physical and chemical processes into a comprehensive scalar $ENV_{IMPACT\_PER\_LAUNCH}$ (set to 2500 EIU), which represents the comprehensive marginal damage to the global environment caused by the launch of a heavy-lift launch vehicle (such as Starship class).
+\subsection{Calculation of Total Environmental Impact}
+\subsubsection{Physical Derivation of Atmospheric Carrying Capacity Threshold}
+The total environmental impact $E_{total}$ of the system is a function of time $T$.Since the space elevator relies mainly on electricity during its operation phase (assumed to be powered by clean energy), its direct environmental emissions are considered zero (or negligible relative to rockets).
+Therefore, the total environmental impact is dominated by rocket launch activities.
+Assuming $L_t$ is the number of rocket launches in year $t$, the total environmental load of the system is calculated as follows:
+\[E_{total}(T)=\sum_{t=1}^T(L_t\times\mu)\]
+\indent Where $L_t$ is endogenously derived from the economic dispatch strategy determined by the current year’s remaining transportation demand $M_{remain}(t)$ and rocket manufacturing/fuel costs.
+This formula reveals the strong coupling relationship between environmental impact and transportation strategy: the pursuit of shortening the total construction period $T$ will inevitably lead to a surge in $L_t$ in the early stage, resulting in an exponential increase in $E_{total}$.
+This paper derives the maximum safe annual emissivity based on the steady-state load of stratospheric aerosols.
+The natural background aerosols in the Earth's stratosphere are mainly composed of sulfates, and their total mass is relatively stable.
+
+We define the following core parameters:
+\begin{itemize}
+\item $M_{bg}$:Total stratospheric background aerosol mass,($6 \times 10^8$kg).
+\item $\eta $: Maximum allowable perturbation ratio (Perturbation Ratio).
+\item $\tau $: Average residence time of particles (Residence Time).
+\item $m_{eff}$: Effective particle injection volume in a single shot($2 \times 10^3$kg).
+\end{itemize}
+\subsubsection{Steady-state Equilibrium Calculation Formula}
+\indent When launch activities continue for a long time, the mass $M_{human}$ of man-made pollutants in the stratosphere will reach a dynamic balance, that is, the annual injection amount is equal to the deposition amount.\\
+The equilibrium equation is:
+\[M_{human}=C_{atm}\times m_{eff}\times\tau\]
+According to environmental safety constraints:
+\[M_{human}\leq M_{bg}\times\eta\]
+Combining the above two formulas, the calculation formula of the maximum safe annual emissivity $C_{atm}$ can be derived:
+\[C_{atm}=\frac{M_{bg}\times\eta}{m_{eff}\times\tau}\]
+Substitute specific values ​​for calculation:
+Calculate the maximum allowable human load increment:
+\[M_{limit}=6\times10^8\mathrm{~kg}\times0.05=3\times10^7\mathrm{~kg}\]
+Substitute into the equilibrium equation to solve for the number of launches:
+$$C_{atm} = \frac{3 \times 10^7 \, \text{kg}}{2000 \, \text{kg/launch} \times 3.75 \, \text{years}} = 4000 \, \text{launches/year}$$
+
+\subsection{Modification of the Transportation Model}
+Based on this model, we concluded that 4000 times/year is the theoretical physical upper limit of the earth's atmosphere without significant climate changes.
+Therefore, the decision logic is revised to:
+\[
+S_{status} =
+\begin{cases}
+\text{Sustainable (Green)}, & \mathrm{if~}\max(L_t) \leq 4000, \\
+\text{Environmental Hazard (Red)}, & \mathrm{if~}\max(L_t) > 4000.
+\end{cases}
+\]
+
+\indent The model running results are shown in Figure~\ref{fig:modification_problem4}:
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.45\textwidth]{../figures/modification_problem4.png}
+  \caption{Modification of Pareto Optimization under Environmental Constraints}
+  \label{fig:modification_problem4}
+\end{figure}
+\FloatBarrier
+It can be seen that after correcting the model for environmental factors, the corresponding Pareto solution changes.
+
+\subsection{Conclusion}
+Through the construction of the above formula, this model expands the original two-dimensional "time-cost" Pareto optimization into a three-dimensional "time-cost-environment" trade-off analysis.
+Mathematical derivation shows that since the unit environmental cost $\mu $ of rocket transportation is constant and significantly greater than zero, while the unit environmental cost of the space elevator approaches zero, the mathematical solution to minimizing the environmental impact $E_{total}$ must point to a solution that maximizes the utilization rate of the space elevator.
+This quantitatively proves that in a billion-ton Earth-moon transportation mission, extending the construction period to wait for the release of the space elevator's capacity is not only the optimal economic solution, but also the only path that the earth's ecosystem can withstand.
