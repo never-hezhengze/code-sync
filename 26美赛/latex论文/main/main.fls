@@ -1,0 +1,419 @@
+PWD h:\Code\26美赛\latex论文\main
+INPUT C:\Users\hezhengze\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT h:\Code\26美赛\latex论文\main\main.tex
+OUTPUT main.log
+INPUT .\mcmthesis.cls
+INPUT mcmthesis.cls
+INPUT E:\Program Files\MikTex\tex\latex\xkeyval\xkeyval.sty
+INPUT E:\Program Files\MikTex\tex\latex\xkeyval\xkeyval.sty
+INPUT E:\Program Files\MikTex\tex\generic\xkeyval\xkeyval.tex
+INPUT E:\Program Files\MikTex\tex\generic\xkeyval\xkvutils.tex
+INPUT E:\Program Files\MikTex\tex\generic\xkeyval\keyval.tex
+INPUT E:\Program Files\MikTex\tex\latex\etoolbox\etoolbox.sty
+INPUT E:\Program Files\MikTex\tex\latex\etoolbox\etoolbox.sty
+INPUT E:\Program Files\MikTex\tex\latex\base\article.cls
+INPUT E:\Program Files\MikTex\tex\latex\base\article.cls
+INPUT E:\Program Files\MikTex\tex\latex\base\size12.clo
+INPUT E:\Program Files\MikTex\tex\latex\base\size12.clo
+INPUT E:\Program Files\MikTex\tex\latex\base\size12.clo
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmr12.tfm
+INPUT E:\Program Files\MikTex\tex\latex\fancyhdr\fancyhdr.sty
+INPUT E:\Program Files\MikTex\tex\latex\fancyhdr\fancyhdr.sty
+INPUT E:\Program Files\MikTex\tex\latex\fancybox\fancybox.sty
+INPUT E:\Program Files\MikTex\tex\latex\fancybox\fancybox.sty
+INPUT E:\Program Files\MikTex\tex\latex\base\ifthen.sty
+INPUT E:\Program Files\MikTex\tex\latex\base\ifthen.sty
+INPUT E:\Program Files\MikTex\tex\latex\listings\listings.sty
+INPUT E:\Program Files\MikTex\tex\latex\listings\listings.sty
+INPUT E:\Program Files\MikTex\tex\latex\graphics\keyval.sty
+INPUT E:\Program Files\MikTex\tex\latex\listings\lstpatch.sty
+INPUT E:\Program Files\MikTex\tex\latex\listings\lstpatch.sty
+INPUT E:\Program Files\MikTex\tex\latex\listings\lstpatch.sty
+INPUT E:\Program Files\MikTex\tex\latex\listings\lstmisc.sty
+INPUT E:\Program Files\MikTex\tex\latex\listings\lstmisc.sty
+INPUT E:\Program Files\MikTex\tex\latex\listings\lstmisc.sty
+INPUT E:\Program Files\MikTex\tex\latex\listings\listings.cfg
+INPUT E:\Program Files\MikTex\tex\latex\listings\listings.cfg
+INPUT E:\Program Files\MikTex\tex\latex\listings\listings.cfg
+INPUT E:\Program Files\MikTex\tex\latex\appendix\appendix.sty
+INPUT E:\Program Files\MikTex\tex\latex\appendix\appendix.sty
+INPUT E:\Program Files\MikTex\tex\latex\paralist\paralist.sty
+INPUT E:\Program Files\MikTex\tex\latex\paralist\paralist.sty
+INPUT E:\Program Files\MikTex\tex\latex\amscls\amsthm.sty
+INPUT E:\Program Files\MikTex\tex\latex\amscls\amsthm.sty
+INPUT E:\Program Files\MikTex\tex\latex\amsfonts\amsfonts.sty
+INPUT E:\Program Files\MikTex\tex\latex\amsfonts\amsfonts.sty
+INPUT E:\Program Files\MikTex\tex\latex\amsmath\amsmath.sty
+INPUT E:\Program Files\MikTex\tex\latex\amsmath\amsmath.sty
+INPUT E:\Program Files\MikTex\tex\latex\amsmath\amsopn.sty
+INPUT E:\Program Files\MikTex\tex\latex\amsmath\amstext.sty
+INPUT E:\Program Files\MikTex\tex\latex\amsmath\amstext.sty
+INPUT E:\Program Files\MikTex\tex\latex\amsmath\amsgen.sty
+INPUT E:\Program Files\MikTex\tex\latex\amsmath\amsgen.sty
+INPUT E:\Program Files\MikTex\tex\latex\amsmath\amsbsy.sty
+INPUT E:\Program Files\MikTex\tex\latex\amsmath\amsbsy.sty
+INPUT E:\Program Files\MikTex\tex\latex\amsmath\amsopn.sty
+INPUT E:\Program Files\MikTex\tex\latex\tools\bm.sty
+INPUT E:\Program Files\MikTex\tex\latex\tools\bm.sty
+INPUT E:\Program Files\MikTex\tex\latex\amsfonts\amssymb.sty
+INPUT E:\Program Files\MikTex\tex\latex\amsfonts\amssymb.sty
+INPUT E:\Program Files\MikTex\tex\latex\jknappen\mathrsfs.sty
+INPUT E:\Program Files\MikTex\tex\latex\jknappen\mathrsfs.sty
+INPUT E:\Program Files\MikTex\tex\latex\base\latexsym.sty
+INPUT E:\Program Files\MikTex\tex\latex\base\latexsym.sty
+INPUT E:\Program Files\MikTex\tex\latex\tools\longtable.sty
+INPUT E:\Program Files\MikTex\tex\latex\tools\longtable.sty
+INPUT E:\Program Files\MikTex\tex\latex\multirow\multirow.sty
+INPUT E:\Program Files\MikTex\tex\latex\multirow\multirow.sty
+INPUT E:\Program Files\MikTex\tex\latex\tools\hhline.sty
+INPUT E:\Program Files\MikTex\tex\latex\tools\hhline.sty
+INPUT E:\Program Files\MikTex\tex\latex\tools\tabularx.sty
+INPUT E:\Program Files\MikTex\tex\latex\tools\tabularx.sty
+INPUT E:\Program Files\MikTex\tex\latex\tools\array.sty
+INPUT E:\Program Files\MikTex\tex\latex\tools\array.sty
+INPUT E:\Program Files\MikTex\tex\latex\base\flafter.sty
+INPUT E:\Program Files\MikTex\tex\latex\base\flafter.sty
+INPUT E:\Program Files\MikTex\tex\latex\psnfss\pifont.sty
+INPUT E:\Program Files\MikTex\tex\latex\psnfss\pifont.sty
+INPUT E:\Program Files\MikTex\tex\latex\psnfss\upzd.fd
+INPUT E:\Program Files\MikTex\tex\latex\psnfss\upzd.fd
+INPUT E:\Program Files\MikTex\tex\latex\psnfss\upzd.fd
+INPUT E:\Program Files\MikTex\fonts\tfm\adobe\zapfding\pzdr.tfm
+INPUT E:\Program Files\MikTex\tex\latex\psnfss\upsy.fd
+INPUT E:\Program Files\MikTex\tex\latex\psnfss\upsy.fd
+INPUT E:\Program Files\MikTex\tex\latex\psnfss\upsy.fd
+INPUT E:\Program Files\MikTex\fonts\tfm\adobe\symbol\psyr.tfm
+INPUT E:\Program Files\MikTex\tex\latex\tools\calc.sty
+INPUT E:\Program Files\MikTex\tex\latex\tools\calc.sty
+INPUT E:\Program Files\MikTex\tex\latex\colortbl\colortbl.sty
+INPUT E:\Program Files\MikTex\tex\latex\colortbl\colortbl.sty
+INPUT E:\Program Files\MikTex\tex\latex\graphics\color.sty
+INPUT E:\Program Files\MikTex\tex\latex\graphics\color.sty
+INPUT E:\Program Files\MikTex\tex\latex\graphics-cfg\color.cfg
+INPUT E:\Program Files\MikTex\tex\latex\graphics-cfg\color.cfg
+INPUT E:\Program Files\MikTex\tex\latex\graphics-cfg\color.cfg
+INPUT E:\Program Files\MikTex\tex\latex\graphics-def\pdftex.def
+INPUT E:\Program Files\MikTex\tex\latex\graphics-def\pdftex.def
+INPUT E:\Program Files\MikTex\tex\latex\graphics-def\pdftex.def
+INPUT E:\Program Files\MikTex\tex\latex\graphics\mathcolor.ltx
+INPUT E:\Program Files\MikTex\tex\latex\graphics\mathcolor.ltx
+INPUT E:\Program Files\MikTex\tex\latex\graphics\mathcolor.ltx
+INPUT E:\Program Files\MikTex\tex\latex\booktabs\booktabs.sty
+INPUT E:\Program Files\MikTex\tex\latex\booktabs\booktabs.sty
+INPUT E:\Program Files\MikTex\tex\latex\geometry\geometry.sty
+INPUT E:\Program Files\MikTex\tex\latex\geometry\geometry.sty
+INPUT E:\Program Files\MikTex\tex\generic\iftex\ifvtex.sty
+INPUT E:\Program Files\MikTex\tex\generic\iftex\ifvtex.sty
+INPUT E:\Program Files\MikTex\tex\generic\iftex\iftex.sty
+INPUT E:\Program Files\MikTex\tex\generic\iftex\iftex.sty
+INPUT E:\Program Files\MikTex\tex\latex\geometry\geometry.cfg
+INPUT E:\Program Files\MikTex\tex\latex\geometry\geometry.cfg
+INPUT E:\Program Files\MikTex\tex\latex\geometry\geometry.cfg
+INPUT E:\Program Files\MikTex\tex\latex\base\fontenc.sty
+INPUT E:\Program Files\MikTex\tex\latex\base\fontenc.sty
+INPUT E:\Program Files\MikTex\fonts\tfm\jknappen\ec\ecrm1200.tfm
+INPUT E:\Program Files\MikTex\tex\latex\bera\berasans.sty
+INPUT E:\Program Files\MikTex\tex\latex\bera\berasans.sty
+INPUT E:\Program Files\MikTex\tex\latex\hyperref\hyperref.sty
+INPUT E:\Program Files\MikTex\tex\latex\hyperref\hyperref.sty
+INPUT E:\Program Files\MikTex\tex\latex\kvsetkeys\kvsetkeys.sty
+INPUT E:\Program Files\MikTex\tex\latex\kvsetkeys\kvsetkeys.sty
+INPUT E:\Program Files\MikTex\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT E:\Program Files\MikTex\tex\generic\kvdefinekeys\kvdefinekeys.sty
+INPUT E:\Program Files\MikTex\tex\generic\pdfescape\pdfescape.sty
+INPUT E:\Program Files\MikTex\tex\generic\pdfescape\pdfescape.sty
+INPUT E:\Program Files\MikTex\tex\generic\ltxcmds\ltxcmds.sty
+INPUT E:\Program Files\MikTex\tex\generic\ltxcmds\ltxcmds.sty
+INPUT E:\Program Files\MikTex\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT E:\Program Files\MikTex\tex\generic\pdftexcmds\pdftexcmds.sty
+INPUT E:\Program Files\MikTex\tex\generic\infwarerr\infwarerr.sty
+INPUT E:\Program Files\MikTex\tex\generic\infwarerr\infwarerr.sty
+INPUT E:\Program Files\MikTex\tex\latex\hycolor\hycolor.sty
+INPUT E:\Program Files\MikTex\tex\latex\hycolor\hycolor.sty
+INPUT E:\Program Files\MikTex\tex\latex\hyperref\nameref.sty
+INPUT E:\Program Files\MikTex\tex\latex\hyperref\nameref.sty
+INPUT E:\Program Files\MikTex\tex\latex\refcount\refcount.sty
+INPUT E:\Program Files\MikTex\tex\latex\refcount\refcount.sty
+INPUT E:\Program Files\MikTex\tex\generic\gettitlestring\gettitlestring.sty
+INPUT E:\Program Files\MikTex\tex\generic\gettitlestring\gettitlestring.sty
+INPUT E:\Program Files\MikTex\tex\latex\kvoptions\kvoptions.sty
+INPUT E:\Program Files\MikTex\tex\latex\kvoptions\kvoptions.sty
+INPUT E:\Program Files\MikTex\tex\generic\stringenc\stringenc.sty
+INPUT E:\Program Files\MikTex\tex\generic\stringenc\stringenc.sty
+INPUT E:\Program Files\MikTex\tex\latex\hyperref\pd1enc.def
+INPUT E:\Program Files\MikTex\tex\latex\hyperref\pd1enc.def
+INPUT E:\Program Files\MikTex\tex\latex\hyperref\pd1enc.def
+INPUT E:\Program Files\MikTex\tex\generic\intcalc\intcalc.sty
+INPUT E:\Program Files\MikTex\tex\generic\intcalc\intcalc.sty
+INPUT E:\Program Files\MikTex\tex\latex\hyperref\puenc.def
+INPUT E:\Program Files\MikTex\tex\latex\hyperref\puenc.def
+INPUT E:\Program Files\MikTex\tex\latex\hyperref\puenc.def
+INPUT E:\Program Files\MikTex\tex\latex\url\url.sty
+INPUT E:\Program Files\MikTex\tex\latex\url\url.sty
+INPUT E:\Program Files\MikTex\tex\generic\bitset\bitset.sty
+INPUT E:\Program Files\MikTex\tex\generic\bitset\bitset.sty
+INPUT E:\Program Files\MikTex\tex\generic\bigintcalc\bigintcalc.sty
+INPUT E:\Program Files\MikTex\tex\generic\bigintcalc\bigintcalc.sty
+INPUT E:\Program Files\MikTex\tex\generic\atbegshi\atbegshi.sty
+INPUT E:\Program Files\MikTex\tex\latex\base\atbegshi-ltx.sty
+INPUT E:\Program Files\MikTex\tex\latex\base\atbegshi-ltx.sty
+INPUT E:\Program Files\MikTex\tex\latex\hyperref\hpdftex.def
+INPUT E:\Program Files\MikTex\tex\latex\hyperref\hpdftex.def
+INPUT E:\Program Files\MikTex\tex\latex\hyperref\hpdftex.def
+INPUT E:\Program Files\MikTex\tex\latex\atveryend\atveryend.sty
+INPUT E:\Program Files\MikTex\tex\latex\base\atveryend-ltx.sty
+INPUT E:\Program Files\MikTex\tex\latex\base\atveryend-ltx.sty
+INPUT E:\Program Files\MikTex\tex\latex\rerunfilecheck\rerunfilecheck.sty
+INPUT E:\Program Files\MikTex\tex\latex\rerunfilecheck\rerunfilecheck.sty
+INPUT E:\Program Files\MikTex\tex\generic\uniquecounter\uniquecounter.sty
+INPUT E:\Program Files\MikTex\tex\generic\uniquecounter\uniquecounter.sty
+INPUT E:\Program Files\MikTex\tex\generic\iftex\ifpdf.sty
+INPUT E:\Program Files\MikTex\tex\generic\iftex\ifpdf.sty
+INPUT E:\Program Files\MikTex\tex\generic\iftex\ifxetex.sty
+INPUT E:\Program Files\MikTex\tex\generic\iftex\ifxetex.sty
+INPUT E:\Program Files\MikTex\tex\latex\graphics\graphicx.sty
+INPUT E:\Program Files\MikTex\tex\latex\graphics\graphicx.sty
+INPUT E:\Program Files\MikTex\tex\latex\graphics\graphics.sty
+INPUT E:\Program Files\MikTex\tex\latex\graphics\graphics.sty
+INPUT E:\Program Files\MikTex\tex\latex\graphics\trig.sty
+INPUT E:\Program Files\MikTex\tex\latex\graphics\trig.sty
+INPUT E:\Program Files\MikTex\tex\latex\graphics-cfg\graphics.cfg
+INPUT E:\Program Files\MikTex\tex\latex\graphics-cfg\graphics.cfg
+INPUT E:\Program Files\MikTex\tex\latex\graphics-cfg\graphics.cfg
+INPUT E:\Program Files\MikTex\tex\latex\epstopdf-pkg\epstopdf.sty
+INPUT E:\Program Files\MikTex\tex\latex\epstopdf-pkg\epstopdf.sty
+INPUT E:\Program Files\MikTex\tex\latex\grfext\grfext.sty
+INPUT E:\Program Files\MikTex\tex\latex\grfext\grfext.sty
+INPUT E:\Program Files\MikTex\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT E:\Program Files\MikTex\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT E:\Program Files\MikTex\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT E:\Program Files\MikTex\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT E:\Program Files\MikTex\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT E:\Program Files\MikTex\tex\latex\xcolor\xcolor.sty
+INPUT E:\Program Files\MikTex\tex\latex\xcolor\xcolor.sty
+INPUT E:\Program Files\MikTex\tex\latex\graphics-cfg\color.cfg
+INPUT E:\Program Files\MikTex\tex\latex\graphics\mathcolor.ltx
+INPUT E:\Program Files\MikTex\tex\latex\xcolor\svgnam.def
+INPUT E:\Program Files\MikTex\tex\latex\xcolor\svgnam.def
+INPUT E:\Program Files\MikTex\tex\latex\xcolor\svgnam.def
+INPUT E:\Program Files\MikTex\tex\latex\listings\lstlang1.sty
+INPUT E:\Program Files\MikTex\tex\latex\listings\lstlang1.sty
+INPUT E:\Program Files\MikTex\tex\latex\listings\lstlang1.sty
+INPUT E:\Program Files\MikTex\tex\latex\listings\lstmisc.sty
+INPUT E:\Program Files\MikTex\tex\latex\listings\lstmisc.sty
+INPUT E:\Program Files\MikTex\tex\latex\listings\lstmisc.sty
+INPUT E:\Program Files\MikTex\tex\latex\base\inputenc.sty
+INPUT E:\Program Files\MikTex\tex\latex\base\inputenc.sty
+INPUT E:\Program Files\MikTex\tex\latex\tools\indentfirst.sty
+INPUT E:\Program Files\MikTex\tex\latex\tools\indentfirst.sty
+INPUT E:\Program Files\MikTex\tex\latex\l3backend\l3backend-pdftex.def
+INPUT E:\Program Files\MikTex\tex\latex\l3backend\l3backend-pdftex.def
+INPUT .\main.aux
+INPUT .\main.aux
+INPUT main.aux
+OUTPUT main.aux
+INPUT E:\Program Files\MikTex\tex\context\base\mkii\supp-pdf.mkii
+INPUT E:\Program Files\MikTex\tex\context\base\mkii\supp-pdf.mkii
+INPUT E:\Program Files\MikTex\tex\context\base\mkii\supp-pdf.mkii
+INPUT .\main.out
+INPUT .\main.out
+INPUT main.out
+INPUT main.out
+OUTPUT main.pdf
+INPUT .\main.out
+INPUT .\main.out
+OUTPUT main.out
+INPUT ..\sections\0_abstract.tex
+INPUT ..\sections\0_abstract.tex
+INPUT ..\sections\0_abstract.tex
+INPUT ..\sections\0_abstract.tex
+INPUT ..\sections\0_abstract.tex
+INPUT E:\Program Files\MikTex\fonts\tfm\jknappen\ec\ecbx1200.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\jknappen\ec\ecrm1728.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\jknappen\ec\ecbx1728.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\jknappen\ec\ecrm2074.tfm
+INPUT C:\Users\hezhengze\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT E:\Program Files\MikTex\tex\latex\bera\t1fvs.fd
+INPUT E:\Program Files\MikTex\tex\latex\bera\t1fvs.fd
+INPUT E:\Program Files\MikTex\tex\latex\bera\t1fvs.fd
+INPUT E:\Program Files\MikTex\fonts\tfm\public\bera\fvsb8t.tfm
+INPUT .\main.toc
+INPUT .\main.toc
+INPUT main.toc
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmr8.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmr6.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmmi12.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmmi8.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmmi6.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmsy10.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmsy8.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmsy6.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmex10.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT E:\Program Files\MikTex\tex\latex\amsfonts\umsa.fd
+INPUT E:\Program Files\MikTex\tex\latex\amsfonts\umsa.fd
+INPUT E:\Program Files\MikTex\tex\latex\amsfonts\umsa.fd
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT E:\Program Files\MikTex\tex\latex\amsfonts\umsb.fd
+INPUT E:\Program Files\MikTex\tex\latex\amsfonts\umsb.fd
+INPUT E:\Program Files\MikTex\tex\latex\amsfonts\umsb.fd
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmbx12.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmbx8.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmbx6.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmmib10.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\cmextra\cmmib8.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\cmextra\cmmib6.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmbsy10.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\cmextra\cmbsy8.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\cmextra\cmbsy6.tfm
+INPUT E:\Program Files\MikTex\tex\latex\jknappen\ursfs.fd
+INPUT E:\Program Files\MikTex\tex\latex\jknappen\ursfs.fd
+INPUT E:\Program Files\MikTex\tex\latex\jknappen\ursfs.fd
+INPUT C:\Users\hezhengze\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT C:\Users\hezhengze\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT C:\Users\hezhengze\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs5.tfm
+INPUT E:\Program Files\MikTex\tex\latex\base\ulasy.fd
+INPUT E:\Program Files\MikTex\tex\latex\base\ulasy.fd
+INPUT E:\Program Files\MikTex\tex\latex\base\ulasy.fd
+INPUT E:\Program Files\MikTex\fonts\tfm\public\latex-fonts\lasy10.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\latex-fonts\lasy8.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\latex-fonts\lasy6.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\jknappen\ec\ecrm1095.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\bera\fvsr8t.tfm
+INPUT E:\Program Files\MikTex\fonts\vf\public\bera\fvsr8t.vf
+INPUT E:\Program Files\MikTex\fonts\tfm\public\bera\fvsr8r.tfm
+INPUT E:\Program Files\MikTex\fonts\enc\dvips\base\8r.enc
+INPUT E:\Program Files\MikTex\fonts\vf\public\bera\fvsb8t.vf
+INPUT E:\Program Files\MikTex\fonts\tfm\public\bera\fvsb8r.tfm
+OUTPUT main.toc
+INPUT ..\sections\1_Introduction.tex
+INPUT ..\sections\1_Introduction.tex
+INPUT ..\sections\1_Introduction.tex
+INPUT ..\sections\1_Introduction.tex
+INPUT ..\sections\1_Introduction.tex
+INPUT E:\Program Files\MikTex\fonts\tfm\jknappen\ec\ecrm1440.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\jknappen\ec\ecbx1440.tfm
+INPUT ..\sections\2_Assumptions.tex
+INPUT ..\sections\2_Assumptions.tex
+INPUT ..\sections\2_Assumptions.tex
+INPUT ..\sections\2_Assumptions.tex
+INPUT ..\sections\2_Assumptions.tex
+INPUT ..\sections\3_Notations.tex
+INPUT ..\sections\3_Notations.tex
+INPUT ..\sections\3_Notations.tex
+INPUT ..\sections\3_Notations.tex
+INPUT ..\sections\3_Notations.tex
+INPUT E:\Program Files\MikTex\fonts\tfm\jknappen\ec\ecrm0800.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\jknappen\ec\ecrm0600.tfm
+INPUT ..\sections\4_Models.tex
+INPUT ..\sections\4_Models.tex
+INPUT ..\sections\4_Models.tex
+INPUT ..\sections\4_Models.tex
+INPUT ..\sections\4_Models.tex
+INPUT ..\sections\5_Sensitivity_Analysis.tex
+INPUT ..\sections\5_Sensitivity_Analysis.tex
+INPUT ..\sections\5_Sensitivity_Analysis.tex
+INPUT ..\sections\5_Sensitivity_Analysis.tex
+INPUT ..\sections\5_Sensitivity_Analysis.tex
+INPUT ..\sections\6_Model_Evaluation_and_Promotion.tex
+INPUT ..\sections\6_Model_Evaluation_and_Promotion.tex
+INPUT ..\sections\6_Model_Evaluation_and_Promotion.tex
+INPUT ..\sections\6_Model_Evaluation_and_Promotion.tex
+INPUT ..\sections\6_Model_Evaluation_and_Promotion.tex
+INPUT ..\sections\7_Conclusions.tex
+INPUT ..\sections\7_Conclusions.tex
+INPUT ..\sections\7_Conclusions.tex
+INPUT ..\sections\7_Conclusions.tex
+INPUT ..\sections\7_Conclusions.tex
+INPUT ..\sections\8_References.tex
+INPUT ..\sections\8_References.tex
+INPUT ..\sections\8_References.tex
+INPUT ..\sections\8_References.tex
+INPUT ..\sections\8_References.tex
+INPUT ..\sections\9_Appendices.tex
+INPUT ..\sections\9_Appendices.tex
+INPUT ..\sections\9_Appendices.tex
+INPUT ..\sections\9_Appendices.tex
+INPUT ..\sections\9_Appendices.tex
+INPUT ..\sections\10_AI.tex
+INPUT ..\sections\10_AI.tex
+INPUT ..\sections\10_AI.tex
+INPUT ..\sections\10_AI.tex
+INPUT ..\sections\10_AI.tex
+INPUT E:\Program Files\MikTex\fonts\tfm\public\bera\fvsr8t.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\bera\fvsb8t.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\jknappen\ec\ecrm1000.tfm
+INPUT E:\Program Files\MikTex\tex\latex\psnfss\t1pcr.fd
+INPUT E:\Program Files\MikTex\tex\latex\psnfss\t1pcr.fd
+INPUT E:\Program Files\MikTex\tex\latex\psnfss\t1pcr.fd
+INPUT E:\Program Files\MikTex\fonts\tfm\adobe\courier\pcrr8t.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\adobe\courier\pcrb8t.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmbx10.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmbx7.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmbx5.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmmib10.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\cmextra\cmmib7.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\cmextra\cmmib5.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\cm\cmbsy10.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\cmextra\cmbsy7.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\amsfonts\cmextra\cmbsy5.tfm
+INPUT C:\Users\hezhengze\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT C:\Users\hezhengze\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs7.tfm
+INPUT C:\Users\hezhengze\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs5.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\latex-fonts\lasy10.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\latex-fonts\lasy7.tfm
+INPUT E:\Program Files\MikTex\fonts\tfm\public\latex-fonts\lasy5.tfm
+INPUT E:\Program Files\MikTex\tex\latex\psnfss\ts1pcr.fd
+INPUT E:\Program Files\MikTex\tex\latex\psnfss\ts1pcr.fd
+INPUT E:\Program Files\MikTex\tex\latex\psnfss\ts1pcr.fd
+INPUT E:\Program Files\MikTex\fonts\tfm\adobe\courier\pcrr8c.tfm
+INPUT E:\Program Files\MikTex\fonts\vf\public\bera\fvsb8t.vf
+INPUT E:\Program Files\MikTex\fonts\tfm\public\bera\fvsb8r.tfm
+INPUT E:\Program Files\MikTex\fonts\vf\adobe\courier\pcrb8t.vf
+INPUT E:\Program Files\MikTex\fonts\tfm\adobe\courier\pcrb8r.tfm
+INPUT E:\Program Files\MikTex\fonts\vf\adobe\courier\pcrr8t.vf
+INPUT E:\Program Files\MikTex\fonts\tfm\adobe\courier\pcrr8r.tfm
+INPUT E:\Program Files\MikTex\fonts\vf\adobe\courier\pcrr8c.vf
+INPUT main.aux
+INPUT .\main.out
+INPUT .\main.out
+INPUT C:\Users\hezhengze\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
+INPUT C:\Users\hezhengze\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk
+INPUT C:\Users\hezhengze\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
+INPUT C:\Users\hezhengze\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1200.pk
+INPUT C:\Users\hezhengze\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk
+INPUT C:\Users\hezhengze\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm2074.pk
+INPUT C:\Users\hezhengze\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk
+INPUT C:\Users\hezhengze\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk
+INPUT C:\Users\hezhengze\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
+INPUT C:\Users\hezhengze\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk
+INPUT E:\Program Files\MikTex\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT E:\Program Files\MikTex\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT E:\Program Files\MikTex\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT E:\Program Files\MikTex\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT E:\Program Files\MikTex\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT E:\Program Files\MikTex\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT E:\Program Files\MikTex\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT E:\Program Files\MikTex\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT E:\Program Files\MikTex\fonts\type1\bera\fvsb8a.pfb
+INPUT E:\Program Files\MikTex\fonts\type1\bera\fvsb8a.pfb
+INPUT E:\Program Files\MikTex\fonts\type1\bera\fvsr8a.pfb
+INPUT E:\Program Files\MikTex\fonts\type1\bera\fvsr8a.pfb
+INPUT E:\Program Files\MikTex\fonts\type1\urw\courier\ucrb8a.pfb
+INPUT E:\Program Files\MikTex\fonts\type1\urw\courier\ucrb8a.pfb
+INPUT E:\Program Files\MikTex\fonts\type1\urw\courier\ucrr8a.pfb
+INPUT E:\Program Files\MikTex\fonts\type1\urw\courier\ucrr8a.pfb

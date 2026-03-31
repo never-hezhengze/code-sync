@@ -2097,3 +2097,28 @@ Merge made by the 'ort' strategy.
  mac_sync_log.txt                                   | 108 +++++++++++++++++++++
  2 files changed, 108 insertions(+)
  create mode 100644 "26\347\276\216\350\265\233/\346\234\210\347\220\203\346\256\226\346\260\221\345\234\260\345\273\272\350\256\276\345\273\272\346\250\241\350\256\272\346\226\207.docx"
+[main 8db8cf0] Auto sync from Windows: 2026/01/30 周五  9:52:52.17
+ 1 file changed, 39 insertions(+)
+[2026/01/30 ����  9:52:52.70] Changes committed 
+Uploading LFS objects: 100% (21/21), 116 MB | 448 KB/s, done.
+To github.com:never-hezhengze/code-sync.git
+   a2b29b6..8db8cf0  main -> main
+[2026/01/30 ����  9:54:17.47] Sync completed successfully 
+======================================== 
+[2026/03/31 �ܶ� 18:01:14.53] Starting auto-sync... 
+From github.com:never-hezhengze/code-sync
+ * branch            main       -> FETCH_HEAD
+   8db8cf0..604b2d9  main       -> origin/main
+error: Your local changes to the following files would be overwritten by merge:
+	26美赛/latex论文/main/main.pdf
+	26美赛/latex论文/main/main.synctex.gz
+	26美赛/latex论文/sections/1_Introduction.tex
+	26美赛/latex论文/sections/2_Assumptions.tex
+Please commit your changes or stash them before you merge.
+error: The following untracked working tree files would be overwritten by merge:
+	26美赛/latex论文/main/main.aux
+	26美赛/latex论文/main/main.out
+	26美赛/latex论文/main/main.toc
+Please move or remove them before you merge.
+Updating 8db8cf0..604b2d9
+Aborting
