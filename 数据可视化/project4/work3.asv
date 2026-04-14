@@ -1,0 +1,17 @@
+f = @(x,y) sin(x) + cos(y);
+
+subplot(1,2,1);
+fcontour(f);
+
+subplot(1,2,2);
+xt = @(t) sin(t);
+yt = @(t) k - sin(t);
+zt = @(t) k;
+
+k_levels = -2:0.5:2;
+hold on;
+for k = k_levels
+    fplot3(xt,yt,zt,[-1 1]);
+end
+hold off;
+view(3)
