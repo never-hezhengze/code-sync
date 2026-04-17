@@ -1,0 +1,103 @@
+{
+  "best_truck_type": 2,
+  "plans": {
+    "1": {
+      "truck": {
+        "truck_id": 1,
+        "name": "车型1",
+        "length": 420,
+        "width": 210,
+        "height": 220,
+        "max_weight": 6000,
+        "trip_cost": 450
+      },
+      "vehicle_count": 4,
+      "total_cost": 1800,
+      "avg_space_utilization": 0.375338,
+      "avg_weight_utilization": 0.17125,
+      "total_volume_cm3": 28735000,
+      "total_weight_kg": 4110.0,
+      "trip_summaries": [
+        {
+          "trip_id": 1,
+          "loaded_items": 170,
+          "unloaded_items": 130,
+          "space_utilization": 0.715422,
+          "weight_utilization": 0.361,
+          "composite_score": 0.538211,
+          "used_volume_cm3": 13692750,
+          "used_weight_kg": 2166.0
+        },
+        {
+          "trip_id": 2,
+          "loaded_items": 105,
+          "unloaded_items": 25,
+          "space_utilization": 0.603062,
+          "weight_utilization": 0.2615,
+          "composite_score": 0.432281,
+          "used_volume_cm3": 11542250,
+          "used_weight_kg": 1569.0
+        },
+        {
+          "trip_id": 3,
+          "loaded_items": 24,
+          "unloaded_items": 1,
+          "space_utilization": 0.175554,
+          "weight_utilization": 0.06,
+          "composite_score": 0.117777,
+          "used_volume_cm3": 3360000,
+          "used_weight_kg": 360.0
+        },
+        {
+          "trip_id": 4,
+          "loaded_items": 1,
+          "unloaded_items": 0,
+          "space_utilization": 0.007315,
+          "weight_utilization": 0.0025,
+          "composite_score": 0.004907,
+          "used_volume_cm3": 140000,
+          "used_weight_kg": 15.0
+        }
+      ]
+    },
+    "2": {
+      "truck": {
+        "truck_id": 2,
+        "name": "车型2",
+        "length": 680,
+        "width": 245,
+        "height": 250,
+        "max_weight": 10000,
+        "trip_cost": 700
+      },
+      "vehicle_count": 2,
+      "total_cost": 1400,
+      "avg_space_utilization": 0.349148,
+      "avg_weight_utilization": 0.2055,
+      "total_volume_cm3": 28735000,
+      "total_weight_kg": 4110.0,
+      "trip_summaries": [
+        {
+          "trip_id": 1,
+          "loaded_items": 271,
+          "unloaded_items": 29,
+          "space_utilization": 0.592342,
+          "weight_utilization": 0.3645,
+          "composite_score": 0.478421,
+          "used_volume_cm3": 24375000,
+          "used_weight_kg": 3645.0
+        },
+        {
+          "trip_id": 2,
+          "loaded_items": 29,
+          "unloaded_items": 0,
+          "space_utilization": 0.105953,
+          "weight_utilization": 0.0465,
+          "composite_score": 0.076227,
+          "used_volume_cm3": 4360000,
+          "used_weight_kg": 465.0
+        }
+      ]
+    }
+  }
+}
