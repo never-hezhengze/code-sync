@@ -1,0 +1,3 @@
+﻿problem,vehicle_count,truck1_count,truck2_count,total_cost,avg_space_util,avg_weight_util
+2.1,48,4,44,32600.00,0.166786,0.091899
+2.2,49,7,42,32550.00,0.174009,0.093348
