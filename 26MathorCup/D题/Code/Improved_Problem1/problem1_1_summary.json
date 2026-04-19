@@ -1,0 +1,20 @@
+{
+  "1": {
+    "loaded_items": 123,
+    "unloaded_items": 2877,
+    "space_utilization": 0.613551,
+    "weight_utilization": 0.3635,
+    "composite_score": 0.488526,
+    "used_volume_cm3": 11743000,
+    "used_weight_kg": 2181.0
+  },
+  "2": {
+    "loaded_items": 167,
+    "unloaded_items": 2833,
+    "space_utilization": 0.391517,
+    "weight_utilization": 0.298,
+    "composite_score": 0.344758,
+    "used_volume_cm3": 16111000,
+    "used_weight_kg": 2980.0
+  }
+}

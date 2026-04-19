@@ -5,7 +5,7 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Dict, List, Sequence, Tuple
 
-RANDOM_SEED = 20261016
+RANDOM_SEED = 20260417
 TOP_CLEARANCE = 3
 SUPPORT_LIMIT_PER_CM2 = 500 / 10000
 
@@ -115,11 +115,11 @@ def load_truck_types() -> Dict[int, TruckType]:
 
 def load_cargo_types() -> Dict[str, CargoType]:
     return {
-        "G1": CargoType("G1", "standard", 60, 40, 30, 12, 80, True, True, False, False),
-        "G2": CargoType("G2", "standard", 50, 35, 25, 8, 100, True, True, False, False),
-        "G3": CargoType("G3", "fragile", 70, 50, 40, 15, 30, False, True, True, False),
-        "G4": CargoType("G4", "oriented", 80, 60, 50, 25, 40, True, False, False, True),
-        "G5": CargoType("G5", "oriented", 40, 40, 60, 18, 50, True, False, False, True),
+        "G1": CargoType("G1", "standard", 60, 40, 30, 12, 800, True, True, False, False),
+        "G2": CargoType("G2", "standard", 50, 35, 25, 8, 1000, True, True, False, False),
+        "G3": CargoType("G3", "fragile", 70, 50, 40, 15, 300, False, True, True, False),
+        "G4": CargoType("G4", "oriented", 80, 60, 50, 25, 400, True, False, False, True),
+        "G5": CargoType("G5", "oriented", 40, 40, 60, 18, 500, True, False, False, True),
     }
 
 

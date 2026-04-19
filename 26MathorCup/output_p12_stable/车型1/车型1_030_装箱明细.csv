@@ -1,0 +1,4 @@
+﻿item_id,type_id,category,x,y,z,length,width,height,weight,orientation_id,rotation,truck_id
+G5_030_0001,G5,oriented,0,0,0,40,40,60,18,1,LWH,车型1_030
+G5_030_0002,G5,oriented,40,0,0,40,40,60,18,1,LWH,车型1_030
+G5_030_0003,G5,oriented,80,0,0,40,40,60,18,1,LWH,车型1_030
