@@ -1,0 +1,32 @@
+=== 车型2 参数敏感性分析结论 ===
+
+按 avg_fullness_score 相对敏感度从高到低排序：
+
+1. MAX_TEMPLATES_PER_TRUCK
+   baseline=40
+   baseline_avg_fullness=0.448262
+   fullness_range=0.034347
+   vehicle_count_range=1
+   relative_sensitivity_fullness=0.059901
+   relative_sensitivity_vehicle_count=0.047619
+
+2. MAX_SPACES_TO_CHECK
+   baseline=80
+   baseline_avg_fullness=0.448262
+   fullness_range=0.00071
+   vehicle_count_range=0
+   relative_sensitivity_fullness=0.002164
+   relative_sensitivity_vehicle_count=0.0
+
+3. MIN_SPACE_VOLUME
+   baseline=20000
+   baseline_avg_fullness=0.448262
+   fullness_range=0.0
+   vehicle_count_range=0
+   relative_sensitivity_fullness=0.0
+   relative_sensitivity_vehicle_count=0.0
+
+结论建议：
+- MAX_TEMPLATES_PER_TRUCK 是当前 车型2 下最敏感的算法参数，优先调参应首先关注它。
+- 若某参数的 fullness_range 较小但 vehicle_count_range 较大，说明它对车辆数更敏感，适合从“少车目标”角度单独讨论。
+- 若某参数的相对敏感度较低，则可在该参数附近固定取值，以减少调参成本。

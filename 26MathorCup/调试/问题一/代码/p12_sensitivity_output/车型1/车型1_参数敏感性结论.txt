@@ -1,0 +1,48 @@
+=== 车型1 参数敏感性分析结论 ===
+
+按 avg_fullness_score 相对敏感度从高到低排序：
+
+1. HYBRID_KEEP_EXT
+   baseline=14
+   baseline_avg_fullness=0.515845
+   fullness_range=0.021866
+   vehicle_count_range=1
+   relative_sensitivity_fullness=0.025863
+   relative_sensitivity_vehicle_count=0.023333
+
+2. MAX_SPACES_TO_CHECK
+   baseline=80
+   baseline_avg_fullness=0.515845
+   fullness_range=0.01984
+   vehicle_count_range=1
+   relative_sensitivity_fullness=0.019231
+   relative_sensitivity_vehicle_count=0.02
+
+3. HYBRID_KEEP_LIFTED
+   baseline=18
+   baseline_avg_fullness=0.515845
+   fullness_range=0.016368
+   vehicle_count_range=1
+   relative_sensitivity_fullness=0.017881
+   relative_sensitivity_vehicle_count=0.0225
+
+4. HYBRID_KEEP_BASE
+   baseline=18
+   baseline_avg_fullness=0.515845
+   fullness_range=7.5e-05
+   vehicle_count_range=0
+   relative_sensitivity_fullness=0.000422
+   relative_sensitivity_vehicle_count=0.0
+
+5. MIN_SPACE_VOLUME
+   baseline=20000
+   baseline_avg_fullness=0.515845
+   fullness_range=0.0
+   vehicle_count_range=0
+   relative_sensitivity_fullness=0.0
+   relative_sensitivity_vehicle_count=0.0
+
+结论建议：
+- HYBRID_KEEP_EXT 是当前 车型1 下最敏感的算法参数，优先调参应首先关注它。
+- 若某参数的 fullness_range 较小但 vehicle_count_range 较大，说明它对车辆数更敏感，适合从“少车目标”角度单独讨论。
+- 若某参数的相对敏感度较低，则可在该参数附近固定取值，以减少调参成本。

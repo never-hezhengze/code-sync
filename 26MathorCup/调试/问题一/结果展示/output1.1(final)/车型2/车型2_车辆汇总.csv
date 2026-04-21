@@ -1,0 +1,2 @@
+﻿vehicle_id,space_utilization,weight_utilization,fullness_score,actual_counts,loaded_count,loaded_weight_kg,loaded_volume_cm3,strategy,module_count
+车型2_001,0.720337,0.4837,0.654078,"{'G1': 264, 'G3': 27, 'G2': 104, 'G5': 24}",419,4837.0,29642000,std_first,16

@@ -1,0 +1,11 @@
+﻿record_type,item_id,type_id,category,x,y,z,length,width,height,weight,orientation_id,rotation,truck_id,support_by,direct_supported_weight,template_name
+item,G3_车型1_027_0001,G3,fragile,0,0,0,70,50,40,15,1,LWH,车型1_027,,0.0,
+item,G3_车型1_027_0002,G3,fragile,0,50,0,70,50,40,15,1,LWH,车型1_027,,0.0,
+item,G3_车型1_027_0003,G3,fragile,0,100,0,70,50,40,15,1,LWH,车型1_027,,0.0,
+item,G3_车型1_027_0004,G3,fragile,0,150,0,70,50,40,15,1,LWH,车型1_027,,0.0,
+item,G3_车型1_027_0005,G3,fragile,70,0,0,70,50,40,15,1,LWH,车型1_027,,0.0,
+item,G3_车型1_027_0006,G3,fragile,70,50,0,70,50,40,15,1,LWH,车型1_027,,0.0,
+item,G3_车型1_027_0007,G3,fragile,70,100,0,70,50,40,15,1,LWH,车型1_027,,0.0,
+item,G3_车型1_027_0008,G3,fragile,70,150,0,70,50,40,15,1,LWH,车型1_027,,0.0,
+item,G3_车型1_027_0009,G3,fragile,140,0,0,70,50,40,15,1,LWH,车型1_027,,0.0,
+item,G3_车型1_027_0010,G3,fragile,140,50,0,70,50,40,15,1,LWH,车型1_027,,0.0,

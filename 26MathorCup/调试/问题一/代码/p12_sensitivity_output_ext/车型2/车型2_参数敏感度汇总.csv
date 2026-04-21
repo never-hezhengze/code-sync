@@ -1,0 +1,4 @@
+﻿truck_name,param_name,baseline_value,baseline_vehicle_count,baseline_avg_fullness,fullness_range,vehicle_count_range,relative_sensitivity_fullness,relative_sensitivity_vehicle_count,success_count
+车型2,MAX_TEMPLATES_PER_TRUCK,40,14,0.448262,0.034347,1,0.059901,0.047619,5
+车型2,MAX_SPACES_TO_CHECK,80,14,0.448262,0.00071,0,0.002164,0.0,5
+车型2,MIN_SPACE_VOLUME,20000,14,0.448262,0.0,0,0.0,0.0,5

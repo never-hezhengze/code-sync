@@ -1,0 +1,246 @@
+{
+  "truck_name": "车型1",
+  "parameter_grid": {
+    "MAX_TEMPLATES_PER_TRUCK": [
+      20,
+      25,
+      30,
+      35,
+      40
+    ],
+    "MAX_SPACES_TO_CHECK": [
+      40,
+      60,
+      80,
+      100,
+      120
+    ],
+    "MIN_SPACE_VOLUME": [
+      10000,
+      15000,
+      20000,
+      25000,
+      30000
+    ]
+  },
+  "run_rows": [
+    {
+      "truck_name": "车型1",
+      "param_name": "MAX_TEMPLATES_PER_TRUCK",
+      "param_value": 20,
+      "vehicle_count": 25,
+      "total_cost": 11250.0,
+      "avg_space_utilization": 0.611242,
+      "avg_weight_utilization": 0.274,
+      "avg_fullness_score": 0.51681424,
+      "success": true,
+      "error": ""
+    },
+    {
+      "truck_name": "车型1",
+      "param_name": "MAX_TEMPLATES_PER_TRUCK",
+      "param_value": 25,
+      "vehicle_count": 26,
+      "total_cost": 11700.0,
+      "avg_space_utilization": 0.587793,
+      "avg_weight_utilization": 0.263462,
+      "avg_fullness_score": 0.49698032,
+      "success": true,
+      "error": ""
+    },
+    {
+      "truck_name": "车型1",
+      "param_name": "MAX_TEMPLATES_PER_TRUCK",
+      "param_value": 30,
+      "vehicle_count": 26,
+      "total_cost": 11700.0,
+      "avg_space_utilization": 0.588126,
+      "avg_weight_utilization": 0.263462,
+      "avg_fullness_score": 0.49722008,
+      "success": true,
+      "error": ""
+    },
+    {
+      "truck_name": "车型1",
+      "param_name": "MAX_TEMPLATES_PER_TRUCK",
+      "param_value": 35,
+      "vehicle_count": 26,
+      "total_cost": 11700.0,
+      "avg_space_utilization": 0.588516,
+      "avg_weight_utilization": 0.263462,
+      "avg_fullness_score": 0.49750088000000003,
+      "success": true,
+      "error": ""
+    },
+    {
+      "truck_name": "车型1",
+      "param_name": "MAX_TEMPLATES_PER_TRUCK",
+      "param_value": 40,
+      "vehicle_count": 26,
+      "total_cost": 11700.0,
+      "avg_space_utilization": 0.588456,
+      "avg_weight_utilization": 0.263462,
+      "avg_fullness_score": 0.49745767999999996,
+      "success": true,
+      "error": ""
+    },
+    {
+      "truck_name": "车型1",
+      "param_name": "MAX_SPACES_TO_CHECK",
+      "param_value": 40,
+      "vehicle_count": 26,
+      "total_cost": 11700.0,
+      "avg_space_utilization": 0.588456,
+      "avg_weight_utilization": 0.263462,
+      "avg_fullness_score": 0.49745767999999996,
+      "success": true,
+      "error": ""
+    },
+    {
+      "truck_name": "车型1",
+      "param_name": "MAX_SPACES_TO_CHECK",
+      "param_value": 60,
+      "vehicle_count": 26,
+      "total_cost": 11700.0,
+      "avg_space_utilization": 0.588456,
+      "avg_weight_utilization": 0.263462,
+      "avg_fullness_score": 0.49745767999999996,
+      "success": true,
+      "error": ""
+    },
+    {
+      "truck_name": "车型1",
+      "param_name": "MAX_SPACES_TO_CHECK",
+      "param_value": 80,
+      "vehicle_count": 26,
+      "total_cost": 11700.0,
+      "avg_space_utilization": 0.588456,
+      "avg_weight_utilization": 0.263462,
+      "avg_fullness_score": 0.49745767999999996,
+      "success": true,
+      "error": ""
+    },
+    {
+      "truck_name": "车型1",
+      "param_name": "MAX_SPACES_TO_CHECK",
+      "param_value": 100,
+      "vehicle_count": 26,
+      "total_cost": 11700.0,
+      "avg_space_utilization": 0.588456,
+      "avg_weight_utilization": 0.263462,
+      "avg_fullness_score": 0.49745767999999996,
+      "success": true,
+      "error": ""
+    },
+    {
+      "truck_name": "车型1",
+      "param_name": "MAX_SPACES_TO_CHECK",
+      "param_value": 120,
+      "vehicle_count": 26,
+      "total_cost": 11700.0,
+      "avg_space_utilization": 0.588456,
+      "avg_weight_utilization": 0.263462,
+      "avg_fullness_score": 0.49745767999999996,
+      "success": true,
+      "error": ""
+    },
+    {
+      "truck_name": "车型1",
+      "param_name": "MIN_SPACE_VOLUME",
+      "param_value": 10000,
+      "vehicle_count": 26,
+      "total_cost": 11700.0,
+      "avg_space_utilization": 0.588456,
+      "avg_weight_utilization": 0.263462,
+      "avg_fullness_score": 0.49745767999999996,
+      "success": true,
+      "error": ""
+    },
+    {
+      "truck_name": "车型1",
+      "param_name": "MIN_SPACE_VOLUME",
+      "param_value": 15000,
+      "vehicle_count": 26,
+      "total_cost": 11700.0,
+      "avg_space_utilization": 0.588456,
+      "avg_weight_utilization": 0.263462,
+      "avg_fullness_score": 0.49745767999999996,
+      "success": true,
+      "error": ""
+    },
+    {
+      "truck_name": "车型1",
+      "param_name": "MIN_SPACE_VOLUME",
+      "param_value": 20000,
+      "vehicle_count": 26,
+      "total_cost": 11700.0,
+      "avg_space_utilization": 0.588456,
+      "avg_weight_utilization": 0.263462,
+      "avg_fullness_score": 0.49745767999999996,
+      "success": true,
+      "error": ""
+    },
+    {
+      "truck_name": "车型1",
+      "param_name": "MIN_SPACE_VOLUME",
+      "param_value": 25000,
+      "vehicle_count": 26,
+      "total_cost": 11700.0,
+      "avg_space_utilization": 0.588456,
+      "avg_weight_utilization": 0.263462,
+      "avg_fullness_score": 0.49745767999999996,
+      "success": true,
+      "error": ""
+    },
+    {
+      "truck_name": "车型1",
+      "param_name": "MIN_SPACE_VOLUME",
+      "param_value": 30000,
+      "vehicle_count": 26,
+      "total_cost": 11700.0,
+      "avg_space_utilization": 0.588456,
+      "avg_weight_utilization": 0.263462,
+      "avg_fullness_score": 0.49745767999999996,
+      "success": true,
+      "error": ""
+    }
+  ],
+  "metric_rows": [
+    {
+      "truck_name": "车型1",
+      "param_name": "MAX_TEMPLATES_PER_TRUCK",
+      "baseline_value": 40,
+      "baseline_vehicle_count": 26,
+      "baseline_avg_fullness": 0.497458,
+      "fullness_range": 0.019834,
+      "vehicle_count_range": 1,
+      "relative_sensitivity_fullness": 0.020747,
+      "relative_sensitivity_vehicle_count": 0.019231,
+      "success_count": 5
+    },
+    {
+      "truck_name": "车型1",
+      "param_name": "MAX_SPACES_TO_CHECK",
+      "baseline_value": 80,
+      "baseline_vehicle_count": 26,
+      "baseline_avg_fullness": 0.497458,
+      "fullness_range": 0.0,
+      "vehicle_count_range": 0,
+      "relative_sensitivity_fullness": 0.0,
+      "relative_sensitivity_vehicle_count": 0.0,
+      "success_count": 5
+    },
+    {
+      "truck_name": "车型1",
+      "param_name": "MIN_SPACE_VOLUME",
+      "baseline_value": 20000,
+      "baseline_vehicle_count": 26,
+      "baseline_avg_fullness": 0.497458,
+      "fullness_range": 0.0,
+      "vehicle_count_range": 0,
+      "relative_sensitivity_fullness": 0.0,
+      "relative_sensitivity_vehicle_count": 0.0,
+      "success_count": 5
+    }
+  ]
+}

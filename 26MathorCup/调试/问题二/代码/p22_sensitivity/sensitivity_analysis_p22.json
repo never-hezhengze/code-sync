@@ -1,0 +1,74 @@
+[
+  {
+    "cargo_type": "G1",
+    "scale": 0.5,
+    "original_quantity": 800,
+    "new_quantity": 400,
+    "x_truck1": 1,
+    "y_truck2": 12,
+    "vehicle_count": 13,
+    "total_cost": 8850.0,
+    "feasible": true,
+    "construction_mode": "直接复用p12边界解(0,13)+低载车型2->车型1转换"
+  },
+  {
+    "cargo_type": "G1",
+    "scale": 0.75,
+    "original_quantity": 800,
+    "new_quantity": 600,
+    "x_truck1": 1,
+    "y_truck2": 12,
+    "vehicle_count": 13,
+    "total_cost": 8850.0,
+    "feasible": true,
+    "construction_mode": "直接复用p12边界解(0,13)+低载车型2->车型1转换"
+  },
+  {
+    "cargo_type": "G1",
+    "scale": 1.0,
+    "original_quantity": 800,
+    "new_quantity": 800,
+    "x_truck1": 1,
+    "y_truck2": 12,
+    "vehicle_count": 13,
+    "total_cost": 8850.0,
+    "feasible": true,
+    "construction_mode": "直接复用p12边界解(0,13)+低载车型2->车型1转换"
+  },
+  {
+    "cargo_type": "G1",
+    "scale": 1.25,
+    "original_quantity": 800,
+    "new_quantity": 1000,
+    "x_truck1": 0,
+    "y_truck2": 13,
+    "vehicle_count": 13,
+    "total_cost": 9100.0,
+    "feasible": true,
+    "construction_mode": "直接复用p12边界解(0,13)"
+  },
+  {
+    "cargo_type": "G1",
+    "scale": 1.5,
+    "original_quantity": 800,
+    "new_quantity": 1200,
+    "x_truck1": 1,
+    "y_truck2": 13,
+    "vehicle_count": 14,
+    "total_cost": 9550.0,
+    "feasible": true,
+    "construction_mode": "直接复用p12边界解(0,13)+低载车型2->车型1转换"
+  },
+  {
+    "cargo_type": "G1",
+    "scale": 2.0,
+    "original_quantity": 800,
+    "new_quantity": 1600,
+    "x_truck1": 1,
+    "y_truck2": 15,
+    "vehicle_count": 16,
+    "total_cost": 10950.0,
+    "feasible": true,
+    "construction_mode": "直接复用p12边界解(0,13)+低载车型2->车型1转换"
+  }
+]

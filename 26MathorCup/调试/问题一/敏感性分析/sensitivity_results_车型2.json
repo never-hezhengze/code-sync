@@ -1,0 +1,563 @@
+{
+  "truck_name": "车型2",
+  "test_percentages": [
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    2.0
+  ],
+  "cargo_tests": {
+    "G1": [
+      {
+        "cargo_id": "G1",
+        "percentage": 0.5,
+        "test_qty": 400,
+        "original_qty": 800,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G1",
+        "percentage": 0.75,
+        "test_qty": 600,
+        "original_qty": 800,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G1",
+        "percentage": 1.0,
+        "test_qty": 800,
+        "original_qty": 800,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G1",
+        "percentage": 1.25,
+        "test_qty": 1000,
+        "original_qty": 800,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G1",
+        "percentage": 1.5,
+        "test_qty": 1200,
+        "original_qty": 800,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G1",
+        "percentage": 2.0,
+        "test_qty": 1600,
+        "original_qty": 800,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      }
+    ],
+    "G2": [
+      {
+        "cargo_id": "G2",
+        "percentage": 0.5,
+        "test_qty": 500,
+        "original_qty": 1000,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G2",
+        "percentage": 0.75,
+        "test_qty": 750,
+        "original_qty": 1000,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G2",
+        "percentage": 1.0,
+        "test_qty": 1000,
+        "original_qty": 1000,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G2",
+        "percentage": 1.25,
+        "test_qty": 1250,
+        "original_qty": 1000,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G2",
+        "percentage": 1.5,
+        "test_qty": 1500,
+        "original_qty": 1000,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G2",
+        "percentage": 2.0,
+        "test_qty": 2000,
+        "original_qty": 1000,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      }
+    ],
+    "G3": [
+      {
+        "cargo_id": "G3",
+        "percentage": 0.5,
+        "test_qty": 150,
+        "original_qty": 300,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G3",
+        "percentage": 0.75,
+        "test_qty": 225,
+        "original_qty": 300,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G3",
+        "percentage": 1.0,
+        "test_qty": 300,
+        "original_qty": 300,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G3",
+        "percentage": 1.25,
+        "test_qty": 375,
+        "original_qty": 300,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G3",
+        "percentage": 1.5,
+        "test_qty": 450,
+        "original_qty": 300,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G3",
+        "percentage": 2.0,
+        "test_qty": 600,
+        "original_qty": 300,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      }
+    ],
+    "G4": [
+      {
+        "cargo_id": "G4",
+        "percentage": 0.5,
+        "test_qty": 200,
+        "original_qty": 400,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G4",
+        "percentage": 0.75,
+        "test_qty": 300,
+        "original_qty": 400,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G4",
+        "percentage": 1.0,
+        "test_qty": 400,
+        "original_qty": 400,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G4",
+        "percentage": 1.25,
+        "test_qty": 500,
+        "original_qty": 400,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G4",
+        "percentage": 1.5,
+        "test_qty": 600,
+        "original_qty": 400,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G4",
+        "percentage": 2.0,
+        "test_qty": 800,
+        "original_qty": 400,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      }
+    ],
+    "G5": [
+      {
+        "cargo_id": "G5",
+        "percentage": 0.5,
+        "test_qty": 250,
+        "original_qty": 500,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G5",
+        "percentage": 0.75,
+        "test_qty": 375,
+        "original_qty": 500,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G5",
+        "percentage": 1.0,
+        "test_qty": 500,
+        "original_qty": 500,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G5",
+        "percentage": 1.25,
+        "test_qty": 625,
+        "original_qty": 500,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G5",
+        "percentage": 1.5,
+        "test_qty": 750,
+        "original_qty": 500,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      },
+      {
+        "cargo_id": "G5",
+        "percentage": 2.0,
+        "test_qty": 1000,
+        "original_qty": 500,
+        "loaded_count": 184,
+        "actual_counts": {
+          "G4": 128,
+          "G5": 24,
+          "G1": 32
+        },
+        "used_weight": 4016.0,
+        "used_volume": 35328000,
+        "space_utilization": 0.858513,
+        "weight_utilization": 0.4016,
+        "fullness_score": 0.730578,
+        "success": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "zero_impact_analysis": {
+    "truck_name": "车型1",
+    "test_scenario": "去除单种货物",
+    "cargo_impact": {
+      "G1": {
+        "removed_cargo": "G1",
+        "loaded_count": 90,
+        "actual_counts": {
+          "G4": 60,
+          "G2": 30
+        },
+        "used_weight": 1740.0,
+        "used_volume": 15712500,
+        "space_utilization": 0.820951,
+        "weight_utilization": 0.29,
+        "fullness_score": 0.672284,
+        "fullness_score_delta": -0.021139,
+        "loaded_count_delta": 5,
+        "success": true
+      },
+      "G2": {
+        "removed_cargo": "G2",
+        "loaded_count": 85,
+        "actual_counts": {
+          "G4": 60,
+          "G1": 25
+        },
+        "used_weight": 1800.0,
+        "used_volume": 16200000,
+        "space_utilization": 0.846422,
+        "weight_utilization": 0.3,
+        "fullness_score": 0.693423,
+        "fullness_score_delta": 0.0,
+        "loaded_count_delta": 0,
+        "success": true
+      },
+      "G3": {
+        "removed_cargo": "G3",
+        "loaded_count": 85,
+        "actual_counts": {
+          "G4": 60,
+          "G1": 25
+        },
+        "used_weight": 1800.0,
+        "used_volume": 16200000,
+        "space_utilization": 0.846422,
+        "weight_utilization": 0.3,
+        "fullness_score": 0.693423,
+        "fullness_score_delta": 0.0,
+        "loaded_count_delta": 0,
+        "success": true
+      },
+      "G4": {
+        "removed_cargo": "G4",
+        "loaded_count": 24,
+        "actual_counts": {
+          "G3": 24
+        },
+        "used_weight": 360.0,
+        "used_volume": 3360000,
+        "space_utilization": 0.175554,
+        "weight_utilization": 0.06,
+        "fullness_score": 0.143199,
+        "fullness_score_delta": -0.550225,
+        "loaded_count_delta": -61,
+        "success": true
+      },
+      "G5": {
+        "removed_cargo": "G5",
+        "loaded_count": 85,
+        "actual_counts": {
+          "G4": 60,
+          "G1": 25
+        },
+        "used_weight": 1800.0,
+        "used_volume": 16200000,
+        "space_utilization": 0.846422,
+        "weight_utilization": 0.3,
+        "fullness_score": 0.693423,
+        "fullness_score_delta": 0.0,
+        "loaded_count_delta": 0,
+        "success": true
+      }
+    },
+    "baseline": {
+      "scenario": "完整货物(基准)",
+      "loaded_count": 85,
+      "actual_counts": {
+        "G4": 60,
+        "G1": 25
+      },
+      "used_weight": 1800.0,
+      "used_volume": 16200000,
+      "space_utilization": 0.846422,
+      "weight_utilization": 0.3,
+      "fullness_score": 0.693423
+    }
+  },
+  "criticality_analysis": {
+    "truck_name": "车型1",
+    "criticality_analysis": {
+      "G4": {
+        "cargo_id": "G4",
+        "count_in_baseline": 60,
+        "item_ratio": 70.59,
+        "volume_contribution_pct": 88.89,
+        "weight_contribution_pct": 83.33,
+        "fs_impact": -0.550225
+      },
+      "G1": {
+        "cargo_id": "G1",
+        "count_in_baseline": 25,
+        "item_ratio": 29.41,
+        "volume_contribution_pct": 11.11,
+        "weight_contribution_pct": 16.67,
+        "fs_impact": -0.021139
+      }
+    },
+    "ranked_by_impact": [
+      [
+        "G4",
+        0.550225
+      ],
+      [
+        "G1",
+        0.021139
+      ]
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+=== Problem 1.1 Sensitivity Analysis Report (车型1) ===
+
+[Sensitivity Ranking - High to Low]
+The higher the rank, the more sensitive the cargo quantity is to the overall packing solution.
+
+1. G1
+   Sensitivity Index: 0.000000
+   Average fullness_score: 0.693423
+   Score Range: 0.000000
+   Successful Test Count: 6
+
+2. G2
+   Sensitivity Index: 0.000000
+   Average fullness_score: 0.693423
+   Score Range: 0.000000
+   Successful Test Count: 6
+
+3. G3
+   Sensitivity Index: 0.000000
+   Average fullness_score: 0.693423
+   Score Range: 0.000000
+   Successful Test Count: 6
+
+4. G4
+   Sensitivity Index: 0.000000
+   Average fullness_score: 0.693423
+   Score Range: 0.000000
+   Successful Test Count: 6
+
+5. G5
+   Sensitivity Index: 0.000000
+   Average fullness_score: 0.693423
+   Score Range: 0.000000
+   Successful Test Count: 6
+
+
+[Explanation]
+- A larger sensitivity index means the cargo quantity change has a greater impact on the final solution.
+- A larger fullness_score range indicates a stronger effect on solution quality.
+- High-sensitivity cargo quantities should be adjusted first.

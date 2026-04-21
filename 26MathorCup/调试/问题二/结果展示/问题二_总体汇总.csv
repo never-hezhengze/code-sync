@@ -1,0 +1,2 @@
+﻿tag,objective,construction_mode,x_truck1,y_truck2,vehicle_count,total_cost,avg_space_utilization,avg_weight_utilization,boundary_point_1,boundary_point_2,output_dir
+problem2_2_min_cost,min_cost,"直接复用p12边界解(0,13)+低载车型2->车型1转换",1,12,13,8850.0,0.545992,0.316923,"(25,0)","(0,13)",/Users/hezhengze/Code/26MathorCup/调试/问题二/结果展示/problem2_2_min_cost

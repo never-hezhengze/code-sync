@@ -1,0 +1,18 @@
+{
+  "车型1": {
+    "truck_name": "车型1",
+    "run_csv": "/Users/hezhengze/Code/26MathorCup/调试/问题一/代码/p12_sensitivity_output/车型1/车型1_参数敏感性明细.csv",
+    "metric_csv": "/Users/hezhengze/Code/26MathorCup/调试/问题一/代码/p12_sensitivity_output/车型1/车型1_参数敏感度汇总.csv",
+    "json_path": "/Users/hezhengze/Code/26MathorCup/调试/问题一/代码/p12_sensitivity_output/车型1/车型1_参数敏感性结果.json",
+    "txt_path": "/Users/hezhengze/Code/26MathorCup/调试/问题一/代码/p12_sensitivity_output/车型1/车型1_参数敏感性结论.txt",
+    "plot_path": "/Users/hezhengze/Code/26MathorCup/调试/问题一/代码/p12_sensitivity_output/车型1/车型1_参数敏感度条形图.png"
+  },
+  "车型2": {
+    "truck_name": "车型2",
+    "run_csv": "/Users/hezhengze/Code/26MathorCup/调试/问题一/代码/p12_sensitivity_output/车型2/车型2_参数敏感性明细.csv",
+    "metric_csv": "/Users/hezhengze/Code/26MathorCup/调试/问题一/代码/p12_sensitivity_output/车型2/车型2_参数敏感度汇总.csv",
+    "json_path": "/Users/hezhengze/Code/26MathorCup/调试/问题一/代码/p12_sensitivity_output/车型2/车型2_参数敏感性结果.json",
+    "txt_path": "/Users/hezhengze/Code/26MathorCup/调试/问题一/代码/p12_sensitivity_output/车型2/车型2_参数敏感性结论.txt",
+    "plot_path": "/Users/hezhengze/Code/26MathorCup/调试/问题一/代码/p12_sensitivity_output/车型2/车型2_参数敏感度条形图.png"
+  }
+}

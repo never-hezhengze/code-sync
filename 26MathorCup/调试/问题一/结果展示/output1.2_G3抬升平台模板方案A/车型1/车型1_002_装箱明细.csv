@@ -1,0 +1,9 @@
+﻿record_type,item_id,type_id,category,x,y,z,length,width,height,weight,orientation_id,rotation,truck_id,support_by,direct_supported_weight,template_name
+module,MODULE_车型1_002_0001,MODULE_G3,composite,0,0,0,100,105,215,366,,,车型1_002,,,MPX_G2_2x3_L1_S1_G32_K2_UP7
+module,MODULE_车型1_002_0002,MODULE_G3,composite,0,105,0,100,105,215,366,,,车型1_002,,,MPX_G2_2x3_L1_S1_G32_K2_UP7
+module,MODULE_车型1_002_0003,MODULE_G3,composite,100,0,0,150,70,215,366,,,车型1_002,,,MPX_G2_3x2_L1_S1_G31_K2_UP7
+module,MODULE_车型1_002_0004,MODULE_G3,composite,100,70,0,150,70,215,366,,,车型1_002,,,MPX_G2_3x2_L1_S1_G31_K2_UP7
+module,MODULE_车型1_002_0005,MODULE_G3,composite,100,140,0,150,70,215,366,,,车型1_002,,,MPX_G2_3x2_L1_S1_G31_K2_UP7
+module,MODULE_车型1_002_0006,MODULE_G3,composite,250,0,0,150,70,215,366,,,车型1_002,,,MPX_G2_3x2_L1_S1_G31_K2_UP7
+module,MODULE_车型1_002_0007,MODULE_G3,composite,250,70,0,150,70,215,366,,,车型1_002,,,MPX_G2_3x2_L1_S1_G31_K2_UP7
+module,MODULE_车型1_002_0008,MODULE_G3,composite,250,140,0,150,70,215,366,,,车型1_002,,,MPX_G2_3x2_L1_S1_G32_K2_UP7
