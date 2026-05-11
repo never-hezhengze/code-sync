@@ -22,7 +22,7 @@ plot(t, g_c, 'k', 'LineWidth', 1.5);
 idx = (t >= t_i) & (t <= t_j);
 
 % 填充区域（斜线效果用 hatch 或简单透明代替）
-fill([t(idx), fliplr(t(idx))], ...
+fill([t(idx), fliplr(t(idx))], ...            %fill函数接受X,Y两个向量 依次取两个向量的元素组成坐标点 围成一个封闭图形
      [g_f(idx), fliplr(g_c(idx))], ...
      [0.8 0.8 0.8], 'EdgeColor', 'none', 'FaceAlpha', 0.5);
 

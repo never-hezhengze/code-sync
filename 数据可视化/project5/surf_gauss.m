@@ -13,7 +13,7 @@ y = -3:0.1:3;
 
 % 计算二维高斯联合概率密度
 % 公式: p(x,y) = 1/(2π|Σ|^(1/2)) * exp(-1/2 * [x-μ]' * Σ^(-1) * [x-μ])
-X_vec = X(:) - mu(1);
+X_vec = X(:) - mu(1);  % 将X矩阵展开成列向量, 并减去均值
 Y_vec = Y(:) - mu(2);
 Sigma_det = det(sigma);
 Sigma_inv = inv(sigma);
@@ -32,7 +32,7 @@ figure('Position', [100, 100, 800, 600]);
 surf(X, Y, Z, 'EdgeColor', 'none', 'FaceAlpha', 0.8);
 
 % 美化图形
-colormap('jet');      % 设置颜色映射
+colormap('jet');      % 设置颜色映射,jet 是一种从蓝色到红色的渐变色,通常低值偏蓝,高值偏红
 colorbar;             % 显示颜色条
 xlabel('X', 'FontSize', 12);
 ylabel('Y', 'FontSize', 12);
@@ -43,6 +43,6 @@ title('二维高斯联合概率密度函数', 'FontSize', 14);
 view(45, 30);
 grid on;
 
-% 可选：添加光照效果
+% 添加光照效果
 light('Position', [1, 1, 1]);
 lighting gouraud;
