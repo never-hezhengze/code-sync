@@ -1,0 +1,210 @@
+\section{问题三：基于连续制氨调节的运行优化}
+
+\subsection{问题分析与求解思路}
+
+问题三将电氢氨装置的运行方式从离散（全开/全停）扩展为连续可调（功率下限为额定功率的10\%）。决策变量从二进制变量$u(t) \in \{0,1\}$变为连续变量$\alpha(t) \in [0.1, 1.0]$，表示时段$t$电氢氨装置相对于额定功率的运行比例。目标函数和约束条件均为线性，问题退化为标准线性规划（LP），考虑到在部分时段售电价格高于购电价格，为了保证不同时购电和售电，引入0-1变量$z_t$来描述购电和售电的状态，实际求解时模型转化为混合整数线性规划模型（MILP）。
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{Branch-and-Cut_算法树形原理图_可编辑.pdf}
+    \caption{Branch-and-Cut 算法原理图}
+    \label{fig:placeholder}
+\end{figure}
+
+本文利用CBC求解器来对上述模型求解，其核心算法为Branch-and-Cut算法，原理图如图\ref{fig:placeholder}所示。CBC 求解器基于 Branch-and-Cut 算法，其核心思想是通过线性规划松弛获得界限，并利用分支定界搜索整数可行解；同时在搜索过程中加入割平面约束，切除不满足整数结构的松弛解，从而提高求解效率并保证全局最优性。
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.85\textwidth,height=0.38\textheight,keepaspectratio]{../figures/fig_flow_q3.pdf}
+%\caption{问题三求解流程图}\label{fig:flow_q3}
+%\end{figure}
+
+\subsection{数学模型建立}
+
+\subsubsection{决策变量与约束}
+
+连续功率调节系数$\alpha(t) \in [0.1, 1.0]$，购售电互斥状态变量$z_t \in \{0, 1\}$,(t=1,2,\dots,24)
+
+其中，
+\[
+z_t=
+\begin{cases}
+1, & \text{第 } t \text{ 小时系统处于购电状态},\\
+0, & \text{第 } t \text{ 小时系统处于售电状态}.
+\end{cases}
+\]
+
+产量约束为：
+\begin{equation}\label{eq:q3_production}
+\sum_{t=1}^{24} \alpha(t) \cdot r_{NH3} \cdot \Delta t = Q_{NH3} \quad \Rightarrow \quad \sum_{t=1}^{24} \alpha(t) = \frac{Q_{NH3}}{3.0}
+\end{equation}
+
+功率平衡约束为：
+\begin{equation}
+P_{buy}(t) - P_{sell}(t) = P_{load}(t) + \alpha(t) \cdot P_{H2NH3}^{max} - P_{wind}(t) - P_{pv}(t)
+\end{equation}
+
+\subsubsection{目标函数}
+
+最小化日运行总成本：
+\begin{equation}\label{eq:q3_obj}
+\min \quad C_{day} = C_{RE} + \sum_{t=1}^{24} [\lambda_{buy}(t) \cdot P_{buy}(t) + C_{OM,h} \cdot \alpha(t)] \cdot \Delta t - \lambda_{sell} \cdot E_{sell}
+\end{equation}
+
+运维成本随功率调节系数线性变化：$C_{OM}(t) = \alpha(t) \cdot C_{OM,h}$，其中$C_{OM,h} = 5003$元/h。
+
+\subsubsection{Branch-and-Cut 算法求解}
+
+问题三中，制氨负荷率、购电功率和售电功率均为连续变量，目标函数和主要约束均为线性形式，因此其主体模型属于线性规划模型。由于购电和售电在同一时段不能同时发生，本文在代码实现中进一步引入二进制变量$z_t$表示购电/售电状态，并采用 Big-M 方法将互斥逻辑线性化。因此，实际求解时模型转化为混合整数线性规划模型（MILP），采用 PuLP 调用 CBC 求解器进行求解。该求解器算法算法是在传统分支定界法的基础上结合割平面技术形成的混合整数规划求解方法。对于每个产量水平$Q \in \{72, 63, 54, 45, 36\}$吨/日，分别求解最优开机时段组合。
+
+\subsubsection{求解的经济直觉}
+
+对于时段$t$，增加$\alpha(t)$的边际成本包括运维成本增量（5003元/单位$\alpha$）和可能的购电成本增量（$\lambda_{buy}(t) \times 41500$元）。最优策略倾向于在购电电价低且风光出力高的时段提高$\alpha(t)$，在电价高且风光不足的时段降低$\alpha(t)$至下限0.1。
+
+\subsection{问题三(1)：24种场景最优调度方案}
+
+对24种风光组合场景，分别求解各产量水平下的最低吨氨成本，选取最优方案。典型场景下各产量水平的计算结果如表\ref{tab:q3_typical}所示。
+\vspace*{-\baselineskip}  % 向上回退一行的高度
+\begin{table}[H]
+\centering
+\caption{典型场景下连续调节各产量水平结果}\label{tab:q3_typical}
+\renewcommand{\arraystretch}{0.8}
+\begin{tabular}{ccccc}
+\toprule
+日产量(吨) & 吨氨成本(元/吨) & $R_{self}$ & $R_{green}$ & $R_{grid}$ \\
+\midrule
+72 & 6219.14 & 86.5\% & 53.3\% & 6.7\% \\
+63 & 5322.19 & 86.5\% & 60.4\% & 6.7\% \\
+54 & 4530.88 & 86.5\% & 69.7\% & 6.7\% \\
+45 & 4008.64 & 48.5\% & 65.6\% & 25.8\% \\
+36 & 3286.97 & 7.2\% & 57.9\% & 46.4\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+与问题二相比，连续调节在中高产量水平（54--72吨/日）时能够显著改善绿电指标。以54吨/日为例，$R_{self}$从80.2\%提升至86.5\%，$R_{green}$从67.3\%提升至69.7\%，$R_{grid}$从9.9\%降至6.7\%。这是因为连续调节允许设备在风光充足时段满负荷运行、在风光不足时段降低功率但不停机，有效减少了余电上网量。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth,height=0.2\textheight,keepaspectratio]{../figures/fig_q3_dispatch.pdf}
+\caption{典型场景下连续调度功率曲线与制氢氨负荷率}\label{fig:q3_dispatch}
+\end{figure}
+
+典型场景下的连续调度功率曲线（图\ref{fig:q3_dispatch}）清晰展示了``跟踪风光"的调度策略：白天光伏高峰时段$\alpha(t)$接近1.0（满负荷），夜间风光不足时段$\alpha(t)$降至0.1（最低负荷），实现了制氢氨负荷与新能源出力的时序匹配。
+
+\begin{table}[H]
+\centering
+\caption{问题三全年绿电直连指标统计}\label{tab:q3_annual}
+\begin{tabular}{lcc}
+\toprule
+类别 & 场景数 & 对应天数 \\
+\midrule
+全满足（三项均达标） & 11种 & 165天 \\
+部分满足（1--2项达标） & 13种 & 195天 \\
+全不满足（三项均不达标） & 0种 & 0天 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+24种场景全年统计结果如表\ref{tab:q3_annual}所示。连续调节模式下，全年165天（45.8\%）实现三项指标全部达标，且没有任何场景出现三项指标全部不达标的情况。全年加权平均吨氨成本为4209.48元/吨，全年总产量为12960吨。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth,height=0.2\textheight,keepaspectratio]{../figures/fig_q3_annual_cost.pdf}
+\caption{全年吨氨成本排序分布曲线}\label{fig:q3_annual_cost}
+\end{figure}
+
+全年吨氨成本分布曲线（图\ref{fig:q3_annual_cost}）显示，连续调节模式下各场景的成本分布更加集中，极端高成本场景得到有效抑制。
+
+\subsection{问题三(2)：运行状况分析}
+
+从园区日购电、售电角度分析，连续调节的优势体现在两个方面：一是通过在风光充足时段提高负荷率，增加了新能源自消纳量，减少了上网电量；二是通过在风光不足时段降低负荷率（而非完全停机），减少了购电需求的峰值。高风电场景（W1--W3）下，连续调节能够将$\alpha(t)$在风电高峰时段提升至接近1.0，充分利用风电资源；低光伏场景（P3--P4）下，连续调节通过降低白天负荷率来适应较低的光伏出力，避免了离散模式下``全开则购电过多、全停则浪费风电"的两难困境。
+
+\subsection{对比分析：两种电解槽的等比例调控与独立分配}
+在电氢氨装置由离散调节转变为连续调节时，本文假设了碱性电解槽和质子交换膜电解槽是按照等比例功率运行的。为了充分证明该假设的合理性，可以将碱性电解槽和质子交换膜电解槽的运行比例分开计算，构建新的独立调节制氢运行的MILP模型并求解，然后再与本文假设下的求解结果进行比较。这在实际生产中代表着在产能大于产量时，工厂可以在不同时段有偏向地优先使用其中一种电解槽来制氢，这是由电解槽的维修系数、效率以及度电成本综合决定的。
+
+设碱性电解槽的功率调节系数为$\alpha_{ALK}(t)$，质子交换膜电解槽的功率调节系数为$\alpha_{PEM}(t)$，则第t小时两类电解槽的总产氢量为：
+\begin{equation}
+H_2(t) = \eta_{1} \alpha_{ALK}(t) P_{ALK}^{max} + \eta_{2} \alpha_{PEM}(t) P_{PEM}^{max}
+\end{equation}
+
+每生产1t氨需要200kg氢气，因此第t小时的产氨率满足：
+\begin{equation}
+q(t) = \frac{\eta_{1} \alpha_{ALK}(t) P_{ALK}^{max} + \eta_{2} \alpha_{PEM}(t) P_{PEM}^{max}}{h_{NH3}}
+\end{equation}
+
+此时的合成氨功率由``合成氨装置功率与产氨率线性相关"来计算：
+\begin{equation}
+P_{NH3} = 0.5q(t)
+\end{equation}
+
+目标日产氨量为$Q_{NH3}$,因此24小时内的总产氨量之和满足：
+\begin{equation}
+\sum_{t=1}^{24} q(t) = Q_{NH3}
+\end{equation}
+
+修改后的功率平衡约束为：
+\begin{equation}
+\begin{split}
+P_{buy}(t) - P_{sell}(t) = & P_{load}(t) + \alpha_{ALK}(t) \cdot P_{ALK}^{max} + \alpha_{PEM}(t) \cdot P_{PEM}^{max} \\
+& + P_{NH3} - P_{wind}(t) - P_{pv}(t)
+\end{split}
+\end{equation}
+
+模型的目标函数仍然是为最小化日总运行成本
+最小化日运行总成本：
+\begin{equation}\label{eq:q3_obj}
+\min \quad C_{day} = C_{RE} + \sum_{t=1}^{24} [\lambda_{buy}(t) \cdot P_{buy}(t) + C_{OM}(t)] - \lambda_{sell} \cdot E_{sell}
+\end{equation}
+
+其中运维成本$C_{OM}(t)$不在单一的随调节系数$\alpha$线性变化，而是满足：
+\begin{equation}
+C_{OM} = \sum_{t=1}^{24} [c_{ALKEL} \cdot \alpha_{ALK}(t) \cdot P_{ALKEL}^{max} + c_{PEMEL} \cdot \alpha_{PEM}(t) \cdot P_{PEMEL}^{max} + c_{NH3} \cdot P_{NH3}] \cdot \Delta t
+\end{equation}
+
+模型仍然属于混合整数线性规划模型(MILP)，只是问题规模里的决策变量中的调节系数由24个变为里48个，沿用问题三的第一小问的算法进行求解可以得到在独立调节制氢装置的功率时的调度方案、绿电直连指标以及吨氨成本。以典型日为例，将结果与等比例功率调节制氢装置比较，选择差异最大的日产氨量为36t/天的结果对比得到如下表格\ref{tab:q3_36_comparison}：
+
+\begin{table}[H]
+\centering
+\caption{日产氨量为36 t/天时两种调节方式的典型日结果对比}
+\label{tab:q3_36_comparison}
+\begin{tabular}{lccc}
+\toprule
+评价指标 & 等比例功率 & 独立调节 & 相对差异 \\
+\midrule
+吨氨成本/元$\cdot$t$^{-1}$ & 3286.97 & 3265.66 & 0.65\% \\
+自发自用率/\% & 7.20 & 5.21 & 27.64\% \\
+绿电比例/\% & 57.89 & 57.43 & 0.79\% \\
+上网电量比例/\% & 46.40 & 47.39 & 2.13\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+根据表格中可以得出结论：即使在差异最大的日产氨量条件下，除自发自用率外，吨氨成本、绿点比例以及上网电量比例的相对差异仍然较小，对碱性电解槽和质子交换膜电解槽采用独立调节方案和等比例调节方案之间的差异不显著，说明在连续调节问题中假设两种电解槽等比例调节是合理的
+
+\subsection{问题三(3)：与问题二对比分析}
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.85\textwidth,height=0.38\textheight,keepaspectratio]{../figures/fig_q3_comparison.pdf}
+%\caption{连续调节相对离散调节各项指标变化率}\label{fig:q3_comparison}
+%\end{figure}
+
+连续调节相对于离散调节的改善效果如表\ref{tab:q3_vs_q2}所示。
+\vspace*{-\baselineskip}
+\begin{table}[H]
+\centering
+\caption{问题二与问题三对比}\label{tab:q3_vs_q2}
+\renewcommand{\arraystretch}{0.9}
+\begin{tabular}{lccc}
+\toprule
+对比维度 & 问题二（离散） & 问题三（连续） & 变化 \\
+\midrule
+全年吨氨成本 & 4493.82 元/吨 & 4209.48 元/吨 & $-$6.3\% \\
+全满足天数 & 0天 & 165天 & +165天 \\
+全不满足天数 & 45天 & 0天 & $-$45天 \\
+全年总产量 & 12960 吨 & 12960 吨 & 不变 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+连续调节相比离散调节，全年吨氨成本降低6.3\%（从4493.82降至4209.48元/吨），绿电指标合规性显著改善（全满足天数从0天增至165天）。成本降低的主要原因是连续调节避免了在高电价时段全负荷运行的被动局面，可以灵活降低功率以减少购电成本。绿电指标改善的原因是连续调节能够更好地跟踪风光出力曲线，减少了余电上网量，提高了自发自用比例。这一结果充分证明了功率连续可调技术对于绿电直连园区运行的重要价值。

@@ -1,0 +1,138 @@
+\section{问题一：典型风光场景下运行指标分析}
+
+\subsection{问题分析与求解思路}
+
+问题一要求在电解槽与合成氨装置均满负荷连续运行的条件下，分析园区典型日内风电、光伏、常规负荷以及制氢合成氨负荷之间的功率平衡关系，并进一步计算园区购售电量、绿电直连指标和吨氨成本。在该运行方式下，电解槽与合成氨装置的功率均已确定，系统不存在可调度的决策变量。因此，本问题属于典型日确定性运行校核问题。
+
+本文以1小时为时间尺度，首先根据附件数据获得各时段风电、光伏和常规负荷功率；然后叠加制氢合成氨装置的固定负荷，逐时段计算园区净负荷；最后根据净负荷的正负判断购电或售电状态，并对24小时结果进行累加，得到日尺度能量指标、绿电直连指标和经济性指标。
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.85\textwidth,height=0.38\textheight,keepaspectratio]{../figures/fig_flow_q1.pdf}
+%\caption{问题一求解流程图}\label{fig:flow_q1}
+%\end{figure}
+
+\subsection{数学模型建立}
+
+\subsubsection{功率平衡方程}
+
+在每个时段$t \in \{1, 2, \ldots, 24\}$，园区功率平衡关系为：
+\begin{equation}\label{eq:power_balance_q1}
+P_{wind}(t) + P_{pv}(t) + P_{buy}(t) = P_{load}(t) + P_{H2NH3}^{max} + P_{sell}(t)
+\end{equation}
+
+由于问题假设电解槽与合成氨装置全天满负荷运行，制氢氨设备总功率为常数：
+\begin{equation}
+P_{H2NH3}^{max} = P_{ALKEL}^{max} + P_{PEMEL}^{max} + P_{NH3}^{max} = 10 + 10 + 0.75 = 20.75 \text{ MW}
+\end{equation}
+
+为判断园区在各时段的购售电状态，定义净负荷为园区总用电需求与新能源发电功率之差：
+\begin{equation}
+P_{net}(t) = P_{load}(t) + P_{H2NH3}^{max} - P_{wind}(t) - P_{pv}(t)
+\end{equation}
+
+当净负荷为正时，说明新能源出力不足，园区需要从电网购电；当净负荷为负时，说明新能源出力超过园区用电需求，园区存在余电上网。根据购电与售电互斥原则，可得到各时段购电功率和售电功率：
+\begin{equation}
+P_{buy}(t) = \max(0, P_{net}(t)), \quad P_{sell}(t) = \max(0, -P_{net}(t))
+\end{equation}
+
+因此，该处理方式保证了每一时段内系统运行状态唯一，即园区要么从电网购电，要么向电网上网，要么实现新能源与负荷的完全平衡。
+
+\subsubsection{日能量指标计算}
+
+在逐时段功率平衡的基础上，对24小时运行结果进行累加，可得到园区典型日的总用电量、新能源发电量、网购电量和上网电量分别为：
+\begin{equation}
+E_{total} = \sum_{t=1}^{24} [P_{load}(t) + P_{H2NH3}^{max}] \cdot \Delta t
+\end{equation}
+\begin{equation}
+E_{RE} = \sum_{t=1}^{24} [P_{wind}(t) + P_{pv}(t)] \cdot \Delta t
+\end{equation}
+\begin{equation}
+E_{buy} = \sum_{t=1}^{24} P_{buy}(t) \cdot \Delta t, \quad E_{sell} = \sum_{t=1}^{24} P_{sell}(t) \cdot \Delta t
+\end{equation}
+
+其中，日总用电量反映园区的总需求；新能源发电量反映风电和光伏在典型日内的总供给能力；网购电量和上网电量则反映新能源出力与园区用电需求之间的时序匹配程度。若新能源发电总量较高但仍同时存在较大购电量和上网电量，则说明系统主要矛盾不是总量不足，而是发用电时序不匹配。
+
+\subsubsection{绿电直连指标}
+
+根据政策文件定义，三项绿电直连指标的计算公式为：
+\begin{equation}\label{eq:R_self}
+R_{self} = \frac{E_{total} - E_{sell} - E_{buy}}{E_{RE}} \quad (\text{要求} > 60\%)
+\end{equation}
+\begin{equation}\label{eq:R_green}
+R_{green} = \frac{E_{RE} - E_{sell}}{E_{total}} \quad (\text{要求} > 30\%)
+\end{equation}
+\begin{equation}\label{eq:R_grid}
+R_{grid} = \frac{E_{sell}}{E_{RE}} \quad (\text{要求} < 20\%)
+\end{equation}
+
+其中，自发自用比例反映新能源发电被园区内部消纳的程度；绿电比例反映园区用电中由新能源直接供给的比例；上网电量比例反映新能源发电中未被本地消纳而送入电网的比例。三个指标分别从新能源消纳、用电绿色化水平以及对外送电规模三个角度刻画园区运行效果。
+
+\subsubsection{吨氨成本模型}
+
+吨为进一步评价该运行方案的经济性，本文构建吨氨成本模型。吨氨成本由新能源发电成本、网购电成本、设备运维成本和售电收入共同决定：
+\begin{equation}\label{eq:C_ton}
+C_{ton} = \frac{C_{RE} + C_{buy} + C_{OM} - I_{sell}}{Q_{NH3}}
+\end{equation}
+
+其中各分项成本为：
+\begin{equation}
+C_{RE} = \sum_{t=1}^{24} [c_{wind} \cdot P_{wind}(t) + c_{pv} \cdot P_{pv}(t)] \cdot \Delta t
+\end{equation}
+\begin{equation}
+C_{buy} = \sum_{t=1}^{24} \lambda_{buy}(t) \cdot P_{buy}(t) \cdot \Delta t
+\end{equation}
+\begin{equation}
+C_{OM} = \sum_{t=1}^{24} [c_{ALKEL} \cdot P_{ALKEL}^{max} + c_{PEMEL} \cdot P_{PEMEL}^{max} + c_{NH3} \cdot P_{NH3}^{max}] \cdot \Delta t
+\end{equation}
+\begin{equation}
+I_{sell} = \lambda_{sell} \cdot E_{sell}
+\end{equation}
+
+分时电价按峰平谷三段划分：低谷时段（23:00--07:00）电价0.3424元/kWh，平时段（07:00--10:00、15:00--18:00、21:00--23:00）电价0.6074元/kWh，高峰时段（10:00--15:00、18:00--21:00）电价0.8024元/kWh。
+
+\subsection{计算结果与分析}
+
+\subsubsection{功率平衡曲线}
+
+基于附件1给出的常规负荷标幺功率曲线和附件2给出的典型日风光标幺功率曲线，代入上述功率平衡模型，得到园区典型日24小时功率平衡结果，如图\ref{fig:q1_power_balance}所示。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.80\textwidth,height=0.25\textheight,keepaspectratio]{../figures/fig_q1_power_balance.pdf}
+\caption{典型日功率平衡曲线}\label{fig:q1_power_balance}
+\end{figure}
+
+典型日功率平衡曲线呈现明显的时序特征：夜间（0:00--7:00）风电出力较高但光伏为零，园区净负荷为正，需要从电网购电；白天（9:00--16:00）光伏出力达到峰值，叠加风电后新能源总出力远超园区用电需求，产生大量余电上网；傍晚至夜间（17:00--24:00）光伏出力迅速下降，园区再次转为购电状态。这种``白天余电、夜间缺电"的时序不匹配特征是绿电直连指标不达标的根本原因。
+
+\subsubsection{运行指标计算结果}
+
+根据功率平衡计算，园区典型日各项能量指标和绿电直连指标如表\ref{tab:q1_results}所示。
+
+\begin{table}[H]
+\centering
+\caption{问题一典型日运行指标计算结果}\label{tab:q1_results}
+\renewcommand{\arraystretch}{0.8}
+\begin{tabular}{lccc}
+\toprule
+指标 & 计算值 & 政策要求 & 是否满足 \\
+\midrule
+日总用电量 $E_{total}$ & 558.72 MWh & --- & --- \\
+新能源发电量 $E_{RE}$ & 603.45 MWh & --- & --- \\
+网购电量 $E_{buy}$ & 172.04 MWh & --- & --- \\
+上网电量 $E_{sell}$ & 216.77 MWh & --- & --- \\
+自发自用比例 $R_{self}$ & 28.16\% & $>60\%$ & 不满足 \\
+绿电比例 $R_{green}$ & 69.21\% & $>30\%$ & 满足 \\
+上网电量比例 $R_{grid}$ & 35.92\% & $<20\%$ & 不满足 \\
+吨氨成本 $C_{ton}$ & 4322.34 元/吨 & --- & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+计算结果表明，尽管新能源总发电量（603.45 MWh）大于日总用电量（558.72 MWh），园区在能量总量上具备自给能力，但三项绿电直连指标中仅绿电比例（69.21\%）满足要求。自发自用比例仅为28.16\%，远低于60\%的政策要求；上网电量比例高达35.92\%，远超20\%的上限。
+
+指标不达标的根本原因在于风光出力与用电负荷的时序不匹配。因此，满负荷连续运行虽然有利于保证合成氨生产稳定性，但不利于提升新能源就地消纳水平。若要改善绿电直连指标，需要在后续模型中引入更灵活的运行策略，例如调整电解槽运行功率、优化制氢时段，或配置储能系统，来实现``削峰填谷"，以提高新能源与负荷之间的时序匹配程度。
+
+\subsubsection{经典风光场景运行指标总结}
+
+综上，问题一的计算结果表明，园区在典型日内新能源发电总量充足，但由于风光出力与制氢合成氨负荷之间存在显著时序错配，导致系统同时出现较大规模购电和上网现象。后续优化应重点围绕``提高新能源就地消纳率、降低网购电量、减少上网电量"展开，通过负荷调节或储能配置改善运行指标和经济性。

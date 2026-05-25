@@ -1,0 +1,135 @@
+\section{问题三：基于连续制氨调节的运行优化}
+
+\subsection{问题分析与求解思路}
+
+问题三将电氢氨装置的运行方式从离散（全开/全停）扩展为连续可调（功率下限为额定功率的10\%）。决策变量从二进制变量$u(t) \in \{0,1\}$变为连续变量$\alpha(t) \in [0.1, 1.0]$，表示时段$t$电氢氨装置相对于额定功率的运行比例。由于目标函数和约束条件均为线性，问题退化为标准线性规划（LP），可高效精确求解。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.38\textheight,keepaspectratio]{../figures/fig_flow_q3.pdf}
+\caption{问题三求解流程图}\label{fig:flow_q3}
+\end{figure}
+
+连续调节的核心优势在于：设备可以在风光出力充足时提高功率、在风光不足时降低功率（但不完全停机），从而更好地跟踪新能源出力曲线，减少购电需求和余电上网（图\ref{fig:flow_q3}）。
+
+\subsection{数学模型建立}
+
+\subsubsection{决策变量与约束}
+
+连续功率调节系数$\alpha(t) \in [0.1, 1.0]$，产量约束为：
+\begin{equation}\label{eq:q3_production}
+\sum_{t=1}^{24} \alpha(t) \cdot r_{NH3} \cdot \Delta t = Q_{NH3} \quad \Rightarrow \quad \sum_{t=1}^{24} \alpha(t) = \frac{Q_{NH3}}{3.0}
+\end{equation}
+
+功率平衡约束为：
+\begin{equation}
+P_{buy}(t) - P_{sell}(t) = P_{load}(t) + \alpha(t) \cdot P_{H2NH3}^{max} - P_{wind}(t) - P_{pv}(t)
+\end{equation}
+
+\subsubsection{目标函数}
+
+最小化日运行总成本：
+\begin{equation}\label{eq:q3_obj}
+\min \quad C_{day} = C_{RE} + \sum_{t=1}^{24} [\lambda_{buy}(t) \cdot P_{buy}(t) + C_{OM,h} \cdot \alpha(t)] \cdot \Delta t - \lambda_{sell} \cdot E_{sell}
+\end{equation}
+
+运维成本随功率调节系数线性变化：$C_{OM}(t) = \alpha(t) \cdot C_{OM,h}$，其中$C_{OM,h} = 5003$元/h。
+
+\subsubsection{LP求解的经济直觉}
+
+对于时段$t$，增加$\alpha(t)$的边际成本包括运维成本增量（5003元/单位$\alpha$）和可能的购电成本增量（$\lambda_{buy}(t) \times 41500$元）。最优策略倾向于在购电电价低且风光出力高的时段提高$\alpha(t)$，在电价高且风光不足的时段降低$\alpha(t)$至下限0.1。
+
+\subsection{问题三(1)：24种场景最优调度方案}
+
+对24种风光组合场景，分别求解各产量水平的LP，选取最优方案。典型场景下各产量水平的计算结果如表\ref{tab:q3_typical}所示。
+
+\begin{table}[H]
+\centering
+\caption{典型场景下连续调节各产量水平结果}\label{tab:q3_typical}
+\begin{tabular}{ccccc}
+\toprule
+日产量(吨) & 吨氨成本(元/吨) & $R_{self}$ & $R_{green}$ & $R_{grid}$ \\
+\midrule
+72 & 6219.14 & 86.5\% & 53.3\% & 6.7\% \\
+63 & 5322.19 & 86.5\% & 60.4\% & 6.7\% \\
+54 & 4530.88 & 86.5\% & 69.7\% & 6.7\% \\
+45 & 4008.64 & 48.5\% & 65.6\% & 25.8\% \\
+36 & 3286.97 & 7.2\% & 57.9\% & 46.4\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+与问题二相比，连续调节在中高产量水平（54--72吨/日）时能够显著改善绿电指标。以54吨/日为例，$R_{self}$从80.2\%提升至86.5\%，$R_{green}$从67.3\%提升至69.7\%，$R_{grid}$从9.9\%降至6.7\%。这是因为连续调节允许设备在风光充足时段满负荷运行、在风光不足时段降低功率但不停机，有效减少了余电上网量。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth,height=0.38\textheight,keepaspectratio]{../figures/fig_q3_dispatch.pdf}
+\caption{典型场景下连续调度功率曲线与制氢氨负荷率}\label{fig:q3_dispatch}
+\end{figure}
+
+典型场景下的连续调度功率曲线（图\ref{fig:q3_dispatch}）清晰展示了``跟踪风光"的调度策略：白天光伏高峰时段$\alpha(t)$接近1.0（满负荷），夜间风光不足时段$\alpha(t)$降至0.1（最低负荷），实现了制氢氨负荷与新能源出力的时序匹配。
+
+24种场景全年统计结果如表\ref{tab:q3_annual}所示。
+
+\begin{table}[H]
+\centering
+\caption{问题三全年绿电直连指标统计}\label{tab:q3_annual}
+\begin{tabular}{lcc}
+\toprule
+类别 & 场景数 & 对应天数 \\
+\midrule
+全满足（三项均达标） & 11种 & 165天 \\
+部分满足（1--2项达标） & 13种 & 195天 \\
+全不满足（三项均不达标） & 0种 & 0天 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+连续调节模式下，全年165天（45.8\%）实现三项指标全部达标，且没有任何场景出现三项指标全部不达标的情况。全年加权平均吨氨成本为4209.48元/吨，全年总产量为12960吨。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth,height=0.38\textheight,keepaspectratio]{../figures/fig_q3_annual_cost.pdf}
+\caption{全年吨氨成本排序分布曲线}\label{fig:q3_annual_cost}
+\end{figure}
+
+全年吨氨成本分布曲线（图\ref{fig:q3_annual_cost}）显示，连续调节模式下各场景的成本分布更加集中，极端高成本场景得到有效抑制。
+
+\subsection{问题三(2)：运行状况分析}
+
+从园区日购电、售电角度分析，连续调节的优势体现在两个方面：一是通过在风光充足时段提高负荷率，增加了新能源自消纳量，减少了上网电量；二是通过在风光不足时段降低负荷率（而非完全停机），减少了购电需求的峰值。高风电场景（W1--W3）下，连续调节能够将$\alpha(t)$在风电高峰时段提升至接近1.0，充分利用风电资源；低光伏场景（P3--P4）下，连续调节通过降低白天负荷率来适应较低的光伏出力，避免了离散模式下"全开则购电过多、全停则浪费风电"的两难困境。
+
+\subsection{问题三(3)：与问题二对比分析}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.38\textheight,keepaspectratio]{../figures/fig_q3_comparison.pdf}
+\caption{连续调节相对离散调节各项指标变化率}\label{fig:q3_comparison}
+\end{figure}
+
+连续调节相对于离散调节的改善效果如表\ref{tab:q3_vs_q2}和图\ref{fig:q3_comparison}所示。
+
+\begin{table}[H]
+\centering
+\caption{问题二与问题三对比}\label{tab:q3_vs_q2}
+\begin{tabular}{lccc}
+\toprule
+对比维度 & 问题二（离散） & 问题三（连续） & 变化 \\
+\midrule
+全年吨氨成本 & 4493.82 元/吨 & 4209.48 元/吨 & $-$6.3\% \\
+全满足天数 & 0天 & 165天 & +165天 \\
+全不满足天数 & 45天 & 0天 & $-$45天 \\
+全年总产量 & 12960 吨 & 12960 吨 & 不变 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+连续调节相比离散调节，全年吨氨成本降低6.3\%（从4493.82降至4209.48元/吨），绿电指标合规性显著改善（全满足天数从0天增至165天）。成本降低的主要原因是连续调节避免了在高电价时段全负荷运行的被动局面，可以灵活降低功率以减少购电成本。绿电指标改善的原因是连续调节能够更好地跟踪风光出力曲线，减少了余电上网量，提高了自发自用比例。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\textwidth,height=0.38\textheight,keepaspectratio]{../figures/fig_q2_green_indicators.pdf}
+\caption{全年绿电直连指标满足情况对比}\label{fig:q2_green_indicators}
+\end{figure}
+
+从图\ref{fig:q2_green_indicators}可以直观看出，连续调节模式在绿电指标合规性方面实现了质的飞跃：离散模式下全年无一天全部达标，而连续模式下近半数天数实现全部达标，且彻底消除了全不满足的情况。这一结果充分证明了功率连续可调技术对于绿电直连园区运行的重要价值。

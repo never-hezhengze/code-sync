@@ -1,0 +1,107 @@
+% !TeX program = xelatex
+% 电工杯数学建模竞赛模板 — 基于 neepumcm 文档类
+\documentclass[a4paper]{neepumcm}
+%  graphicx, booktabs, colortbl, xcolor 已由 neepumcm.cls 加载，不要重复加载
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit,calc}
+\usepackage{algorithm2e}
+\usepackage{float}
+\usepackage[section]{placeins}
+\usepackage{needspace}
+\usepackage{longtable}
+\usepackage{listings}
+\lstset{
+  language=Python,
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny,
+  tabsize=4
+}
+
+% === 引用上标格式 ===
+\makeatletter
+\def\@cite#1#2{\textsuperscript{[{#1\if@tempswa , #2\fi}]}}
+\makeatother
+
+\mcmsetup{CTeX = true,
+        tcn = [报名序号],
+        problem = A,
+        timu = 绿电直连型电氢氨园区多场景运行优化研究}
+\setmainfont{Times New Roman}
+\usepackage{xeCJK}
+\setCJKmainfont{Noto Sans CJK SC}
+\setmonofont[
+    Path=fonts/,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic
+]{UbuntuMono}
+
+\begin{document}
+
+\begin{abstract}
+
+为推动新能源就地消纳与化工行业低碳转型，本文围绕绿电直连型电氢氨园区的多场景优化运行问题，综合考虑风光场景波动、分时电价、绿电直连指标与制氨负荷调节特性，构建了涵盖功率平衡、离散开停机优化、连续功率调度、离网储能配置和政策影响分析的多维优化模型。
+
+\textbf{针对问题一：}建立园区\textbf{逐时功率平衡模型}，计算电解槽与合成氨装置满负荷连续运行时的典型日运行指标。结果表明，典型日新能源发电量为 $603.45\,\mathrm{MWh}$，大于日总用电量 $558.72\,\mathrm{MWh}$，但受风光出力与负荷需求时序错配影响，自发自用比例仅为 $28.16\%$，上网电量比例达到 $35.92\%$，均不满足绿电政策要求，吨氨成本为 $4322.34$ 元/吨，说明仅依靠满负荷运行难以实现绿电直连指标协同达标。
+
+\textbf{针对问题二：}在园区制氨产能扩展至 $72$ 吨/日且电氢氨装置仅能全开或全停的条件下，建立以日运行成本最小为目标的 \textbf{$0$-$1$ 混合整数线性规划模型}，并基于\textbf{贪心算法} 成功求解了不同日产量对应的最优开停机时段。典型场景下，满足三项绿电指标的最优日产量为 $54$ 吨/日，对应吨氨成本 $4591.27$ 元/吨。再进一步对 $24$ 种不同风光场景下的不同日产量条件进行最优求解，结果显示离散调节模式下全年无场景能够实现三项指标全部达标，表明单纯开停机调度的灵活性不足。
+
+\textbf{针对问题三：}引入\textbf{基于负荷率连续调节的线性规划模型}，将负荷调节系数作为连续决策变量，基于\textbf{Branch and Cut算法}解多场景最优功率调度方案。结果表明，连续调节能够使制氢制氨负荷主动跟踪风光出力变化，从而减少购电和余电上网。随后研究了两种制氢设备在等比例调节与独立调节之间的差异。与离散调节相比，连续调节使全年吨氨成本由 $4493.82$ 元/吨降至 $4209.48$ 元/吨；三项绿电指标合规性提升显著，验证了连续功率调度对提升园区经济性和合规性的显著作用。
+
+\textbf{针对问题四：}面向园区离网运行场景，建立\textbf{离网运行下的储能配置优化模型}，并通过参数扫描确定最佳储能配置方案。结果表明，离网无储能时全年制氨产量为 $9782$ 吨，产能利用率仅为 $37.7\%$；配置 $150\,\mathrm{MWh}/75\,\mathrm{MW}$ 储能后，全年产量提升至 $10619$ 吨，产能利用率提高至 $41.0\%$。经济性对比显示，联网模式吨氨成本为 $4209.48$ 元/吨，较离网储能模式的 $4785.85$ 元/吨降低 $13.7\%$，量化体现了电网支撑对绿电直连园区稳定运行和成本控制的重要价值。
+
+\textbf{针对问题五：}从新能源消纳、调峰能力、产业带动等维度分析了绿电园区渗透率提高的利弊影响，并从差异化考核机制、电力市场参与、储能共享等方面提出了政策建议。灵敏度分析表明，购电电价是最敏感参数（$\pm$30\%扰动导致成本变化$\pm$501元/吨），为园区选址和运营决策提供了参考。
+
+综上，本文构建了集功率平衡分析、混合整数规划、线性规划与储能配置优化于一体的绿电直连型电氢氨园区运行优化体系，为绿电直连园区规划建设和运行管理提供了定量化依据。
+
+\begin{keywords}
+绿电直连 \quad 电氢氨园区 \quad 混合整数规划 \quad 连续功率调度 \quad 储能配置优化
+\end{keywords}
+\end{abstract}
+
+\maketitle
+\newpage
+%\tableofcontents
+%\clearpage
+
+% === 正文 ===
+\input{sections/1_restatement}
+\input{sections/2_assumptions}
+\input{sections/3_symbols}
+\input{sections/4_problem1}
+\input{sections/5_problem2}
+\input{sections/6_problem3}
+\input{sections/7_problem4}
+\input{sections/8_problem5}
+\input{sections/9_sensitivity}
+\input{sections/10_evaluation}
+
+% === 参考文献 ===
+\begin{thebibliography}{99}
+
+\bibitem{ref1} 国家发展改革委, 国家能源局. 关于有序推动绿电直连发展有关事项的通知[Z]. 2024.
+
+\bibitem{ref2} Knueven B, Ostrowski J, Watson J P. On mixed-integer programming formulations for the unit commitment problem[J]. INFORMS Journal on Computing, 2020, 32(4): 857-876.
+
+\bibitem{ref3} Nguyen-Duc T, Hoang-Tuan L, Ta-Xuan H, et al. A mixed-integer programming approach for unit commitment in micro-grid with incentive-based demand response and battery energy storage system[J]. Energies, 2022, 15(19): 7192.
+
+\bibitem{ref4} Farhani S, Alharbi S S, Barhoumi E M, et al. Investigation and analysis of solar and wind energy potential for green hydrogen production via alkaline water electrolysis[J]. IEEE Access, 2025, 13: 168878-168892.
+
+\bibitem{ref5} Mo D, Li Q, Sun Y, et al. Multi-objective optimization scheduling of a wind-solar energy storage microgrid based on an improved OGGWO algorithm[J]. Algorithms, 2025, 18(1): 13.
+
+\bibitem{ref6} Raghavan A, Maan P, Shenoy K B A. Optimization of day-ahead energy storage system scheduling in microgrid using genetic algorithm and particle swarm optimization[J]. IEEE Access, 2020, 8: 173068-173078.
+
+\bibitem{ref7} Qiu Y, Sun Q, Zeng Y, et al. Reconfiguring flexibility in renewable power-to-ammonia systems using molten-salt thermal energy storage[J]. arXiv preprint arXiv:2604.25192, 2026.
+\end{thebibliography}
+
+% === 附录 ===
+\newpage
+\begin{appendices}
+\input{B_code}
+\input{sections/A_code}
+\end{appendices}
+
+\end{document}

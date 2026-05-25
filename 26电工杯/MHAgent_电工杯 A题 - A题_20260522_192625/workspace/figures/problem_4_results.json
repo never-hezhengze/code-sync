@@ -1,0 +1,423 @@
+{
+  "offgrid_no_storage": [
+    {
+      "scenario": "W1P1",
+      "Q_NH3": 39.98,
+      "E_curtail": 147.93,
+      "C_ton": 3662.45,
+      "hours_on": 19,
+      "utilization": 0.8058
+    },
+    {
+      "scenario": "W1P2",
+      "Q_NH3": 30.54,
+      "E_curtail": 20.05,
+      "C_ton": 3804.28,
+      "hours_on": 19,
+      "utilization": 0.9602
+    },
+    {
+      "scenario": "W1P3",
+      "Q_NH3": 19.09,
+      "E_curtail": 12.6,
+      "C_ton": 4090.95,
+      "hours_on": 19,
+      "utilization": 0.9627
+    },
+    {
+      "scenario": "W1P4",
+      "Q_NH3": 13.91,
+      "E_curtail": 19.66,
+      "C_ton": 4356.47,
+      "hours_on": 17,
+      "utilization": 0.9279
+    },
+    {
+      "scenario": "W2P1",
+      "Q_NH3": 36.1,
+      "E_curtail": 98.99,
+      "C_ton": 3635.11,
+      "hours_on": 18,
+      "utilization": 0.85
+    },
+    {
+      "scenario": "W2P2",
+      "Q_NH3": 23.88,
+      "E_curtail": 9.38,
+      "C_ton": 3816.17,
+      "hours_on": 18,
+      "utilization": 0.9769
+    },
+    {
+      "scenario": "W2P3",
+      "Q_NH3": 11.62,
+      "E_curtail": 13.32,
+      "C_ton": 4319.3,
+      "hours_on": 17,
+      "utilization": 0.9438
+    },
+    {
+      "scenario": "W2P4",
+      "Q_NH3": 6.25,
+      "E_curtail": 22.92,
+      "C_ton": 5115.15,
+      "hours_on": 11,
+      "utilization": 0.8659
+    },
+    {
+      "scenario": "W3P1",
+      "Q_NH3": 42.92,
+      "E_curtail": 126.37,
+      "C_ton": 3656.42,
+      "hours_on": 24,
+      "utilization": 0.8382
+    },
+    {
+      "scenario": "W3P2",
+      "Q_NH3": 33.1,
+      "E_curtail": 3.73,
+      "C_ton": 3792.08,
+      "hours_on": 24,
+      "utilization": 0.9929
+    },
+    {
+      "scenario": "W3P3",
+      "Q_NH3": 21.38,
+      "E_curtail": 0.0,
+      "C_ton": 4049.19,
+      "hours_on": 24,
+      "utilization": 1.0
+    },
+    {
+      "scenario": "W3P4",
+      "Q_NH3": 16.71,
+      "E_curtail": 0.0,
+      "C_ton": 4250.95,
+      "hours_on": 24,
+      "utilization": 1.0
+    },
+    {
+      "scenario": "W4P1",
+      "Q_NH3": 46.19,
+      "E_curtail": 177.29,
+      "C_ton": 3675.87,
+      "hours_on": 23,
+      "utilization": 0.7978
+    },
+    {
+      "scenario": "W4P2",
+      "Q_NH3": 39.35,
+      "E_curtail": 13.33,
+      "C_ton": 3786.98,
+      "hours_on": 23,
+      "utilization": 0.9784
+    },
+    {
+      "scenario": "W4P3",
+      "Q_NH3": 28.07,
+      "E_curtail": 3.59,
+      "C_ton": 3976.89,
+      "hours_on": 23,
+      "utilization": 0.9921
+    },
+    {
+      "scenario": "W4P4",
+      "Q_NH3": 23.4,
+      "E_curtail": 3.59,
+      "C_ton": 4105.93,
+      "hours_on": 23,
+      "utilization": 0.9908
+    },
+    {
+      "scenario": "W5P1",
+      "Q_NH3": 43.38,
+      "E_curtail": 158.64,
+      "C_ton": 3668.52,
+      "hours_on": 24,
+      "utilization": 0.8064
+    },
+    {
+      "scenario": "W5P2",
+      "Q_NH3": 35.44,
+      "E_curtail": 9.85,
+      "C_ton": 3791.02,
+      "hours_on": 24,
+      "utilization": 0.9824
+    },
+    {
+      "scenario": "W5P3",
+      "Q_NH3": 24.17,
+      "E_curtail": 0.0,
+      "C_ton": 4013.82,
+      "hours_on": 24,
+      "utilization": 1.0
+    },
+    {
+      "scenario": "W5P4",
+      "Q_NH3": 19.5,
+      "E_curtail": 0.0,
+      "C_ton": 4178.25,
+      "hours_on": 24,
+      "utilization": 1.0
+    },
+    {
+      "scenario": "W6P1",
+      "Q_NH3": 40.79,
+      "E_curtail": 90.83,
+      "C_ton": 3638.81,
+      "hours_on": 24,
+      "utilization": 0.8731
+    },
+    {
+      "scenario": "W6P2",
+      "Q_NH3": 28.66,
+      "E_curtail": 0.0,
+      "C_ton": 3797.85,
+      "hours_on": 24,
+      "utilization": 1.0
+    },
+    {
+      "scenario": "W6P3",
+      "Q_NH3": 16.68,
+      "E_curtail": 0.0,
+      "C_ton": 4135.65,
+      "hours_on": 24,
+      "utilization": 1.0
+    },
+    {
+      "scenario": "W6P4",
+      "Q_NH3": 11.01,
+      "E_curtail": 13.84,
+      "C_ton": 4517.86,
+      "hours_on": 19,
+      "utilization": 0.939
+    }
+  ],
+  "annual_no_storage": {
+    "total_production": 9781.8,
+    "avg_utilization": 0.3774,
+    "max_curtail_scenario": "W4P1",
+    "max_curtail_MWh": 177.29
+  },
+  "min_capacity": {
+    "wind_MW": 155.0,
+    "pv_MW": null
+  },
+  "storage_sweep": [
+    {
+      "C_sto": 10,
+      "P_sto_max": 5.0,
+      "Q_NH3": 47.09,
+      "C_ton": 3715.56,
+      "E_curtail": 164.68
+    },
+    {
+      "C_sto": 20,
+      "P_sto_max": 10.0,
+      "Q_NH3": 47.74,
+      "C_ton": 3755.12,
+      "E_curtail": 155.65
+    },
+    {
+      "C_sto": 30,
+      "P_sto_max": 15.0,
+      "Q_NH3": 48.39,
+      "C_ton": 3793.63,
+      "E_curtail": 146.61
+    },
+    {
+      "C_sto": 50,
+      "P_sto_max": 25.0,
+      "Q_NH3": 49.68,
+      "C_ton": 3867.65,
+      "E_curtail": 128.5
+    },
+    {
+      "C_sto": 75,
+      "P_sto_max": 37.5,
+      "Q_NH3": 51.3,
+      "C_ton": 3954.95,
+      "E_curtail": 105.8
+    },
+    {
+      "C_sto": 100,
+      "P_sto_max": 50.0,
+      "Q_NH3": 52.91,
+      "C_ton": 4036.96,
+      "E_curtail": 82.93
+    },
+    {
+      "C_sto": 150,
+      "P_sto_max": 75.0,
+      "Q_NH3": 56.13,
+      "C_ton": 4186.9,
+      "E_curtail": 37.3
+    },
+    {
+      "C_sto": 200,
+      "P_sto_max": 100.0,
+      "Q_NH3": 56.45,
+      "C_ton": 4346.57,
+      "E_curtail": 32.75
+    }
+  ],
+  "optimal_storage": {
+    "C_sto_MWh": 150,
+    "P_sto_max_MW": 75.0
+  },
+  "with_storage": [
+    {
+      "scenario": "W1P1",
+      "Q_NH3": 48.7,
+      "C_ton": 4239.61,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W1P2",
+      "Q_NH3": 31.85,
+      "C_ton": 4658.43,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W1P3",
+      "Q_NH3": 19.94,
+      "C_ton": 5449.63,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W1P4",
+      "Q_NH3": 15.25,
+      "C_ton": 6103.33,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W2P1",
+      "Q_NH3": 41.95,
+      "C_ton": 4296.94,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W2P2",
+      "Q_NH3": 24.51,
+      "C_ton": 4928.06,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W2P3",
+      "Q_NH3": 12.52,
+      "C_ton": 6459.08,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W2P4",
+      "Q_NH3": 7.79,
+      "C_ton": 8369.12,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W3P1",
+      "Q_NH3": 50.22,
+      "C_ton": 4220.43,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W3P2",
+      "Q_NH3": 33.31,
+      "C_ton": 4614.87,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W3P3",
+      "Q_NH3": 21.38,
+      "C_ton": 5330.44,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W3P4",
+      "Q_NH3": 16.71,
+      "C_ton": 5890.49,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W4P1",
+      "Q_NH3": 56.13,
+      "C_ton": 4186.9,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W4P2",
+      "Q_NH3": 40.17,
+      "C_ton": 4468.94,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W4P3",
+      "Q_NH3": 28.32,
+      "C_ton": 4942.03,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W4P4",
+      "Q_NH3": 23.65,
+      "C_ton": 5261.02,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W5P1",
+      "Q_NH3": 52.52,
+      "C_ton": 4212.43,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W5P2",
+      "Q_NH3": 36.02,
+      "C_ton": 4552.9,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W5P3",
+      "Q_NH3": 24.17,
+      "C_ton": 5147.25,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W5P4",
+      "Q_NH3": 19.5,
+      "C_ton": 5583.29,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W6P1",
+      "Q_NH3": 46.04,
+      "C_ton": 4247.57,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W6P2",
+      "Q_NH3": 28.66,
+      "C_ton": 4753.75,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W6P3",
+      "Q_NH3": 16.68,
+      "C_ton": 5778.31,
+      "C_sto": 150
+    },
+    {
+      "scenario": "W6P4",
+      "Q_NH3": 11.94,
+      "C_ton": 6756.08,
+      "C_sto": 150
+    }
+  ],
+  "annual_with_storage": {
+    "total_production": 10618.95,
+    "avg_utilization": 0.4097
+  },
+  "economics_comparison": {
+    "ongrid_C_ton": 4209.48,
+    "offgrid_C_ton": 4785.85,
+    "grid_support_value_pct": 13.69
+  }
+}

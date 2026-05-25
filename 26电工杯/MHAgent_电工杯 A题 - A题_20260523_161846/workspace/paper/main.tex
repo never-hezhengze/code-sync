@@ -1,0 +1,112 @@
+% !TeX program = xelatex
+% 电工杯数学建模竞赛模板 — 基于 neepumcm 文档类
+\documentclass[a4paper]{neepumcm}
+%  graphicx, booktabs, colortbl, xcolor 已由 neepumcm.cls 加载，不要重复加载
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit,calc}
+\usepackage{algorithm2e}
+\usepackage{float}
+\usepackage[section]{placeins}
+\usepackage{needspace}
+\usepackage{longtable}
+\usepackage{listings}
+\lstset{
+  language=Python,
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  numbers=left,
+  numberstyle=\tiny,
+  tabsize=4
+}
+
+% === 引用上标格式 ===
+\makeatletter
+\def\@cite#1#2{\textsuperscript{[{#1\if@tempswa , #2\fi}]}}
+\makeatother
+
+\mcmsetup{CTeX = true,
+        tcn = [报名序号],
+        problem = A,
+        timu = 绿电直连型电氢氨园区多场景运行优化研究}
+\setmainfont{Times New Roman}
+\setmonofont[
+    Path=fonts/,
+    UprightFont = *-Regular,
+    BoldFont = *-Bold,
+    ItalicFont = *-Italic
+]{UbuntuMono}
+
+\begin{document}
+
+\begin{abstract}
+
+本文针对绿电直连型电氢氨园区的优化运行问题，综合运用功率平衡分析、混合整数线性规划（MILP）和线性规划（LP）等方法，系统研究了园区在不同运行模式下的最优调度策略与经济性能。
+
+针对问题一，建立功率平衡模型计算园区典型日运行指标。结果表明，满负荷连续运行时日总用电量558.72 MWh、新能源发电量603.45 MWh，但由于风光出力与负荷时序不匹配，自发自用比例仅28.16\%（不满足$>$60\%要求）、上网电量比例35.92\%（不满足$<$20\%要求），吨氨成本4322.34元/吨。
+
+针对问题二，建立0-1整数规划模型求解离散调节下最优开停机方案。典型场景下绿电指标全满足的最优产量为54吨/日（吨氨成本4591.27元/吨），24种场景全年统计显示全满足天数为0天，全年吨氨成本4493.82元/吨。
+
+针对问题三，建立线性规划模型求解连续功率调度方案。连续调节相比离散调节，全年吨氨成本降低6.3\%（4209.48元/吨），绿电指标全满足天数从0天增至165天，全不满足天数从45天降至0天，充分体现了功率连续可调技术的优势。
+
+针对问题四，建立离网运行优化模型并设计储能配置方案。离网无储能全年产量9782吨（利用率37.7\%），配置150 MWh/75 MW最优储能后产量提升至10619吨（利用率41.0\%）。联网模式吨氨成本（4209.48元/吨）比离网模式（4785.85元/吨）低13.7\%，量化了电网系统支撑价值。
+
+针对问题五，从新能源消纳、调峰能力、产业带动等维度分析了绿电园区渗透率提高的利弊影响，并从差异化考核机制、电力市场参与、储能共享等方面提出了政策建议。灵敏度分析表明购电电价是最敏感参数（$\pm$30\%扰动导致成本变化$\pm$501元/吨），为园区选址和运营决策提供了参考。
+
+\begin{keywords}
+绿电直连 \quad 电氢氨园区 \quad 混合整数规划 \quad 连续功率调度 \quad 储能配置优化
+\end{keywords}
+\end{abstract}
+
+\maketitle
+\newpage
+\tableofcontents
+\clearpage
+
+% === 正文 ===
+\input{sections/1_restatement}
+\input{sections/2_assumptions}
+\input{sections/3_symbols}
+\input{sections/4_problem1}
+\input{sections/5_problem2}
+\input{sections/6_problem3}
+\input{sections/7_problem4}
+\input{sections/8_problem5}
+\input{sections/9_sensitivity}
+\input{sections/10_evaluation}
+
+% === 参考文献 ===
+\begin{thebibliography}{99}
+
+\bibitem{ref1} 国家发展改革委, 国家能源局. 关于有序推动绿电直连发展有关事项的通知[Z]. 2024.
+
+\bibitem{ref2} Knueven B, Ostrowski J, Watson J P. On mixed-integer programming formulations for the unit commitment problem[J]. INFORMS Journal on Computing, 2020, 32(4): 857-876.
+
+\bibitem{ref3} Nguyen-Duc T, Hoang-Tuan L, Ta-Xuan H, et al. A mixed-integer programming approach for unit commitment in micro-grid with incentive-based demand response and battery energy storage system[J]. Energies, 2022, 15(19): 7192.
+
+\bibitem{ref4} Farhani S, Alharbi S S, Barhoumi E M, et al. Investigation and analysis of solar and wind energy potential for green hydrogen production via alkaline water electrolysis[J]. IEEE Access, 2025, 13: 168878-168892.
+
+\bibitem{ref5} Mo D, Li Q, Sun Y, et al. Multi-objective optimization scheduling of a wind-solar energy storage microgrid based on an improved OGGWO algorithm[J]. Algorithms, 2025, 18(1): 13.
+
+\bibitem{ref6} Raghavan A, Maan P, Shenoy K B A. Optimization of day-ahead energy storage system scheduling in microgrid using genetic algorithm and particle swarm optimization[J]. IEEE Access, 2020, 8: 173068-173078.
+
+\bibitem{ref7} Qiu Y, Sun Q, Zeng Y, et al. Reconfiguring flexibility in renewable power-to-ammonia systems using molten-salt thermal energy storage[J]. arXiv preprint arXiv:2604.25192, 2026.
+
+\bibitem{ref8} 张粒子, 黄仁辉, 义博. 考虑电解水制氢的电力系统优化调度[J]. 电力系统自动化, 2022, 46(16): 150-159.
+
+\bibitem{ref9} 梅生伟, 郭文涛, 王颖. 新型电力系统中储能应用的规划与运行优化[J]. 中国电机工程学报, 2023, 43(1): 209-218.
+
+\bibitem{ref10} 刘吉臻, 胡阳, 马玉清, 等. 新能源电力系统中的氢储能技术研究综述[J]. 中国电机工程学报, 2022, 42(12): 4285-4299.
+
+\bibitem{ref11} 王成山, 武震, 李鹏. 微电网关键技术研究[J]. 电工技术学报, 2014, 29(2): 1-12.
+
+\bibitem{ref12} 康重庆, 杜尔顺, 郭鸿业, 等. 新型电力系统中的储能规划与运行[J]. 电力系统自动化, 2023, 47(1): 1-14.
+
+\end{thebibliography}
+
+% === 附录 ===
+\begin{appendices}
+\input{sections/A_code}
+\end{appendices}
+
+\end{document}
