@@ -13,7 +13,7 @@ for k = k_levels
     % 正分支
     xt = @(t) t;
     yt1 = @(t) acos(k - sin(t));
-    zt = @(t) k + 0*t;   % 保证维度一致
+    zt = @(t) k * ones(size(t));
     
     % 负分支
     yt2 = @(t) -acos(k - sin(t));
