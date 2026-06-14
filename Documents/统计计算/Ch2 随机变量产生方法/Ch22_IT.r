@@ -26,7 +26,7 @@ x
 n = 1000
 p = 0.4
 u = runif(n)
-x = as.integer(u > 1-p)   
+x = as.integer(u > 1-p)   ## 通过逻辑值转为0，1得到二项分布
 
 mean(x)
 var(x)

@@ -111,16 +111,16 @@ y
 ch=c("sa","ba")
 ch
 
-## seq
+## seq 生成数列，给定起点、终点以及步长
 z=seq(1,5)
 z
 
-1:5-1
-1:(5-1)
+1:5-1 # 整体减1
+1:(5-1) # 终点变成4
 
-w=seq(from=0, to= 10, by = 1)
+w=seq(from=0, to= 10, by = 1)  # 给定步长
 w
-z=seq(from=0, to= 10, length.out = 10)
+z=seq(from=0, to= 10, length.out = 10)  # 给定数列长度
 z
 
 ## 画图
@@ -128,9 +128,9 @@ jpeg("fig1.jpeg")
 x=seq(from=-10, to=10, by=0.02)
 y=x^2
 plot(x,y)
-dev.off()
+dev.off()      # 结束图片输出
 
-## scan
+## scan 读取输入，默认读取数字，通过scan(what = "")读取字符向量
 z = scan()
 
 ## rep
@@ -144,19 +144,19 @@ x
 u=rep(x, 10)
 u
 
-## gl
+## gl 生成因子（factor）变量的函数
 gl(2,3)
 gl(2,3,length=4)
 gl(2,2,label=c("F","M"))
 
 ## 随机生成特定分布
-dnorm(4, 2, sqrt(4))    ## density
-pnorm(4, 2, sqrt(4))    ## distribution
+dnorm(4, 2, sqrt(4))    ## density 概率密度函数   ## mean = 2 ; sd = sqrt(4) ; x=4处的概率密度
+pnorm(4, 2, sqrt(4))    ## distribution 累积分布函数
 
 alpha=0.05
-qnorm(1-alpha/2, 0, 1)  ## quantile
+qnorm(1-alpha/2, 0, 1)  ## quantile 分位数函数 # 求标准正态分布左侧累计概率为0.975时对应的x值
 
-rnorm(1000, 0, 1)       ## random sampling
+rnorm(1000, 0, 1)       ## random sampling 随机抽样
 
 
 ## 生成各种对象 ##
@@ -170,11 +170,11 @@ x[2]
 
 ## matrix
 matrix(data=5, nr=2, nc=2)
-matrix(1:6, 2, 3)
-matrix(1:6, 2, 3, byrow=TRUE)
+matrix(1:6, 2, 3)   ## 默认情况下按列填充数据
+matrix(1:6, 2, 3, byrow=TRUE)  ## 强制要求按行填充数据
 
 x = 1:6
-dim(x) = c(2, 3)
+dim(x) = c(2, 3)  ## 设置x的维度为2行3列
 x
 
 A=matrix(1:100, nrow=10, ncol=10)
@@ -218,7 +218,7 @@ L2
 names(L2)
 L2$A
 
-## expression
+## expression 表达式
 exp1 = expression(x/(y+exp(z))) 
 exp1
 
@@ -254,7 +254,7 @@ y=c(3, 8, 2)
 
 x+y
 x-y
-x*y
+x*y  #对应的元素相乘
 x/y
 x^2
 y^x
@@ -278,7 +278,7 @@ a=T
 b=c(T, F)
 a&b
 a|b
-xor(a, b)
+xor(a, b)   ## 异或（相同为F，不同为T）
 
 all(1:7>3) 
 any(1:7>3) 
@@ -292,11 +292,12 @@ colors
 more.colors = c(colors, "green", "magenta", "cyan")
 more.colors
 
-substr(colors, 1, 2)
+substr(colors, 1, 2) ## 提取字符串的一部分substr(x, start, stop)
+## 得到"re" "ye" "bl"（分别对字符向量里的每一个字符做substr操作）
 
-paste(colors, "flowers")
-paste("several ", colors, "s", sep="")
-paste("I like", colors, collapse = ", ")
+paste(colors, "flowers") ## 拼接字符串，自动加空格
+paste("several ", colors, "s", sep="")  ## sep控制每个字符串内部怎么拼接
+paste("I like", colors, collapse = ", ")  ## collapse控制多个字符串之间怎么连接
 
 
 ## 对象的提取 ##
@@ -306,9 +307,9 @@ x
 x[3]
 x[c(1,3)]
 x[3:5]
-x[x>2]
-x[-2]
-x[-c(1,3)]
+x[x>2]  ## 逻辑索引
+x[-2]  ## 删除第2个元素
+x[-c(1,3)]  ## 删除多个元素
 
 x[c(F,T)]
 
@@ -361,12 +362,12 @@ z
 
 x = 1:2 
 y = rep(1, 4)
-z = x + y
+z = x + y  ## 把较短的向量循环补齐，x变成(1,2,1,2)
 z
 
 x = 1:3
 y = rep(1, 4)
-z = x + y
+z = x + y ## 短的向量不能被整除，补齐部分后会有警告
 z
 
 a = 10
@@ -391,18 +392,18 @@ min(x)
 max(x)
 range(x)
 
-which.max(x)
+which.max(x)    ## 输出索引
 which.min(x)
 
 sum(x)
-prod(x)
+prod(x)         ## 累乘
 length(x)
 
 x=3.789
-ceiling(x)
-floor(x)
-trunc(x)
-round(x, 2)
+ceiling(x)      ## 向上取整
+floor(x)        ## 向下取整
+trunc(x)        ## 截断，直接去掉小数部分
+round(x, 2)     ## 四舍五入，保留2位小数
 
 x=rnorm(100, 0, sqrt(2))
 print(x)
@@ -417,7 +418,7 @@ cv=sd(x)/mean(x)
 A=matrix(1:4,2,2)
 A
 
-B=diag(2)
+B=diag(2)   ## 对角阵，2代表行/列数
 B
 
 v=rep(1, 5)
@@ -431,13 +432,16 @@ I
 
 A=matrix(1:9, nrow=3)
 A
-a=diag(A)
+a=diag(A)  ## 取A的对角元素存放在a里
 a 
 
 A=matrix(1:9, nrow=3)
 A
 B=diag(diag(A))
 B
+
+## 得到A的对角阵还可以用矩阵乘法
+## D = A * diag(nrow(A))
 
 A=matrix(1:4,2,2)
 A
@@ -447,24 +451,24 @@ B
 
 A+B
 A-B
-A*B
+A*B  ## 对应元素相乘
 B/A
 
-A%*%B
+A%*%B  ## 矩阵乘法
 
 A=matrix(1:4,2,2)
 B=matrix(rep(1,4),2,2)
-kronecker(A,B)
+kronecker(A,B)  ## 把 A 中每个元素替换成该元素 × B （张量积）
 
 dim(A)
 nrow(A)
 ncol(A) 
-t(A)
-det(A)
+t(A)     ## 转置矩阵
+det(A)   ## 行列式
 
-eigen(A)
+eigen(A) ## 特征值与特征向量
 
-solve(A)
+solve(A) ## 求逆矩阵，solve(A,b)还可以用来解方程
 
 A=matrix(1:9, nrow=3, byrow=T)
 A[3,3]=10
@@ -480,23 +484,23 @@ B=diag(c(100000000000, 0.00001))
 B
 det(B)
 solve(B)
-rcond(B)>.Machine$double.eps
+rcond(B)>.Machine$double.eps   ## rcond计算条件数的倒数
 
-if(rcond(B)>.Machine$double.eps)
+if(rcond(B)>.Machine$double.eps)  ## 此时的条件数够好才计算逆矩阵
 {B.inv=solve(B)}
-if(rcond(B)<=.Machine$double.eps)
+if(rcond(B)<=.Machine$double.eps)  ## 此时的矩阵是病态矩阵
 {cat("the matrix is computationally sigular!")}
 
 A=matrix(1:9, 3, 3)
 A
 B=matrix(rep(1,9), 3, 3)
 B
-cbind(A, B)
-rbind(A, B) 
+cbind(A, B)  ## 在A的后面增广一个B（列数增加）
+rbind(A, B)  ## 增加行
 
-lower.tri(A,diag=T)
-
-B[lower.tri(A,diag=T)]=0
+lower.tri(A,diag=T)  ## 返回一个与 A 同样大小的逻辑矩阵，用来标记下三角区域，默认不包含对角
+## 加入“diag = T”后加入对角
+B[lower.tri(A,diag=T)]=0  ## 下三角与对角线全部赋值0
 
 
 ## 奇异值分解
