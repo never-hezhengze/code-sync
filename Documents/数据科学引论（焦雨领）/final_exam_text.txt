@@ -1,0 +1,88 @@
+            Wuhan University 2022–2023 Spring
+            Introduction to Data Science Final Exam
+                 (Total: 100 points         Exam duration: 150 minutes)
+
+
+1. (20 points)
+Suppose we have data x1 , . . . , xn with each xi ∈ Rd and d is huge. We want to compress the
+data by linear map: i.e., find linear encoder E ∈ Rs×d and decoder D ∈ Rd×s with s ≪ d
+that minimize the reconstruction loss
+                                            1∑
+                                               n
+                                L(E, D) =         ∥xi − DExi ∥22 .
+                                            n i=1
+
+What is the optimal E and D?
+
+
+2. (20 points)
+Show that:
+   1. x∗ ∈ arg minx∈Rn f (x) if and only if 0 ∈ ∂f (x∗ ).
+   2. Let x̂ = arg minx∈R f (x) = 12 (x − t)2 + λ|x| with t ∈ R, λ ∈ R++ . Then
+                                 x̂ = Sλ (t) = sign(t) max(|t| − λ, 0).
+
+   3. x̂ = arg minx∈Rn f (x) = 21 ∥Ax − b∥22 + λ∥x∥1 with b ∈ Rn , λ ∈ R++ if and only if
+                                       (                  )
+                              x̂ = Sλτ x̂ + τ A⊤ (b − Ax̂) , ∀τ > 0.
+
+
+3. (20 points)
+Prove the Bounded Difference Inequality:
+   Let X1 , . . . , Xn be independent random variables. Let f : Rn → R be a measurable
+function. Assume that |f (x) − f (x′ )| ≤ ci , where x′ is an arbitrary change of the i-th
+coordinate of x, for i = 1, . . . , n. Then, for any t > 0, we have
+                                                           (            )
+                                                                2t2
+                           P [f (X) − Ef (X) ≥ t] ≤ exp − ∑n 2 ,
+                                                                 i=1 ci
+
+where X = (X1 , . . . , Xn ).
+
+                                                1
+4. (10 points)
+Define the target function as
+
+                     f ∗ ∈ arg      min         R(f ) = E(X,Y )∼P [ℓ(f (X), Y )] .
+                                 measurable f
+
+
+Show that:
+
+  1. f ∗ (x) = arg mina∈Y E [ℓ(a, Y ) | X = x].
+
+  2. For regression: Y = R, ℓ(a, y) = 21 (a − y)2 , prove that f ∗ (x) = E[Y | X = x].
+
+  3. For classification: Y = [K] := {1, 2, . . . , K}, ℓ(a, y) = 1a̸=y , prove that f ∗ (x) =
+     arg maxk∈[K] P(Y = k | X = x).
+
+
+5. (20 points)
+Consider the linear model Y = Xθ∗ + ϵ, where ϵ ∼ N (0, σ 2 I) and n ≪ d. Define the Lasso
+estimator:                             {                       }
+                                          1
+                        θ̂L = arg min       ∥Y − Xθ∥2 + λ∥θ∥1 .
+                                                    2
+                                  θ∈Rd   2n
+Let                                                      ⊤
+                                               v⊤ X n X v
+                                       γ = inf            > 0,
+                                           v∈C   ∥v∥22
+with C = {v : ∥vA∗ ∥1 ≤ 3∥vA∗ ∥1 } and A∗ = supp(θ∗ ). Set
+                                            √
+                                              2 ln(2d/δ)
+                                     λ = 2σ              .
+                                                   n
+Prove that, with probability at least 1 − δ,
+                                                                  √
+                                           6√                         |A∗ |
+                            ∥θ̂L − θ∗ ∥2 ≤   2 ln(2d/δ)σ                    .
+                                           γ                           n
+
+6. (10 points)
+Write down your suggestion for this course.
+
+
+
+
+                                                     2
+
