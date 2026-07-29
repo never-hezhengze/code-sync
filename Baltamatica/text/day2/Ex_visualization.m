@@ -1,0 +1,56 @@
+%% 第一题
+t = -4*pi:0.1:4*pi;
+xt = @(t) exp(t) .* cos(t);
+yt = @(t) exp(t) .* sin(t);
+fplot(xt,yt);
+
+%% 第二题
+[X,Y] = meshgrid(-3:0.5:3);
+Z = -X.^2/10 + Y.^2/10;
+surf(X,Y,Z);
+
+%% 第三题
+[X,Y] = meshgrid(-4:0.2:4);
+Z = exp(abs(X+Y))./(X+Y);
+Z(abs(X+Y) < 1e-6) = NaN; 
+surf(X,Y,Z);
+zlim([-20 20]);
+
+%% 第四题
+% 读取泰坦尼克号数据，计算不同舱位等级的生还率
+data = readtable('train.csv');
+classes = unique(data.Pclass);
+survivalRate = zeros(size(classes));
+
+for i = 1:length(classes)
+    idx = data.Pclass == classes(i);
+    survivalRate(i) = mean(data.Survived(idx));
+end
+
+% 输出各舱位的生还率
+result = table(classes, survivalRate, ...
+    'VariableNames', {'Pclass', 'SurvivalRate'});
+disp(result);
+
+% 用柱状图展示舱位与生还率的关系
+bar(classes, survivalRate * 100);
+xlabel('舱位等级');
+ylabel('生还率（%）');
+title('不同舱位乘客的生还率');
+xticks(classes);
+ylim([0 100]);
+grid on;
+
+%% 第五题
+categories = {'教授', '副教授', '讲师', '助教'};
+values = [5,8,12,5];
+explode = [1, 0, 0, 0]; 
+pie(values,explode,categories)
+title("职称比例结构饼图");
+legend(categories, 'Location', 'best'); 
+
+%% 第六题
+z = 0:0.1:4*pi;
+x = cos(z);
+y = sin(z);
+plot3(x,y,z)

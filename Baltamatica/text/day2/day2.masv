@@ -1,0 +1,78 @@
+%% 第一题
+x = linspace(10, 100, 10)
+x1 = x(7)
+x2 = x(6)
+x3 = x(2:2:end)
+
+%% 第二题
+% 定义横轴，步长取 0.01 以保证曲线平滑
+x = 0:0.01:4*pi;
+
+% 计算三个函数值
+y1 = x;                      % y1 = x
+y2 = sqrt(x);                % y2 = x^0.5
+y3 = 4*pi * exp(-0.1*x) .* sin(x);  % y3 = 4π e^{-0.1x} sin(x)
+
+% 绘制第一条曲线（红色实线）
+plot(x, y1, 'r-', 'LineWidth', 1.5);
+hold on;                     % 保持当前坐标系
+
+% 绘制第二条曲线（蓝色虚线）
+plot(x, y2, 'b--', 'LineWidth', 1.5);
+
+% 绘制第三条曲线（绿色点划线）
+plot(x, y3, 'g-.', 'LineWidth', 1.5);
+
+% 关闭保持，避免影响后续绘图
+hold off;
+
+% 添加标签、图例和标题
+xlabel('x');
+ylabel('y');
+legend('y_1 = x', 'y_2 = sqrt{x}', 'y_3 = 4pi e^{-0.1x} sin(x)', ...
+       'Location', 'northwest');
+title('三个函数在同一坐标系下的图像');
+grid on;                     % 显示网格，便于观察
+
+%% 第三题
+% 初始化
+sum_val = 0;
+m = 0;
+
+while sum_val <= 10000
+    m = m + 1;          % 递增 m
+    sum_val = sum_val + 2^m;   % 累加 2^m
+end
+
+% 输出结果
+fprintf('满足 ∑_{i=1}^{m} 2^i > 10000 的最小 m = %d\n', m);
+fprintf('此时累加和 = %d\n', sum_val);
+
+%% 第四题
+function [s, avg] = cal_sum_mean(x)
+    % 计算向量 x 的元素总和 s 与算术平均值 avg
+    % 使用 for 循环手动累加，不依赖 sum 和 mean 函数
+    
+    n = length(x);      % 获取向量长度
+    s = 0;              % 初始化总和为 0
+    
+    % 循环遍历每个元素，累加求和
+    for i = 1:n
+        s = s + x(i);
+    end
+    
+    avg = s / n;        % 平均值 = 总和 / 元素个数
+end
+
+%% 第五题
+function [y] = myfun1(x)
+    
+    if x <= 0
+        y = sin(x)
+    elseif x<=3
+        y = x
+    else 
+        y = -x + 6
+    end
+end 
+        
