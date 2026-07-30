@@ -1,0 +1,303 @@
+{"kind":"deck","id":"pr/0hy853","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"","type":"master"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"11_自定义版式","placeholders":[{"name":"title","type":"title","textPreview":"单击此处编辑母版标题样式"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout2.xml","name":"9_自定义版式","placeholders":[{"name":"title","type":"title","textPreview":"单击此处编辑母版标题样式"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout3.xml","name":"12_自定义版式","placeholders":[{"name":"title","type":"title","textPreview":"单击此处编辑母版标题样式"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout4.xml","name":"13_自定义版式","placeholders":[{"name":"title","type":"title","textPreview":"单击此处编辑母版标题样式"},{"name":"dateTime","type":"dateTime"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout5.xml","name":"自定义版式","placeholders":[{"name":"title","type":"title","textPreview":"单击此处编辑母版标题样式"},{"name":"dateTime","type":"dateTime"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout6.xml","name":"1_自定义版式","placeholders":[{"name":"title","type":"title","textPreview":"单击此处编辑母版标题样式"},{"name":"dateTime","type":"dateTime"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber"}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout7.xml","name":"2_自定义版式","placeholders":[{"name":"title","type":"title","textPreview":"单击此处编辑母版标题样式"},{"name":"dateTime","type":"dateTime"},{"name":"footer","type":"footer"},{"name":"slideNumber","type":"slideNumber"}]}
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"自定义 ROC 分析类","textShapes":3}
+{"kind":"textbox","id":"sh/hofulsf2","slide":1,"name":"文本框 10","text":"自定义 ROC 分析类\n的设计与实现","textPreview":"自定义 ROC 分析类 | 的设计与实现","textChars":18,"textLines":2,"bbox":[99,228,620,163.2]}
+{"kind":"textbox","id":"sh/ul4vaxgb","slide":1,"name":"文本框 11","text":"姓名：          学号：          班级：","textPreview":"姓名：          学号：          班级：","textChars":29,"textLines":1,"bbox":[99,422,650,43.2]}
+{"kind":"shape","id":"sh/4r6dg7et","slide":1,"name":"矩形 13","bbox":[99,393,202,10]}
+{"kind":"textbox","id":"sh/5sfepcfe","slide":1,"name":"文本框 14","text":"2026.07","textPreview":"2026.07","textChars":7,"textLines":1,"bbox":[99,474,180,43.2]}
+{"kind":"notes","id":"nt/y90nupkv","slide":1,"text":"本次实验在北太天元中实现自定义 ROC 分析类。汇报将依次介绍评价原理、类与算法、程序实现以及三组数据的运行结果。"}
+{"kind":"slide","id":"sl/hwbqtkby","slide":2,"title":"目录","textShapes":10}
+{"kind":"textbox","id":"sh/a10jqpsj","slide":2,"name":"文本框 4","text":"目录","textPreview":"目录","textChars":2,"textLines":1,"bbox":[108.73,187.4,104.53,61.27]}
+{"kind":"textbox","id":"sh/65kfmpor","slide":2,"name":"文本框 22","text":"01-","textPreview":"01-","textChars":3,"textLines":1,"bbox":[643.77,187.53,75.59,48.33]}
+{"kind":"textbox","id":"sh/w3i1sfa9","slide":2,"name":"文本框 6","text":"02-","textPreview":"02-","textChars":3,"textLines":1,"bbox":[639.8,273.07,82.27,48.33]}
+{"kind":"textbox","id":"sh/r65knqtk","slide":2,"name":"文本框 7","text":"03-","textPreview":"03-","textChars":3,"textLines":1,"bbox":[639.8,367.27,82.2,48.33]}
+{"kind":"textbox","id":"sh/q5wjelsz","slide":2,"name":"文本框 8","text":"04-","textPreview":"04-","textChars":3,"textLines":1,"bbox":[639.8,454.93,82.27,48.33]}
+{"kind":"textbox","id":"sh/ove9o7yd","slide":2,"name":"文本框 9","text":"问题与原理","textPreview":"问题与原理","textChars":5,"textLines":1,"bbox":[719.36,186.41,377.95,48.33]}
+{"kind":"textbox","id":"sh/9wnqhczy","slide":2,"name":"文本框 10","text":"类与算法","textPreview":"类与算法","textChars":4,"textLines":1,"bbox":[719.33,273.73,378.07,48.33]}
+{"kind":"textbox","id":"sh/mtwrmxg7","slide":2,"name":"文本框 11","text":"程序实现","textPreview":"程序实现","textChars":4,"textLines":1,"bbox":[719.36,367.27,377.95,48.33]}
+{"kind":"textbox","id":"sh/nu58f2hs","slide":2,"name":"文本框 12","text":"实验结果","textPreview":"实验结果","textChars":4,"textLines":1,"bbox":[722.03,454.93,377.95,48.33]}
+{"kind":"shape","id":"sh/wjy9sry9","slide":2,"name":"矩形 13","bbox":[121.93,252,202.07,10]}
+{"kind":"textbox","id":"sh/xk7qlczu","slide":2,"name":"文本框 14","text":"CONTENTS","textPreview":"CONTENTS","textChars":8,"textLines":1,"bbox":[219.47,187.4,250.13,61.27]}
+{"kind":"notes","id":"nt/hwbqtkby","slide":2,"text":"汇报分为四部分。先明确 ROC 和 AUC 的评价逻辑，再说明 MyROC 类与核心算法，随后介绍测试程序和北太天元兼容性，最后展示实验结果。"}
+{"kind":"slide","id":"sl/ofy9wn61","slide":3,"title":"01 / ROC PRINCIPLE","textShapes":23}
+{"kind":"textbox","id":"sh/by1svqlc","slide":3,"text":"01 / ROC PRINCIPLE","textPreview":"01 / ROC PRINCIPLE","textChars":18,"textLines":1,"bbox":[78,92,500,24]}
+{"kind":"textbox","id":"sh/cza94vmx","slide":3,"text":"ROC 把阈值遍历转化为一条性能轨迹","textPreview":"ROC 把阈值遍历转化为一条性能轨迹","textChars":18,"textLines":1,"bbox":[78,120,1090,60]}
+{"kind":"shape","id":"sh/d0jax03i","slide":3,"bbox":[78,207,460,348]}
+{"kind":"textbox","id":"sh/298ryl4v","slide":3,"text":"预测得分","textPreview":"预测得分","textChars":4,"textLines":1,"bbox":[108,232,370,34]}
+{"kind":"textbox","id":"sh/3ah8rqlg","slide":3,"text":"f(x)","textPreview":"f(x)","textChars":4,"textLines":1,"bbox":[108,276,370,58]}
+{"kind":"shape","id":"sh/obq90bml","slide":3,"bbox":[108,350,365,0]}
+{"kind":"textbox","id":"sh/pcjqtg36","slide":3,"text":"ŷ = 1,  f(x) ≥ t\nŷ = 0,  f(x) < t","textPreview":"ŷ = 1,  f(x) ≥ t | ŷ = 0,  f(x) < t","textChars":33,"textLines":2,"bbox":[108,376,370,78]}
+{"kind":"textbox","id":"sh/m5cra54z","slide":3,"text":"阈值 t 从大到小\n预测为正类的样本逐步增加","textPreview":"阈值 t 从大到小 | 预测为正类的样本逐步增加","textChars":22,"textLines":2,"bbox":[108,477,370,58]}
+{"kind":"textbox","id":"sh/n6ls3alk","slide":3,"text":"混淆矩阵","textPreview":"混淆矩阵","textChars":4,"textLines":1,"bbox":[590,205,220,30]}
+{"kind":"textbox","id":"sh/n2l4fq98","slide":3,"text":"真实正类","textPreview":"真实正类","textChars":4,"textLines":1,"bbox":[774,215,125,24]}
+{"kind":"textbox","id":"sh/m1c3mlsn","slide":3,"text":"真实负类","textPreview":"真实负类","textChars":4,"textLines":1,"bbox":[914,215,125,24]}
+{"kind":"textbox","id":"sh/943mhgre","slide":3,"text":"预测正类","textPreview":"预测正类","textChars":4,"textLines":1,"bbox":[590,267,120,25]}
+{"kind":"textbox","id":"sh/83ulovat","slide":3,"text":"预测负类","textPreview":"预测负类","textChars":4,"textLines":1,"bbox":[590,337,120,25]}
+{"kind":"shape","id":"sh/v6l4jq94","slide":3,"bbox":[724,250,130,60]}
+{"kind":"textbox","id":"sh/a5c3ql8z","slide":3,"text":"TP","textPreview":"TP","textChars":2,"textLines":1,"bbox":[724,266,130,30]}
+{"kind":"shape","id":"sh/x8nml0ra","slide":3,"bbox":[864,250,130,60]}
+{"kind":"textbox","id":"sh/w7ulsvqp","slide":3,"text":"FP","textPreview":"FP","textChars":2,"textLines":1,"bbox":[864,266,130,30]}
+{"kind":"shape","id":"sh/ja54na9g","slide":3,"bbox":[724,320,130,60]}
+{"kind":"textbox","id":"sh/i9w3u58v","slide":3,"text":"FN","textPreview":"FN","textChars":2,"textLines":1,"bbox":[724,336,130,30]}
+{"kind":"shape","id":"sh/e10f2twf","slide":3,"bbox":[864,320,130,60]}
+{"kind":"textbox","id":"sh/f29gbyx0","slide":3,"text":"TN","textPreview":"TN","textChars":2,"textLines":1,"bbox":[864,336,130,30]}
+{"kind":"shape","id":"sh/03ix43e5","slide":3,"bbox":[590,408,530,0]}
+{"kind":"textbox","id":"sh/14ryd8fq","slide":3,"text":"TPR","textPreview":"TPR","textChars":3,"textLines":1,"bbox":[590,429,70,34]}
+{"kind":"textbox","id":"sh/6d0fytg3","slide":3,"text":"= TP / (TP + FN) = TP / m⁺","textPreview":"= TP / (TP + FN) = TP / m⁺","textChars":26,"textLines":1,"bbox":[662,426,430,34]}
+{"kind":"textbox","id":"sh/re9g7yxo","slide":3,"text":"FPR","textPreview":"FPR","textChars":3,"textLines":1,"bbox":[590,476,70,34]}
+{"kind":"textbox","id":"sh/sfix03y9","slide":3,"text":"= FP / (TN + FP) = FP / m⁻","textPreview":"= FP / (TN + FP) = FP / m⁻","textChars":26,"textLines":1,"bbox":[662,473,430,34]}
+{"kind":"shape","id":"sh/tgry9ofu","slide":3,"bbox":[590,532,530,54]}
+{"kind":"textbox","id":"sh/a9kfadwn","slide":3,"text":"AUC","textPreview":"AUC","textChars":3,"textLines":1,"bbox":[610,547,70,25]}
+{"kind":"textbox","id":"sh/batgjixs","slide":3,"text":"= ∫₀¹ TPR d(FPR)   越接近 1，排序区分能力越强","textPreview":"= ∫₀¹ TPR d(FPR)   越接近 1，排序区分能力越强","textChars":33,"textLines":1,"bbox":[684,545,416,28]}
+{"kind":"textbox","id":"sh/l4fi9cza","slide":3,"text":"参考：周志华《机器学习》第 2 章 2.3.3 节“ROC 与 AUC”","textPreview":"参考：周志华《机器学习》第 2 章 2.3.3 节“ROC 与 AUC”","textChars":36,"textLines":1,"bbox":[78,615,900,22]}
+{"kind":"textbox","id":"sh/k3m1g7yp","slide":3,"text":"03 / 15","textPreview":"03 / 15","textChars":7,"textLines":1,"bbox":[1100,661,106,18]}
+{"kind":"notes","id":"nt/ofy9wn61","slide":3,"text":"分类器先为每个样本给出一个实值得分，再用阈值决定正负类别。阈值改变时，TP、FP、TN 和 FN 随之变化。ROC 用 FPR 作为横轴、TPR 作为纵轴，把所有阈值下的性能点连接起来。AUC 是曲线下的面积，反映整体排序区分能力，而不是某一个固定阈值的准确率。\n\n[Sources]\n- /Volumes/External/Documents/大作业/实验一_ROC分析/机器学习（周志华）片段.md"}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":4,"title":"01 / DRAWING ROC","textShapes":10}
+{"kind":"textbox","id":"sh/e9sj2tsv","slide":4,"text":"01 / DRAWING ROC","textPreview":"01 / DRAWING ROC","textChars":16,"textLines":1,"bbox":[78,92,500,24]}
+{"kind":"textbox","id":"sh/1cj2d8b6","slide":4,"text":"阈值每越过一个样本，曲线就走一步","textPreview":"阈值每越过一个样本，曲线就走一步","textChars":16,"textLines":1,"bbox":[78,120,1090,60]}
+{"kind":"shape","id":"sh/0ba143al","slide":4,"bbox":[78,198,748,0]}
+{"kind":"textbox","id":"sh/ql8jytsj","slide":4,"text":"每一步的坐标增量","textPreview":"每一步的坐标增量","textChars":8,"textLines":1,"bbox":[874,205,276,34]}
+{"kind":"textbox","id":"sh/doj29oba","slide":4,"text":"正例 P","textPreview":"正例 P","textChars":4,"textLines":1,"bbox":[874,258,110,25]}
+{"kind":"textbox","id":"sh/sna103ap","slide":4,"text":"(x, y) → (x, y + 1/m⁺)","textPreview":"(x, y) → (x, y + 1/m⁺)","textChars":22,"textLines":1,"bbox":[874,290,286,31]}
+{"kind":"textbox","id":"sh/3ihk3et8","slide":4,"text":"反例 N","textPreview":"反例 N","textChars":4,"textLines":1,"bbox":[874,341,110,25]}
+{"kind":"textbox","id":"sh/ih8ju9sn","slide":4,"text":"(x, y) → (x + 1/m⁻, y)","textPreview":"(x, y) → (x + 1/m⁻, y)","textChars":22,"textLines":1,"bbox":[874,373,286,31]}
+{"kind":"shape","id":"sh/kbm987y5","slide":4,"bbox":[874,423,286,0]}
+{"kind":"textbox","id":"sh/5cva1cfq","slide":4,"text":"“把分类阈值设为最大……在 (0,0) 处标记一个点。然后，将分类阈值依次设为每个样例的预测值……用线段连接相邻点即得。”","textPreview":"“把分类阈值设为最大……在 (0,0) 处标记一个点。然后，将分类阈值依次设为每个样例的预测值……用线段连接相邻点即得。”","textChars":61,"textLines":1,"bbox":[874,447,286,122]}
+{"kind":"textbox","id":"sh/i94r6xgz","slide":4,"text":"周志华《机器学习》\n第 2 章 2.3.3 节“ROC 与 AUC”","textPreview":"周志华《机器学习》 | 第 2 章 2.3.3 节“ROC 与 AUC”","textChars":34,"textLines":2,"bbox":[874,579,286,45]}
+{"kind":"textbox","id":"sh/jadsz2xk","slide":4,"text":"04 / 15","textPreview":"04 / 15","textChars":7,"textLines":1,"bbox":[1100,661,106,18]}
+{"kind":"image","id":"im/q1sbal07","slide":4,"name":"","alt":"Animated step-by-step construction of an ROC curve","bbox":[78,214,748,408]}
+{"kind":"notes","id":"nt/jyx0ra1s","slide":4,"text":"先把测试样本按照预测得分从高到低排序，并把阈值放在最大得分之上，因此所有样本都判为反例，起点是零零。阈值依次越过每个样本：遇到一个正例，TP 增加一，TPR 上升一除以正例总数；遇到一个反例，FP 增加一，FPR 向右增加一除以反例总数。依次连接这些点，最终到达一一。实际代码还会把相同得分样本作为一组同时处理。\n\n[Sources]\n- /Volumes/External/Documents/大作业/实验一_ROC分析/机器学习（周志华）片段.md\n- /Volumes/External/Documents/大作业/实验一_ROC分析/assets/ROC曲线逐点绘制.gif"}
+{"kind":"slide","id":"sl/i107q5of","slide":5,"title":"目录","textShapes":4}
+{"kind":"textbox","id":"sh/yhkbe1o7","slide":5,"name":"文本框 4","text":"目录","textPreview":"目录","textChars":2,"textLines":1,"bbox":[108.73,187.4,104.53,61.27]}
+{"kind":"textbox","id":"sh/ud0ne10b","slide":5,"name":"文本框 22","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[108.73,305.4,138.27,87.13]}
+{"kind":"textbox","id":"sh/w32dkbuh","slide":5,"name":"文本框 9","text":"类与算法","textPreview":"类与算法","textChars":4,"textLines":1,"bbox":[213.27,304.27,771.87,87.13]}
+{"kind":"shape","id":"sh/k7mxovud","slide":5,"name":"矩形 13","bbox":[121,255.07,469.67,8]}
+{"kind":"textbox","id":"sh/58vehgvy","slide":5,"name":"文本框 14","text":"CONTENTS","textPreview":"CONTENTS","textChars":8,"textLines":1,"bbox":[213.27,187.4,250.13,61.27]}
+{"kind":"notes","id":"nt/i107q5of","slide":5,"text":"理解评价原理之后，下面进入类结构和 ROC 核心算法。"}
+{"kind":"slide","id":"sl/x8f69ofe","slide":6,"title":"02 / CLASS DESIGN","textShapes":22}
+{"kind":"textbox","id":"sh/lkrqp4ra","slide":6,"text":"02 / CLASS DESIGN","textPreview":"02 / CLASS DESIGN","textChars":17,"textLines":1,"bbox":[78,92,500,24]}
+{"kind":"textbox","id":"sh/yhg7epsj","slide":6,"text":"一个对象封装输入、曲线与面积","textPreview":"一个对象封装输入、曲线与面积","textChars":14,"textLines":1,"bbox":[78,120,1080,62]}
+{"kind":"textbox","id":"sh/zi98nu94","slide":6,"text":"四个方法","textPreview":"四个方法","textChars":4,"textLines":1,"bbox":[78,209,280,32]}
+{"kind":"textbox","id":"sh/87ipkzal","slide":6,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[78,255,42,30]}
+{"kind":"textbox","id":"sh/98rqt4r6","slide":6,"text":"MyROC","textPreview":"MyROC","textChars":5,"textLines":1,"bbox":[130,252,190,30]}
+{"kind":"textbox","id":"sh/ml07i9sv","slide":6,"text":"保存数据并自动触发计算","textPreview":"保存数据并自动触发计算","textChars":11,"textLines":1,"bbox":[130,283,300,28]}
+{"kind":"shape","id":"sh/7m98ru9g","slide":6,"bbox":[78,317,352,0]}
+{"kind":"textbox","id":"sh/oryp8fah","slide":6,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[78,331,42,30]}
+{"kind":"textbox","id":"sh/pc76hkr2","slide":6,"text":"computeROC","textPreview":"computeROC","textChars":10,"textLines":1,"bbox":[130,328,190,30]}
+{"kind":"textbox","id":"sh/h4bupgn6","slide":6,"text":"生成 FPR 与 TPR","textPreview":"生成 FPR 与 TPR","textChars":12,"textLines":1,"bbox":[130,359,300,28]}
+{"kind":"shape","id":"sh/w32twb6l","slide":6,"bbox":[78,393,352,0]}
+{"kind":"textbox","id":"sh/v2tcn650","slide":6,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[78,407,42,30]}
+{"kind":"textbox","id":"sh/u1kbu1ov","slide":6,"text":"computeAUC","textPreview":"computeAUC","textChars":10,"textLines":1,"bbox":[130,404,190,30]}
+{"kind":"textbox","id":"sh/5svutgni","slide":6,"text":"调用 trapz 计算面积","textPreview":"调用 trapz 计算面积","textChars":13,"textLines":1,"bbox":[130,435,300,28]}
+{"kind":"shape","id":"sh/47mt0b6x","slide":6,"bbox":[78,469,352,0]}
+{"kind":"textbox","id":"sh/j6dcr65c","slide":6,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[78,483,42,30]}
+{"kind":"textbox","id":"sh/i54bylor","slide":6,"text":"plotROC","textPreview":"plotROC","textChars":7,"textLines":1,"bbox":[130,480,190,30]}
+{"kind":"textbox","id":"sh/twfux0ne","slide":6,"text":"绘制曲线并标注 AUC","textPreview":"绘制曲线并标注 AUC","textChars":11,"textLines":1,"bbox":[130,511,300,28]}
+{"kind":"shape","id":"sh/svmt4v6t","slide":6,"bbox":[78,545,352,0]}
+{"kind":"shape","id":"sh/cbe5g3ih","slide":6,"bbox":[535,213,600,364]}
+{"kind":"shape","id":"sh/dcnm98zm","slide":6,"bbox":[578,253,514,282]}
+{"kind":"shape","id":"sh/qpwnet0b","slide":6,"bbox":[626,298,418,192]}
+{"kind":"textbox","id":"sh/bq547yhw","slide":6,"text":"MyROC 对象","textPreview":"MyROC 对象","textChars":8,"textLines":1,"bbox":[670,327,330,46]}
+{"kind":"textbox","id":"sh/0fy5k3id","slide":6,"text":"Labels  ·  Scores","textPreview":"Labels  ·  Scores","textChars":17,"textLines":1,"bbox":[680,392,310,30]}
+{"kind":"textbox","id":"sh/lg76d8zy","slide":6,"text":"FPR  ·  TPR  ·  AUC","textPreview":"FPR  ·  TPR  ·  AUC","textChars":19,"textLines":1,"bbox":[680,439,310,30]}
+{"kind":"textbox","id":"sh/ydgnit07","slide":6,"text":"输入层","textPreview":"输入层","textChars":3,"textLines":1,"bbox":[1080,260,50,24]}
+{"kind":"textbox","id":"sh/zep4byhs","slide":6,"text":"结果层","textPreview":"结果层","textChars":3,"textLines":1,"bbox":[1080,507,50,24]}
+{"kind":"textbox","id":"sh/gju58ji9","slide":6,"text":"SetAccess = private","textPreview":"SetAccess = private","textChars":19,"textLines":1,"bbox":[535,596,600,24]}
+{"kind":"textbox","id":"sh/1k3mhozu","slide":6,"text":"06 / 15","textPreview":"06 / 15","textChars":7,"textLines":1,"bbox":[1100,661,106,18]}
+{"kind":"notes","id":"nt/x8f69ofe","slide":6,"text":"MyROC 把输入数据、曲线坐标和 AUC 放在同一个对象中。构造函数创建对象时自动完成计算，主程序不需要分别调用多个零散函数。属性设置为只允许类内部修改，避免输入和结果出现不一致。"}
+{"kind":"slide","id":"sl/gnmp4jqx","slide":7,"title":"02 / ALGORITHM","textShapes":21}
+{"kind":"textbox","id":"sh/batcbq94","slide":7,"text":"02 / ALGORITHM","textPreview":"02 / ALGORITHM","textChars":14,"textLines":1,"bbox":[78,92,500,24]}
+{"kind":"textbox","id":"sh/cb2tkvap","slide":7,"text":"排序一次，累计一次，得到完整 ROC","textPreview":"排序一次，累计一次，得到完整 ROC","textChars":18,"textLines":1,"bbox":[78,120,1080,62]}
+{"kind":"textbox","id":"sh/dcbud0ra","slide":7,"text":"当前实现的主要时间开销是排序，复杂度约为 O(n log n)。","textPreview":"当前实现的主要时间开销是排序，复杂度约为 O(n log n)。","textChars":32,"textLines":1,"bbox":[78,184,840,30]}
+{"kind":"shape","id":"sh/ydkbm5sv","slide":7,"bbox":[105,363,1060,0]}
+{"kind":"shape","id":"sh/zedcfa9g","slide":7,"bbox":[99,357,12,12]}
+{"kind":"textbox","id":"sh/kzmdova1","slide":7,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[55,301,100,24]}
+{"kind":"textbox","id":"sh/l0vuh0rm","slide":7,"text":"输入","textPreview":"输入","textChars":2,"textLines":1,"bbox":[23,393,164,32]}
+{"kind":"textbox","id":"sh/eh0ba1sr","slide":7,"text":"labels(:)\nscores(:)","textPreview":"labels(:) | scores(:)","textChars":19,"textLines":2,"bbox":[13,442,184,60]}
+{"kind":"shape","id":"sh/fi9c369c","slide":7,"bbox":[364,357,12,12]}
+{"kind":"textbox","id":"sh/baxkjqlk","slide":7,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[320,301,100,24]}
+{"kind":"textbox","id":"sh/a9ojq5kz","slide":7,"text":"降序排序","textPreview":"降序排序","textChars":4,"textLines":1,"bbox":[288,393,164,32]}
+{"kind":"textbox","id":"sh/xcz2l03q","slide":7,"text":"sort(scores,\n'descend')","textPreview":"sort(scores, | 'descend')","textChars":23,"textLines":2,"bbox":[278,442,184,60]}
+{"kind":"shape","id":"sh/cbq1sv25","slide":7,"bbox":[629,357,12,12]}
+{"kind":"textbox","id":"sh/n6x0fqlo","slide":7,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[585,301,100,24]}
+{"kind":"textbox","id":"sh/25ojml43","slide":7,"text":"同分组","textPreview":"同分组","textChars":3,"textLines":1,"bbox":[553,393,164,32]}
+{"kind":"textbox","id":"sh/p8fih03e","slide":7,"text":"diff + find\n定位组末","textPreview":"diff + find | 定位组末","textChars":16,"textLines":2,"bbox":[543,442,184,60]}
+{"kind":"shape","id":"sh/o761ov2t","slide":7,"bbox":[894,357,12,12]}
+{"kind":"textbox","id":"sh/f2d0b6lc","slide":7,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[850,301,100,24]}
+{"kind":"textbox","id":"sh/eh4jil4r","slide":7,"text":"累计计数","textPreview":"累计计数","textChars":4,"textLines":1,"bbox":[818,393,164,32]}
+{"kind":"textbox","id":"sh/id4ju1oz","slide":7,"text":"cumsum(TP)\ncumsum(FP)","textPreview":"cumsum(TP) | cumsum(FP)","textChars":21,"textLines":2,"bbox":[808,442,184,60]}
+{"kind":"shape","id":"sh/jedkn654","slide":7,"bbox":[1159,357,12,12]}
+{"kind":"textbox","id":"sh/4fm1wb6p","slide":7,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1115,301,100,24]}
+{"kind":"textbox","id":"sh/50v2pgna","slide":7,"text":"生成曲线","textPreview":"生成曲线","textChars":4,"textLines":1,"bbox":[1083,393,164,32]}
+{"kind":"textbox","id":"sh/q143ylov","slide":7,"text":"FPR / TPR\n加入首尾","textPreview":"FPR / TPR | 加入首尾","textChars":14,"textLines":2,"bbox":[1073,442,184,60]}
+{"kind":"shape","id":"sh/r2dkrq5g","slide":7,"bbox":[78,551,1100,55]}
+{"kind":"textbox","id":"sh/s3ml0v61","slide":7,"text":"不逐阈值重复扫描全部样本","textPreview":"不逐阈值重复扫描全部样本","textChars":12,"textLines":1,"bbox":[104,566,410,25]}
+{"kind":"textbox","id":"sh/d4f2t0nm","slide":7,"text":"data3：2000 个样本，1750 个 ROC 点","textPreview":"data3：2000 个样本，1750 个 ROC 点","textChars":27,"textLines":1,"bbox":[610,566,530,25]}
+{"kind":"textbox","id":"sh/e5o32lor","slide":7,"text":"07 / 15","textPreview":"07 / 15","textChars":7,"textLines":1,"bbox":[1100,661,106,18]}
+{"kind":"notes","id":"nt/gnmp4jqx","slide":7,"text":"最直接的方法会针对每个阈值重新扫描全部样本，数据稍大时就会变慢。当前实现先排序，再找到每个相同得分组的结束位置，并用累计和一次得到 TP 和 FP。这样 data3 的两千个样本也能够快速完成。"}
+{"kind":"slide","id":"sl/fu1gfa1s","slide":8,"title":"02 / CORE CODE","textShapes":12}
+{"kind":"textbox","id":"sh/elkf2pg7","slide":8,"text":"02 / CORE CODE","textPreview":"02 / CORE CODE","textChars":14,"textLines":1,"bbox":[78,92,500,24]}
+{"kind":"textbox","id":"sh/18byd4zy","slide":8,"text":"同分组与极端阈值决定曲线是否稳定","textPreview":"同分组与极端阈值决定曲线是否稳定","textChars":16,"textLines":1,"bbox":[78,120,1080,62]}
+{"kind":"shape","id":"sh/g72x4zyd","slide":8,"bbox":[78,207,600,385]}
+{"kind":"textbox","id":"sh/ri9g7uhw","slide":8,"text":"COMPUTEROC.M","textPreview":"COMPUTEROC.M","textChars":12,"textLines":1,"bbox":[104,228,520,22]}
+{"kind":"textbox","id":"sh/6h0fypgb","slide":8,"text":"[sortedScores, sortIndex] = sort(scores, 'descend');\nsortedLabels = labels(sortIndex);\nscoreChangeIndex = [find(diff(sortedScores) ~= 0);\n    numel(sortedScores)];\n\ncumulativeTP = cumsum(sortedLabels == 1);\ncumulativeFP = cumsum(sortedLabels == 0);\ntpr = [0; cumulativeTP(scoreChangeIndex) / positiveCount; 1];\nfpr = [0; cumulativeFP(scoreChangeIndex) / negativeCount; 1];","textPreview":"[sortedScores, sortIndex] = sort(scores, 'descend'); | sortedLabels = labels(sortIndex); | scoreChangeIndex = [find(diff(sortedScores) ~=...","textChars":372,"textLines":9,"bbox":[104,274,540,285]}
+{"kind":"shape","id":"sh/tkby9kzm","slide":8,"bbox":[728,207,0,385]}
+{"kind":"textbox","id":"sh/sjix0zy1","slide":8,"text":"相同得分","textPreview":"相同得分","textChars":4,"textLines":1,"bbox":[774,218,360,36]}
+{"kind":"textbox","id":"sh/je9g3ahk","slide":8,"text":"只在 scoreChangeIndex 对应的组末位置记录 ROC 点，避免同分样本内部顺序改变曲线。","textPreview":"只在 scoreChangeIndex 对应的组末位置记录 ROC 点，避免同分样本内部顺序改变曲线。","textChars":51,"textLines":1,"bbox":[774,269,370,92]}
+{"kind":"shape","id":"sh/id0fu50z","slide":8,"bbox":[774,379,370,0]}
+{"kind":"textbox","id":"sh/o7ydoret","slide":8,"text":"+Inf","textPreview":"+Inf","textChars":4,"textLines":1,"bbox":[774,405,105,48]}
+{"kind":"textbox","id":"sh/98rehwve","slide":8,"text":"全部判为负类  →  (0,0)","textPreview":"全部判为负类  →  (0,0)","textChars":16,"textLines":1,"bbox":[894,412,250,34]}
+{"kind":"textbox","id":"sh/m5gvmhwn","slide":8,"text":"-Inf","textPreview":"-Inf","textChars":4,"textLines":1,"bbox":[774,477,105,48]}
+{"kind":"textbox","id":"sh/n6pwfmd8","slide":8,"text":"全部判为正类  →  (1,1)","textPreview":"全部判为正类  →  (1,1)","textChars":16,"textLines":1,"bbox":[894,484,250,34]}
+{"kind":"textbox","id":"sh/0jydkreh","slide":8,"text":"ROC 点数 = 唯一得分数量 + 2","textPreview":"ROC 点数 = 唯一得分数量 + 2","textChars":19,"textLines":1,"bbox":[774,548,370,28]}
+{"kind":"textbox","id":"sh/1k7edwv2","slide":8,"text":"08 / 15","textPreview":"08 / 15","textChars":7,"textLines":1,"bbox":[1100,661,106,18]}
+{"kind":"notes","id":"nt/fu1gfa1s","slide":8,"text":"这段代码是整个实验的核心。相同得分的样本必须同时进入预测正类集合，所以只在每组结束位置记录曲线点。向量首尾的零和一分别对应正无穷与负无穷阈值，保证曲线完整覆盖两个极端状态。"}
+{"kind":"slide","id":"sl/udsvah03","slide":9,"title":"目录","textShapes":4}
+{"kind":"textbox","id":"sh/mdonql4z","slide":9,"name":"文本框 4","text":"目录","textPreview":"目录","textChars":2,"textLines":1,"bbox":[108.73,187.4,104.53,61.27]}
+{"kind":"textbox","id":"sh/ml8j6p8n","slide":9,"name":"文本框 22","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[108.73,305.4,138.27,87.13]}
+{"kind":"textbox","id":"sh/oza1gfyh","slide":9,"name":"文本框 9","text":"程序实现","textPreview":"程序实现","textChars":4,"textLines":1,"bbox":[213.27,304.27,771.87,87.13]}
+{"kind":"shape","id":"sh/cnu1kzyd","slide":9,"name":"矩形 13","bbox":[121,255.07,469.67,8]}
+{"kind":"textbox","id":"sh/do3id4fy","slide":9,"name":"文本框 14","text":"CONTENTS","textPreview":"CONTENTS","textChars":8,"textLines":1,"bbox":[213.27,187.4,250.13,61.27]}
+{"kind":"notes","id":"nt/udsvah03","slide":9,"text":"算法确定后，下面说明 AUC、绘图和主测试程序如何组合。"}
+{"kind":"slide","id":"sl/m90b6t0r","slide":10,"title":"03 / AUC & PLOT","textShapes":20}
+{"kind":"textbox","id":"sh/q9sn69kb","slide":10,"text":"03 / AUC & PLOT","textPreview":"03 / AUC & PLOT","textChars":15,"textLines":1,"bbox":[78,92,500,24]}
+{"kind":"textbox","id":"sh/xc3mho32","slide":10,"text":"AUC 与绘图只保留必要动作","textPreview":"AUC 与绘图只保留必要动作","textChars":14,"textLines":1,"bbox":[78,120,1080,62]}
+{"kind":"shape","id":"sh/cbu58j2h","slide":10,"bbox":[78,198,150,4]}
+{"kind":"shape","id":"sh/zelojyl8","slide":10,"bbox":[78,245,261.5,0]}
+{"kind":"textbox","id":"sh/ydcnatkn","slide":10,"text":"01 / AREA","textPreview":"01 / AREA","textChars":9,"textLines":1,"bbox":[78,260,261.5,22]}
+{"kind":"textbox","id":"sh/l036l83y","slide":10,"text":"trapz","textPreview":"trapz","textChars":5,"textLines":1,"bbox":[78,302,261.5,48]}
+{"kind":"shape","id":"sh/kzu5c32t","slide":10,"bbox":[78,370,261.5,103]}
+{"kind":"textbox","id":"sh/725onyl4","slide":10,"text":"obj.AUC = trapz(\nobj.FPR, obj.TPR);","textPreview":"obj.AUC = trapz( | obj.FPR, obj.TPR);","textChars":35,"textLines":2,"bbox":[93,391,231.5,65]}
+{"kind":"textbox","id":"sh/m1cnetkj","slide":10,"text":"按题目要求使用梯形积分","textPreview":"按题目要求使用梯形积分","textChars":11,"textLines":1,"bbox":[78,500,261.5,58]}
+{"kind":"shape","id":"sh/s7yt4b21","slide":10,"bbox":[357.5,245,261.5,0]}
+{"kind":"textbox","id":"sh/d87uxg3m","slide":10,"text":"02 / ROC","textPreview":"02 / ROC","textChars":8,"textLines":1,"bbox":[357.5,260,261.5,22]}
+{"kind":"textbox","id":"sh/q5gb21kb","slide":10,"text":"蓝实线","textPreview":"蓝实线","textChars":3,"textLines":1,"bbox":[357.5,302,261.5,48]}
+{"kind":"shape","id":"sh/r6pcv6lw","slide":10,"bbox":[357.5,370,261.5,103]}
+{"kind":"textbox","id":"sh/0bit8b2d","slide":10,"text":"plot(FPR, TPR,\n'b-');","textPreview":"plot(FPR, TPR, | 'b-');","textChars":21,"textLines":2,"bbox":[372.5,391,231.5,65]}
+{"kind":"textbox","id":"sh/1cru1g3y","slide":10,"text":"展示实际分类器曲线","textPreview":"展示实际分类器曲线","textChars":9,"textLines":1,"bbox":[357.5,500,261.5,58]}
+{"kind":"shape","id":"sh/e9gb61k7","slide":10,"bbox":[637,245,261.5,0]}
+{"kind":"textbox","id":"sh/fapcz6ls","slide":10,"text":"03 / BASELINE","textPreview":"03 / BASELINE","textChars":13,"textLines":1,"bbox":[637,260,261.5,22]}
+{"kind":"textbox","id":"sh/ozitcv29","slide":10,"text":"红虚线","textPreview":"红虚线","textChars":3,"textLines":1,"bbox":[637,302,261.5,48]}
+{"kind":"shape","id":"sh/p0ru503u","slide":10,"bbox":[637,370,261.5,103]}
+{"kind":"textbox","id":"sh/xwnupgvy","slide":10,"text":"plot([0 1], [0 1],\n'r--');","textPreview":"plot([0 1], [0 1], | 'r--');","textChars":26,"textLines":2,"bbox":[652,391,231.5,65]}
+{"kind":"textbox","id":"sh/wvetgbud","slide":10,"text":"表示随机分类器参考线","textPreview":"表示随机分类器参考线","textChars":10,"textLines":1,"bbox":[637,500,261.5,58]}
+{"kind":"shape","id":"sh/bu5cnqd8","slide":10,"bbox":[916.5,245,261.5,0]}
+{"kind":"textbox","id":"sh/atwbelcn","slide":10,"text":"04 / OUTPUT","textPreview":"04 / OUTPUT","textChars":11,"textLines":1,"bbox":[916.5,260,261.5,22]}
+{"kind":"textbox","id":"sh/lk7ut0va","slide":10,"text":"默认样式","textPreview":"默认样式","textChars":4,"textLines":1,"bbox":[916.5,302,261.5,48]}
+{"kind":"shape","id":"sh/kjytkvup","slide":10,"bbox":[916.5,370,261.5,103]}
+{"kind":"textbox","id":"sh/jypcrqd4","slide":10,"text":"legend  ·  grid\naxis([0 1 0 1])","textPreview":"legend  ·  grid | axis([0 1 0 1])","textChars":31,"textLines":2,"bbox":[931.5,391,231.5,65]}
+{"kind":"textbox","id":"sh/yxgbilcj","slide":10,"text":"降低北太天元连续绘图负担","textPreview":"降低北太天元连续绘图负担","textChars":12,"textLines":1,"bbox":[916.5,500,261.5,58]}
+{"kind":"textbox","id":"sh/1o3ahwvq","slide":10,"text":"默认字体  ·  默认字号  ·  默认线宽","textPreview":"默认字体  ·  默认字号  ·  默认线宽","textChars":22,"textLines":1,"bbox":[78,586,1100,28]}
+{"kind":"textbox","id":"sh/0nut8rul","slide":10,"text":"10 / 15","textPreview":"10 / 15","textChars":7,"textLines":1,"bbox":[1100,661,106,18]}
+{"kind":"notes","id":"nt/m90b6t0r","slide":10,"text":"AUC 直接调用题目指定的 trapz，不再重复排序或增加额外校验。绘图保留蓝色 ROC、红色随机参考线、图例、网格和 AUC 标注。为了适配北太天元，最终版使用默认字体、字号和线宽，连续生成三张图时响应更快。"}
+{"kind":"slide","id":"sl/jetc3ut0","slide":11,"title":"03 / TEST SCRIPT","textShapes":22}
+{"kind":"textbox","id":"sh/a90z21on","slide":11,"text":"03 / TEST SCRIPT","textPreview":"03 / TEST SCRIPT","textChars":16,"textLines":1,"bbox":[78,92,500,24]}
+{"kind":"textbox","id":"sh/xcryxg7y","slide":11,"text":"三组数据沿同一条执行链运行","textPreview":"三组数据沿同一条执行链运行","textChars":13,"textLines":1,"bbox":[78,120,1080,62]}
+{"kind":"textbox","id":"sh/wbih4b6d","slide":11,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[78,220,50,32]}
+{"kind":"textbox","id":"sh/n69grmpw","slide":11,"text":"LOAD","textPreview":"LOAD","textChars":4,"textLines":1,"bbox":[145,219,130,28]}
+{"kind":"textbox","id":"sh/250zy18b","slide":11,"text":"读取 data*.mat","textPreview":"读取 data*.mat","textChars":12,"textLines":1,"bbox":[290,218,280,32]}
+{"kind":"shape","id":"sh/98rytw72","slide":11,"bbox":[78,268,490,0]}
+{"kind":"textbox","id":"sh/o7ih0r6h","slide":11,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[78,311,50,32]}
+{"kind":"textbox","id":"sh/72t03qp0","slide":11,"text":"OBJECT","textPreview":"OBJECT","textChars":6,"textLines":1,"bbox":[145,310,130,28]}
+{"kind":"textbox","id":"sh/61kzalof","slide":11,"text":"创建 MyROC 对象","textPreview":"创建 MyROC 对象","textChars":11,"textLines":1,"bbox":[290,309,280,32]}
+{"kind":"shape","id":"sh/ofqtgnyt","slide":11,"bbox":[78,359,490,0]}
+{"kind":"textbox","id":"sh/9gza9sze","slide":11,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[78,402,50,32]}
+{"kind":"textbox","id":"sh/mdobedg3","slide":11,"text":"REPORT","textPreview":"REPORT","textChars":6,"textLines":1,"bbox":[145,401,130,28]}
+{"kind":"textbox","id":"sh/nehs7iho","slide":11,"text":"输出样本数与 AUC","textPreview":"输出样本数与 AUC","textChars":10,"textLines":1,"bbox":[290,400,280,32]}
+{"kind":"shape","id":"sh/0b6tc3yx","slide":11,"bbox":[78,450,490,0]}
+{"kind":"textbox","id":"sh/1cfa58zi","slide":11,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[78,493,50,32]}
+{"kind":"textbox","id":"sh/epobatgr","slide":11,"text":"PLOT","textPreview":"PLOT","textChars":4,"textLines":1,"bbox":[145,492,130,28]}
+{"kind":"textbox","id":"sh/zaxs3yhc","slide":11,"text":"生成独立 ROC 图窗","textPreview":"生成独立 ROC 图窗","textChars":11,"textLines":1,"bbox":[290,491,280,32]}
+{"kind":"shape","id":"sh/cn6t83y1","slide":11,"bbox":[78,541,490,0]}
+{"kind":"shape","id":"sh/dofa18z6","slide":11,"bbox":[740,262,288,0]}
+{"kind":"shape","id":"sh/tsnip0ny","slide":11,"bbox":[1028,262,0,230]}
+{"kind":"shape","id":"sh/87ehgv6d","slide":11,"bbox":[740,492,288,0]}
+{"kind":"shape","id":"sh/7650nq5s","slide":11,"bbox":[740,262,0,230]}
+{"kind":"shape","id":"sh/65wzelo7","slide":11,"bbox":[690,221,132,74]}
+{"kind":"textbox","id":"sh/l43ilgn2","slide":11,"text":"LOAD","textPreview":"LOAD","textChars":4,"textLines":1,"bbox":[690,244,132,30]}
+{"kind":"shape","id":"sh/k3uhcb6h","slide":11,"bbox":[982,221,132,74]}
+{"kind":"textbox","id":"sh/j2lgjq5w","slide":11,"text":"OBJECT","textPreview":"OBJECT","textChars":6,"textLines":1,"bbox":[982,244,132,30]}
+{"kind":"shape","id":"sh/y1czalob","slide":11,"bbox":[982,451,132,74]}
+{"kind":"textbox","id":"sh/p07ixkn6","slide":11,"text":"PLOT","textPreview":"PLOT","textChars":4,"textLines":1,"bbox":[982,474,132,30]}
+{"kind":"shape","id":"sh/4zyhofml","slide":11,"bbox":[690,451,132,74]}
+{"kind":"textbox","id":"sh/m58fih43","slide":11,"text":"REPORT","textPreview":"REPORT","textChars":6,"textLines":1,"bbox":[690,474,132,30]}
+{"kind":"textbox","id":"sh/n61wbmlo","slide":11,"text":"testMyROC","textPreview":"testMyROC","textChars":9,"textLines":1,"bbox":[808,340,190,50]}
+{"kind":"textbox","id":"sh/o7axk7m9","slide":11,"text":"北太天元 GUI","textPreview":"北太天元 GUI","textChars":8,"textLines":1,"bbox":[817,395,170,28]}
+{"kind":"textbox","id":"sh/98jedc3u","slide":11,"text":"不使用 onCleanup  ·  不使用 saveas / print  ·  图窗手动保存 PNG","textPreview":"不使用 onCleanup  ·  不使用 saveas / print  ·  图窗手动保存 PNG","textChars":51,"textLines":1,"bbox":[78,596,1100,26]}
+{"kind":"textbox","id":"sh/eh8fex47","slide":11,"text":"11 / 15","textPreview":"11 / 15","textChars":7,"textLines":1,"bbox":[1100,661,106,18]}
+{"kind":"notes","id":"nt/jetc3ut0","slide":11,"text":"主程序对三组数据执行完全相同的流程：加载数据、创建对象、输出结果并绘图。当前北太天元版本没有 onCleanup、saveas 和 print，因此代码只负责稳定生成三个图窗，图片由图形界面手动保存为 PNG。"}
+{"kind":"slide","id":"sl/8f2psfyx","slide":12,"title":"目录","textShapes":4}
+{"kind":"textbox","id":"sh/q903ad4n","slide":12,"name":"文本框 4","text":"目录","textPreview":"目录","textChars":2,"textLines":1,"bbox":[108.73,187.4,104.53,61.27]}
+{"kind":"textbox","id":"sh/uh0na1g3","slide":12,"name":"文本框 22","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[108.73,305.4,138.27,87.13]}
+{"kind":"textbox","id":"sh/wvupgz6t","slide":12,"name":"文本框 9","text":"实验结果","textPreview":"实验结果","textChars":4,"textLines":1,"bbox":[213.27,304.27,771.87,87.13]}
+{"kind":"shape","id":"sh/orapcf6h","slide":12,"name":"矩形 13","bbox":[121,255.07,469.67,8]}
+{"kind":"textbox","id":"sh/9sj65kn2","slide":12,"name":"文本框 14","text":"CONTENTS","textPreview":"CONTENTS","textChars":8,"textLines":1,"bbox":[213.27,187.4,250.13,61.27]}
+{"kind":"notes","id":"nt/8f2psfyx","slide":12,"text":"最后进入实际运行结果，观察三组数据的 AUC 和 ROC 曲线。"}
+{"kind":"slide","id":"sl/hgzapcr6","slide":13,"title":"04 / RESULTS","textShapes":15}
+{"kind":"textbox","id":"sh/dsr6t8bu","slide":13,"text":"04 / RESULTS","textPreview":"04 / RESULTS","textChars":12,"textLines":1,"bbox":[78,92,500,24]}
+{"kind":"textbox","id":"sh/q50nydsj","slide":13,"text":"三个数据集均显示较强区分能力","textPreview":"三个数据集均显示较强区分能力","textChars":14,"textLines":1,"bbox":[78,120,1080,62]}
+{"kind":"shape","id":"sh/bq9orito","slide":13,"bbox":[78,223,650,0]}
+{"kind":"textbox","id":"sh/o3i5w3ad","slide":13,"text":"1.0000","textPreview":"1.0000","textChars":6,"textLines":1,"bbox":[78,241,230,67]}
+{"kind":"textbox","id":"sh/p4r6p8by","slide":13,"text":"data1.mat","textPreview":"data1.mat","textChars":9,"textLines":1,"bbox":[326,242,190,34]}
+{"kind":"textbox","id":"sh/21gnuts7","slide":13,"text":"100 samples  ·  102 ROC points","textPreview":"100 samples  ·  102 ROC points","textChars":30,"textLines":1,"bbox":[326,281,360,26]}
+{"kind":"shape","id":"sh/32ponyts","slide":13,"bbox":[78,337,650,0]}
+{"kind":"textbox","id":"sh/gzy5s3a1","slide":13,"text":"0.9464","textPreview":"0.9464","textChars":6,"textLines":1,"bbox":[78,355,230,67]}
+{"kind":"textbox","id":"sh/1076lobm","slide":13,"text":"data2.mat","textPreview":"data2.mat","textChars":9,"textLines":1,"bbox":[326,356,190,34]}
+{"kind":"textbox","id":"sh/hcfy9k3u","slide":13,"text":"200 samples  ·  194 ROC points","textPreview":"200 samples  ·  194 ROC points","textChars":30,"textLines":1,"bbox":[326,395,360,26]}
+{"kind":"shape","id":"sh/gb6x0zm9","slide":13,"bbox":[78,451,650,0]}
+{"kind":"textbox","id":"sh/vaxg7ulo","slide":13,"text":"0.9040","textPreview":"0.9040","textChars":6,"textLines":1,"bbox":[78,469,230,67]}
+{"kind":"textbox","id":"sh/u9ofyp43","slide":13,"text":"data3.mat","textPreview":"data3.mat","textChars":9,"textLines":1,"bbox":[326,470,190,34]}
+{"kind":"textbox","id":"sh/t8fy5k3i","slide":13,"text":"2000 samples  ·  1750 ROC points","textPreview":"2000 samples  ·  1750 ROC points","textChars":32,"textLines":1,"bbox":[326,509,360,26]}
+{"kind":"shape","id":"sh/876xwfmx","slide":13,"bbox":[775,218,405,348]}
+{"kind":"textbox","id":"sh/7mdg3als","slide":13,"text":"BALTAMATICA / OUTPUT","textPreview":"BALTAMATICA / OUTPUT","textChars":20,"textLines":1,"bbox":[800,240,350,22]}
+{"kind":"textbox","id":"sh/6l4fu547","slide":13,"text":"实验一：自定义ROC分析类测试\n--------------------------------\ndata1.mat  AUC = 1.0000\ndata2.mat  AUC = 0.9464\ndata3.mat  AUC = 0.9040\n--------------------------------\n测试完成，共生成3个图窗","textPreview":"实验一：自定义ROC分析类测试 | -------------------------------- | data1.mat  AUC = 1.0000 | data2.mat  AUC = 0.9464 | data3.mat  AUC = 0.9040 | ------...","textChars":166,"textLines":7,"bbox":[800,285,350,230]}
+{"kind":"textbox","id":"sh/lkvy103m","slide":13,"text":"AUC > 0.9","textPreview":"AUC > 0.9","textChars":9,"textLines":1,"bbox":[775,584,405,38]}
+{"kind":"textbox","id":"sh/kjmxsfm1","slide":13,"text":"13 / 15","textPreview":"13 / 15","textChars":7,"textLines":1,"bbox":[1100,661,106,18]}
+{"kind":"notes","id":"nt/hgzapcr6","slide":13,"text":"三组数据都在北太天元中成功运行。data1 的 AUC 为一，说明正负样本完全可分；data2 和 data3 的 AUC 也都超过零点九，分类器具有较强区分能力。右侧终端卡片来自实际日志内容。\n\n[Sources]\n- /Volumes/External/Documents/大作业/实验一_ROC分析/run_logs/baltamatica_run_output.txt"}
+{"kind":"slide","id":"sl/6lsnupw7","slide":14,"title":"04 / ROC CURVES","textShapes":12}
+{"kind":"textbox","id":"sh/a9gvid8v","slide":14,"text":"04 / ROC CURVES","textPreview":"04 / ROC CURVES","textChars":15,"textLines":1,"bbox":[78,92,500,24]}
+{"kind":"textbox","id":"sh/xc7eds76","slide":14,"text":"三条 ROC 曲线均位于随机参考线上方","textPreview":"三条 ROC 曲线均位于随机参考线上方","textChars":19,"textLines":1,"bbox":[78,120,1080,62]}
+{"kind":"shape","id":"sh/wbydknq1","slide":14,"bbox":[78,203,330,0]}
+{"kind":"textbox","id":"sh/idgvmx8r","slide":14,"text":"data1.mat","textPreview":"data1.mat","textChars":9,"textLines":1,"bbox":[78,518,190,28]}
+{"kind":"textbox","id":"sh/5grehs7i","slide":14,"text":"AUC  1.0000","textPreview":"AUC  1.0000","textChars":11,"textLines":1,"bbox":[268,518,140,28]}
+{"kind":"textbox","id":"sh/kfidonqx","slide":14,"text":"完全可分","textPreview":"完全可分","textChars":4,"textLines":1,"bbox":[78,560,330,26]}
+{"kind":"shape","id":"sh/zi5c3y98","slide":14,"bbox":[452,203,330,0]}
+{"kind":"textbox","id":"sh/c3e1gjyd","slide":14,"text":"data2.mat","textPreview":"data2.mat","textChars":9,"textLines":1,"bbox":[452,518,190,28]}
+{"kind":"textbox","id":"sh/x4ni9ofy","slide":14,"text":"AUC  0.9464","textPreview":"AUC  0.9464","textChars":11,"textLines":1,"bbox":[642,518,140,28]}
+{"kind":"textbox","id":"sh/a1wze9g7","slide":14,"text":"区分能力很强","textPreview":"区分能力很强","textChars":6,"textLines":1,"bbox":[452,560,330,26]}
+{"kind":"shape","id":"sh/b2507exs","slide":14,"bbox":[826,203,330,0]}
+{"kind":"textbox","id":"sh/ls7idofu","slide":14,"text":"data3.mat","textPreview":"data3.mat","textChars":9,"textLines":1,"bbox":[826,518,190,28]}
+{"kind":"textbox","id":"sh/y5wjitgj","slide":14,"text":"AUC  0.9040","textPreview":"AUC  0.9040","textChars":11,"textLines":1,"bbox":[1016,518,140,28]}
+{"kind":"textbox","id":"sh/z650byxo","slide":14,"text":"大样本下仍超过 0.9","textPreview":"大样本下仍超过 0.9","textChars":11,"textLines":1,"bbox":[826,560,330,26]}
+{"kind":"textbox","id":"sh/0buh8zy5","slide":14,"text":"14 / 15","textPreview":"14 / 15","textChars":7,"textLines":1,"bbox":[1100,661,106,18]}
+{"kind":"image","id":"im/i5wjyxwn","slide":14,"name":"","alt":"data1.mat ROC curve","bbox":[78,220,330,278]}
+{"kind":"image","id":"im/rapkb2x4","slide":14,"name":"","alt":"data2.mat ROC curve","bbox":[452,220,330,278]}
+{"kind":"image","id":"im/rq1cvq1g","slide":14,"name":"","alt":"data3.mat ROC curve","bbox":[826,220,330,278]}
+{"kind":"notes","id":"nt/6lsnupw7","slide":14,"text":"三条蓝色 ROC 曲线都明显位于红色随机参考线上方。data1 几乎贴近左上角，data2 和 data3 也保持较高曲线位置。data3 的样本和曲线点更多，因此线条更细密，但总体 AUC 仍超过零点九。\n\n[Sources]\n- /Volumes/External/Documents/大作业/实验一_ROC分析/results/data1_ROC.png\n- /Volumes/External/Documents/大作业/实验一_ROC分析/results/data2_ROC.png\n- /Volumes/External/Documents/大作业/实验一_ROC分析/results/data3_ROC.png"}
+{"kind":"slide","id":"sl/vaxsvy10","slide":15,"title":"SUMMARY","textShapes":14}
+{"kind":"shape","id":"sh/ihw3mlkv","slide":15,"bbox":[72,104,505,510]}
+{"kind":"textbox","id":"sh/547mhg3m","slide":15,"text":"SUMMARY","textPreview":"SUMMARY","textChars":7,"textLines":1,"bbox":[102,136,380,24]}
+{"kind":"textbox","id":"sh/k3y5ov21","slide":15,"text":"完成从数据\n到曲线的闭环","textPreview":"完成从数据 | 到曲线的闭环","textChars":12,"textLines":2,"bbox":[102,232,410,154]}
+{"kind":"textbox","id":"sh/76p4jqls","slide":15,"text":"北太天元 · MyROC · ROC/AUC","textPreview":"北太天元 · MyROC · ROC/AUC","textChars":22,"textLines":1,"bbox":[102,558,410,24]}
+{"kind":"textbox","id":"sh/65gnqlk7","slide":15,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[642,137,55,28]}
+{"kind":"textbox","id":"sh/t87ml0ji","slide":15,"text":"类封装","textPreview":"类封装","textChars":3,"textLines":1,"bbox":[714,133,330,36]}
+{"kind":"textbox","id":"sh/s7y5sv2x","slide":15,"text":"输入、曲线与面积保存在同一对象中","textPreview":"输入、曲线与面积保存在同一对象中","textChars":16,"textLines":1,"bbox":[714,181,390,50]}
+{"kind":"shape","id":"sh/na5476l8","slide":15,"bbox":[642,244,480,0]}
+{"kind":"textbox","id":"sh/m9c3e1kn","slide":15,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[642,281,55,28]}
+{"kind":"textbox","id":"sh/wrm9kvep","slide":15,"text":"累计和","textPreview":"累计和","textChars":3,"textLines":1,"bbox":[714,277,330,36]}
+{"kind":"textbox","id":"sh/hsvat0fa","slide":15,"text":"排序与同分组保证效率和稳定性","textPreview":"排序与同分组保证效率和稳定性","textChars":14,"textLines":1,"bbox":[714,325,390,50]}
+{"kind":"shape","id":"sh/upkrilwj","slide":15,"bbox":[642,388,480,0]}
+{"kind":"textbox","id":"sh/vqdsrqx4","slide":15,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[642,425,55,28]}
+{"kind":"textbox","id":"sh/4vm9ovel","slide":15,"text":"实际运行","textPreview":"实际运行","textChars":4,"textLines":1,"bbox":[714,421,330,36]}
+{"kind":"textbox","id":"sh/5wvax0f6","slide":15,"text":"三组数据均在北太天元中完成","textPreview":"三组数据均在北太天元中完成","textChars":13,"textLines":1,"bbox":[714,469,390,50]}
+{"kind":"shape","id":"sh/it4rm5wv","slide":15,"bbox":[642,532,480,0]}
+{"kind":"textbox","id":"sh/judsvqxg","slide":15,"text":"ROC 点数完整覆盖 (0,0) → (1,1)","textPreview":"ROC 点数完整覆盖 (0,0) → (1,1)","textChars":24,"textLines":1,"bbox":[642,584,480,26]}
+{"kind":"textbox","id":"sh/0z29cbyh","slide":15,"text":"15 / 15","textPreview":"15 / 15","textChars":7,"textLines":1,"bbox":[1100,661,106,18]}
+{"kind":"notes","id":"nt/vaxsvy10","slide":15,"text":"本实验完成了从数据输入、ROC 计算、AUC 积分到结果绘图的完整流程。核心实现通过类封装和累计和保持代码简洁，并且能够稳定处理重复得分与极端阈值。最终三组数据均在北太天元中完成测试。"}
