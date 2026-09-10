@@ -8053,3 +8053,167 @@ Fast-forward
  create mode 100644 "Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/\345\256\236\351\252\214\344\270\200_PPT\351\200\220\351\241\265\350\247\204\345\210\222.md"
  create mode 100644 "Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/\345\256\236\351\252\214\344\270\200_\345\256\236\347\216\260\346\200\235\350\267\257\344\270\216\344\273\243\347\240\201\350\257\246\350\247\243.md"
  create mode 100644 "Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/\345\256\236\351\252\214\344\270\200\346\212\245\345\221\212\350\215\211\347\250\277.md"
+[main 5da7f18] Auto sync from Windows: 2026/07/29 å‘¨ä¸‰ 23:16:44.14
+ 2 files changed, 123 insertions(+)
+ create mode 100644 AGENTS.md
+[2026/07/29 ÖÜÈı 23:16:46.36] Changes committed 
+To github.com:never-hezhengze/code-sync.git
+   c27acbe..5da7f18  main -> main
+[2026/07/29 ÖÜÈı 23:17:13.83] Sync completed successfully 
+======================================== 
+[2026/07/30 ÖÜËÄ 17:36:08.45] Starting auto-sync... 
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/notes/DeepSeek\350\257\204\344\273\267\351\207\207\347\272\263\350\256\260\345\275\225.md"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/notes/\345\256\236\351\252\214\344\270\200\346\200\235\350\267\257\350\256\260\345\275\225.md"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data1_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data2_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data3_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/tie_test_ROC.png"
+M	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/run_logs/baltamatica_run_output.txt"
+M	windows_sync_log.txt
+Your branch is up to date with 'origin/main'.
+Already on 'main'
+From github.com:never-hezhengze/code-sync
+ * branch            main       -> FETCH_HEAD
+   5da7f18..da57de4  main       -> origin/main
+error: Your local changes to the following files would be overwritten by merge:
+	Baltamatica/å¤§ä½œä¸š/å®éªŒä¸€_ROCåˆ†æ/run_logs/baltamatica_run_output.txt
+Please commit your changes or stash them before you merge.
+error: The following untracked working tree files would be overwritten by merge:
+	Baltamatica/å¤§ä½œä¸š/å®éªŒä¸€_ROCåˆ†æ/MyROC.masv
+	Baltamatica/å¤§ä½œä¸š/å®éªŒä¸€_ROCåˆ†æ/testMyROC.masv
+Please move or remove them before you merge.
+Updating 5da7f18..da57de4
+Aborting
+[2026/07/30 ÖÜËÄ 17:37:12.13] Sync failed 
+======================================== 
+[2026/07/30 ÖÜËÄ 17:38:12.01] Starting auto-sync... 
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/notes/DeepSeek\350\257\204\344\273\267\351\207\207\347\272\263\350\256\260\345\275\225.md"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/notes/\345\256\236\351\252\214\344\270\200\346\200\235\350\267\257\350\256\260\345\275\225.md"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data1_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data2_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data3_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/tie_test_ROC.png"
+M	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/run_logs/baltamatica_run_output.txt"
+M	windows_sync_log.txt
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Already on 'main'
+From github.com:never-hezhengze/code-sync
+ * branch            main       -> FETCH_HEAD
+error: Your local changes to the following files would be overwritten by merge:
+	Baltamatica/å¤§ä½œä¸š/å®éªŒä¸€_ROCåˆ†æ/run_logs/baltamatica_run_output.txt
+Please commit your changes or stash them before you merge.
+error: The following untracked working tree files would be overwritten by merge:
+	Baltamatica/å¤§ä½œä¸š/å®éªŒä¸€_ROCåˆ†æ/MyROC.masv
+	Baltamatica/å¤§ä½œä¸š/å®éªŒä¸€_ROCåˆ†æ/testMyROC.masv
+Please move or remove them before you merge.
+Updating 5da7f18..da57de4
+Aborting
+[2026/07/30 ÖÜËÄ 17:38:17.77] Sync failed 
+======================================== 
+[2026/07/31 ÖÜÎå  9:00:26.40] Starting auto-sync... 
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/notes/DeepSeek\350\257\204\344\273\267\351\207\207\347\272\263\350\256\260\345\275\225.md"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/notes/\345\256\236\351\252\214\344\270\200\346\200\235\350\267\257\350\256\260\345\275\225.md"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data1_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data2_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data3_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/tie_test_ROC.png"
+M	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/run_logs/baltamatica_run_output.txt"
+M	windows_sync_log.txt
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Already on 'main'
+From github.com:never-hezhengze/code-sync
+ * branch            main       -> FETCH_HEAD
+error: Your local changes to the following files would be overwritten by merge:
+	Baltamatica/å¤§ä½œä¸š/å®éªŒä¸€_ROCåˆ†æ/run_logs/baltamatica_run_output.txt
+Please commit your changes or stash them before you merge.
+Updating 5da7f18..da57de4
+Aborting
+[2026/07/31 ÖÜÎå  9:00:31.99] Sync failed 
+======================================== 
+[2026/07/31 ÖÜÎå  9:01:40.79] Starting auto-sync... 
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/notes/DeepSeek\350\257\204\344\273\267\351\207\207\347\272\263\350\256\260\345\275\225.md"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/notes/\345\256\236\351\252\214\344\270\200\346\200\235\350\267\257\350\256\260\345\275\225.md"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data1_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data2_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data3_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/tie_test_ROC.png"
+M	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/run_logs/baltamatica_run_output.txt"
+M	windows_sync_log.txt
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Already on 'main'
+From github.com:never-hezhengze/code-sync
+ * branch            main       -> FETCH_HEAD
+error: Your local changes to the following files would be overwritten by merge:
+	Baltamatica/å¤§ä½œä¸š/å®éªŒä¸€_ROCåˆ†æ/run_logs/baltamatica_run_output.txt
+Please commit your changes or stash them before you merge.
+Updating 5da7f18..da57de4
+Aborting
+[2026/07/31 ÖÜÎå  9:01:46.06] Sync failed 
+======================================== 
+[2026/07/31 ÖÜÎå  9:02:52.02] Starting auto-sync... 
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/notes/DeepSeek\350\257\204\344\273\267\351\207\207\347\272\263\350\256\260\345\275\225.md"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/notes/\345\256\236\351\252\214\344\270\200\346\200\235\350\267\257\350\256\260\345\275\225.md"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data1_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data2_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data3_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/tie_test_ROC.png"
+M	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/run_logs/baltamatica_run_output.txt"
+M	windows_sync_log.txt
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Already on 'main'
+From github.com:never-hezhengze/code-sync
+ * branch            main       -> FETCH_HEAD
+error: Your local changes to the following files would be overwritten by merge:
+	Baltamatica/å¤§ä½œä¸š/å®éªŒä¸€_ROCåˆ†æ/run_logs/baltamatica_run_output.txt
+Please commit your changes or stash them before you merge.
+Updating 5da7f18..da57de4
+Aborting
+[2026/07/31 ÖÜÎå  9:02:57.22] Sync failed 
+======================================== 
+[2026/09/10 ÖÜËÄ 12:03:18.30] Starting auto-sync... 
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/notes/DeepSeek\350\257\204\344\273\267\351\207\207\347\272\263\350\256\260\345\275\225.md"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/notes/\345\256\236\351\252\214\344\270\200\346\200\235\350\267\257\350\256\260\345\275\225.md"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data1_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data2_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data3_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/tie_test_ROC.png"
+M	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/run_logs/baltamatica_run_output.txt"
+M	windows_sync_log.txt
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Already on 'main'
+From github.com:never-hezhengze/code-sync
+ * branch            main       -> FETCH_HEAD
+   da57de4..65417ae  main       -> origin/main
+error: Your local changes to the following files would be overwritten by merge:
+	Baltamatica/å¤§ä½œä¸š/å®éªŒä¸€_ROCåˆ†æ/run_logs/baltamatica_run_output.txt
+Please commit your changes or stash them before you merge.
+Updating 5da7f18..65417ae
+Aborting
+[2026/09/10 ÖÜËÄ 12:03:24.72] Sync failed 
+======================================== 
+[2026/09/10 ÖÜËÄ 12:03:48.75] Starting auto-sync... 
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/notes/DeepSeek\350\257\204\344\273\267\351\207\207\347\272\263\350\256\260\345\275\225.md"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/notes/\345\256\236\351\252\214\344\270\200\346\200\235\350\267\257\350\256\260\345\275\225.md"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data1_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data2_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/data3_ROC.png"
+D	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/results/tie_test_ROC.png"
+M	"Baltamatica/\345\244\247\344\275\234\344\270\232/\345\256\236\351\252\214\344\270\200_ROC\345\210\206\346\236\220/run_logs/baltamatica_run_output.txt"
+M	windows_sync_log.txt
+Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+Already on 'main'
+From github.com:never-hezhengze/code-sync
+ * branch            main       -> FETCH_HEAD
+error: Your local changes to the following files would be overwritten by merge:
+	Baltamatica/å¤§ä½œä¸š/å®éªŒä¸€_ROCåˆ†æ/run_logs/baltamatica_run_output.txt
+Please commit your changes or stash them before you merge.
+Updating 5da7f18..65417ae
+Aborting
+[2026/09/10 ÖÜËÄ 12:03:54.17] Sync failed 
+======================================== 
