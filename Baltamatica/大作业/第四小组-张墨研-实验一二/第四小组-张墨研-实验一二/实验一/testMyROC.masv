@@ -1,0 +1,39 @@
+% testMyROC 实验一主程序
+% 使用data1.mat、data2.mat、data3.mat测试MyROC类并绘制ROC曲线。
+
+clear;
+clc;
+
+scriptDir = fileparts(mfilename('fullpath'));
+projectDir = fileparts(scriptDir);
+logDir = fullfile(scriptDir, 'run_logs');
+
+if ~exist(logDir, 'dir')
+    mkdir(logDir);
+end
+
+dataFiles = {'data1.mat', 'data2.mat', 'data3.mat'};
+
+logPath = fullfile(logDir, 'baltamatica_run_output.txt');
+logFile = fopen(logPath, 'w');
+fclose(logFile);
+diary(logPath);
+
+fprintf('实验一：自定义ROC分析类测试\n');
+fprintf('----------------------------------------\n');
+fprintf('程序将连续绘制3张ROC图，完成后请逐张保存。\n');
+
+for i = 1:numel(dataFiles)
+    dataPath = fullfile(projectDir, dataFiles{i});
+    data = load(dataPath);
+
+    rocObj = MyROC(data.labels, data.scores);
+
+    fprintf('%s: 样本数 = %d, ROC点数 = %d, AUC = %.4f\n', ...
+        dataFiles{i}, numel(data.labels), numel(rocObj.FPR), rocObj.AUC);
+    rocObj.plotROC(['ROC Curve - ' dataFiles{i}]);
+end
+
+fprintf('----------------------------------------\n');
+fprintf('测试完成，请将3个图窗依次保存为data1_ROC.png、data2_ROC.png和data3_ROC.png。\n');
+diary off;

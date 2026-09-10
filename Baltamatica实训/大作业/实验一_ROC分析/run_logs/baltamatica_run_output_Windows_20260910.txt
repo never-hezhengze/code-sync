@@ -1,0 +1,13 @@
+实验一：自定义ROC分析类测试
+----------------------------------------
+当前北太天元命令行环境未提供图形函数，跳过ROC图像保存。
+data1.mat: 样本数 = 100, ROC点数 = 102, AUC = 1.0000
+    Pairwise AUC = 1.000000, |MyROC - Pairwise| = 0
+data2.mat: 样本数 = 200, ROC点数 = 194, AUC = 0.9464
+    Pairwise AUC = 0.946400, |MyROC - Pairwise| = 1.11022e-16
+data3.mat: 样本数 = 2000, ROC点数 = 1750, AUC = 0.9040
+    Pairwise AUC = 0.903970, |MyROC - Pairwise| = 9.99201e-16
+tie_test: 样本数 = 12, ROC点数 = 5, AUC = 0.7222
+    Pairwise AUC = 0.722222, |MyROC - Pairwise| = 1.11022e-16
+----------------------------------------
+测试完成。当前环境未生成ROC图像，可在支持图形函数的环境中调用plotROC生成图片。
