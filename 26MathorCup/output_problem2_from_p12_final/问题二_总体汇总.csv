@@ -1,3 +1,0 @@
-﻿tag,objective,construction_mode,x_truck1,y_truck2,vehicle_count,total_cost,avg_space_utilization,avg_weight_utilization,boundary_point_1,boundary_point_2,output_dir
-problem2_1_min_vehicle,min_vehicle,纯车型2边界,0,13,13,9100.0,0.467242,0.262969,"(27,0)","(0,13)",output_problem2_from_p12_final/problem2_1_min_vehicle
-problem2_2_min_cost,min_cost,纯车型2边界,0,13,13,9100.0,0.467242,0.262969,"(27,0)","(0,13)",output_problem2_from_p12_final/problem2_2_min_cost

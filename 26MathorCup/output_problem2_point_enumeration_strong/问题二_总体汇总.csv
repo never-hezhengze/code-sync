@@ -1,3 +1,0 @@
-﻿tag,objective,construction_mode,x_truck1,y_truck2,vehicle_count,total_cost,avg_space_utilization,avg_weight_utilization,boundary_point_1,boundary_point_2,output_dir
-problem2_1_min_vehicle,min_vehicle,"固定点(0,13)-车型1优先",0,13,13,9100.0,0.53715,0.316154,"(27,0)","(0,13)",output_problem2_point_enumeration_strong/problem2_1_min_vehicle
-problem2_2_min_cost,min_cost,"超强验证-固定点(1,12)-车型2集中后车型1补尾",1,12,13,8850.0,0.561262,0.326969,"(27,0)","(0,13)",output_problem2_point_enumeration_strong/problem2_2_min_cost
